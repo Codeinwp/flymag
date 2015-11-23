@@ -1,0 +1,19 @@
+Flymag changelog
+
+1.05 - 12 Apr 2015
+----------------------------
+- few CSS fixes.
+
+1.04 - 2 Apr 2015
+----------------------------
+- added social navigation;
+- added image attachment template;
+- fixed author name.
+
+1.03 - 31 Mar 2015
+----------------------------
+- added changelog.txt;
+- responsive improvements for site title;
+- changed $content_width value;
+- added theme info tab in the Customizer;
+- changed screenshot and added new copyright info.
