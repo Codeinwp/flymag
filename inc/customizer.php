@@ -1239,28 +1239,6 @@ class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
             )
         )
     );
-    //___Theme info___//
-    $wp_customize->add_section(
-        'flymag_theme_info',
-        array(
-            'title' => __('Theme info', 'flymag'),
-            'priority' => 99,
-            'description' => '<p>' . __('Documentation for FlyMag can be found ', 'flymag') . '<a target="_blank" href="http://flyfreemedia.com/documentation/flymag/">here</a></p><p>' . __('If you enjoy FlyMag and want to see what FlyMag Pro offers, please go ', 'flymag') . '<a target="_blank" href="http://flyfreemedia.com/themes/flymag-pro/">here</a></p>',
-        )
-    );
-    //Pro
-    $wp_customize->add_setting('flymag_options[info]', array(
-            'sanitize_callback' => 'esc_attr',
-            'type' => 'info_control',
-            'capability' => 'edit_theme_options',
-        )
-    );
-    $wp_customize->add_control( new Flymag_Info( $wp_customize, 'pro_section', array(
-        'section' => 'flymag_theme_info',
-        'settings' => 'flymag_options[info]',
-        'priority' => 10
-        ) )
-    );
 }
 add_action( 'customize_register', 'flymag_customize_register' );
 
@@ -1326,7 +1304,8 @@ function flymag_registers() {
 	wp_localize_script( 'flymag_customizer_script', 'flymagCustomizerObject', array(
 		'pro' 					=> __('View PRO version','flymag'),
 		'github'				=> __('GitHub','flymag'),
-		'review'				=> __('Leave a Review', 'flymag')
+		'review'				=> __('Leave a Review', 'flymag'),
+		'documentation'				=> __('Documentation', 'flymag')
 		) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'flymag_registers' );
