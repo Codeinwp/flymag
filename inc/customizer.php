@@ -921,7 +921,7 @@ class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
 					'flymag_extra_widget_areas',array('sanitize_callback' => 'flymag_sanitize_text')
 		);
 
-		$wp_customize->add_control( new Flymag_Theme_Support_Footer_Credits( $wp_customize, 'flymag_extra_widget_areas',
+		$wp_customize->add_control( new Flymag_Theme_Support_Extra_Widget_Areas( $wp_customize, 'flymag_extra_widget_areas',
 				array(
 						'section' => 'flymag_extra_widget_areas',
 			 )
