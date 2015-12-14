@@ -28,7 +28,7 @@ function flymag_setup() {
 	global $content_width;
 	if ( ! isset( $content_width ) ) {
 		$content_width = 1160;
-	}		
+	}
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -132,7 +132,7 @@ function flymag_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );	
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer right', 'flymag' ),
 		'id'            => 'sidebar-6',
@@ -140,7 +140,7 @@ function flymag_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );		
+	) );
 
 	//Custom widgets
 	register_widget( 'Flymag_Recent_A' );
@@ -171,24 +171,24 @@ function flymag_scripts() {
 	wp_enqueue_style( 'flymag-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', array(), true );
 
 	if ( get_theme_mod('body_font_name') !='' ) {
-	    wp_enqueue_style( 'flymag-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) ); 
+	    wp_enqueue_style( 'flymag-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) );
 	} else {
 	    wp_enqueue_style( 'flymag-body-fonts', '//fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic');
 	}
 
 	if ( get_theme_mod('headings_font_name') !='' ) {
-	    wp_enqueue_style( 'flymag-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) ); 
+	    wp_enqueue_style( 'flymag-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) );
 	} else {
-	    wp_enqueue_style( 'flymag-headings-fonts', '//fonts.googleapis.com/css?family=Oswald:400,300,700'); 
+	    wp_enqueue_style( 'flymag-headings-fonts', '//fonts.googleapis.com/css?family=Oswald:400,300,700');
 	}
 
 	wp_enqueue_style( 'flymag-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'flymag-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );	
+	wp_enqueue_style( 'flymag-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
 
 	wp_enqueue_script( 'flymag-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), true );
 
-	wp_enqueue_script( 'flymag-slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), true );		
+	wp_enqueue_script( 'flymag-slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), true );
 
 	wp_enqueue_script( 'flymag-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -200,18 +200,97 @@ function flymag_scripts() {
 
 		wp_enqueue_script( 'jquery-masonry');
 
-		wp_enqueue_script( 'flymag-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), true );		
+		wp_enqueue_script( 'flymag-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), true );
 
-		wp_enqueue_script( 'flymag-masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array(), true );		
-	}	
+		wp_enqueue_script( 'flymag-masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array(), true );
+	}
 
-	wp_enqueue_script( 'flymag-ticker', get_template_directory_uri() . '/js/jquery.easy-ticker.min.js', array('jquery'), true );	
+	wp_enqueue_script( 'flymag-ticker', get_template_directory_uri() . '/js/jquery.easy-ticker.min.js', array('jquery'), true );
 
-	wp_enqueue_script( 'flymag-animations', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), true );	
+	wp_enqueue_script( 'flymag-animations', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), true );
 
-	wp_enqueue_script( 'flymag-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );			
+	wp_enqueue_script( 'flymag-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );
 }
 add_action( 'wp_enqueue_scripts', 'flymag_scripts' );
+
+
+/**
+* Enqueue customizer custom style
+*/
+function flymag_customizer_custom_css() {
+
+    wp_enqueue_style('flymag_customizer_custom_css', get_template_directory_uri() . '/css/flymag_customizer_style.css');
+
+}
+add_action('customize_controls_print_styles', 'flymag_customizer_custom_css');
+
+/* tgm-plugin-activation */
+require_once get_template_directory() . '/class-tgm-plugin-activation.php';
+
+/**
+ * TGMPA register
+ */
+function flymag_register_required_plugins() {
+		$plugins = array(
+
+			array(
+				'name'      => 'WP Product Reviews',
+				'slug'      => 'wp-product-reviews',
+				'required'  => false,
+			),
+
+			array(
+					'name'      => 'Login customizer',
+					'slug'      => 'login-customizer',
+					'required'  => false,
+			),
+
+			array(
+				'name'      => 'Intergeo Maps - Google Maps Plugin',
+				'slug'      => 'intergeo-maps',
+				'required'  => false
+			),
+
+			array(
+				'name'     => 'Pirate Forms',
+				'slug' 	   => 'pirate-forms',
+				'required' => false
+			));
+
+	$config = array(
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => false,
+        'message'      => '',
+        'strings'      => array(
+            'page_title'                      => esc_html__( 'Install Required Plugins', 'flymag' ),
+            'menu_title'                      => esc_html__( 'Install Plugins', 'flymag' ),
+            'installing'                      => esc_html__( 'Installing Plugin: %s', 'flymag' ),
+            'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'flymag' ),
+            'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'flymag' ),
+            'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'flymag' ),
+            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'flymag' ),
+            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'flymag' ),
+            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'flymag' ),
+            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'flymag' ),
+            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'flymag' ),
+            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'flymag' ),
+            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'flymag' ),
+            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'flymag' ),
+            'return'                          => esc_html__( 'Return to Required Plugins Installer', 'flymag' ),
+            'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'flymag' ),
+            'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'flymag' ),
+            'nag_type'                        => 'updated'
+        )
+    );
+
+	tgmpa( $plugins, $config );
+
+}
+add_action( 'tgmpa_register', 'flymag_register_required_plugins' );
 
 
 /**
@@ -238,7 +317,7 @@ add_filter( 'nav_menu_css_class', 'flymag_nav_menu_css_class', 10, 3 );
  * Change the excerpt length
  */
 function flymag_excerpt_length( $length ) {
-  
+
   $excerpt = get_theme_mod('exc_lenght', '55');
   return $excerpt;
 
@@ -259,9 +338,9 @@ function flymag_color_picker( $hook ) {
     if ( 'widgets.php' != $hook ) {
         return;
     }
-    wp_enqueue_style( 'wp-color-picker' );        
-    wp_enqueue_script( 'wp-color-picker' ); 
-	wp_enqueue_script( 'flymag-color-init', get_template_directory_uri() . '/js/color-init.js', array('jquery'), true );    
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'wp-color-picker' );
+	wp_enqueue_script( 'flymag-color-init', get_template_directory_uri() . '/js/color-init.js', array('jquery'), true );
 }
 add_action( 'admin_enqueue_scripts', 'flymag_color_picker' );
 

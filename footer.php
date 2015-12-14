@@ -16,9 +16,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="site-info col-md-6 col-sm-6">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'flymag' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'flymag' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'flymag' ) ); ?>" rel="nofollow"><?php printf( __( 'Proudly powered by %s', 'flymag' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %2$s by %1$s.', 'flymag' ), 'FlyFreeMedia', '<a href="http://flyfreemedia.com/themes/flymag" rel="designer">FlyMag</a>' ); ?>
+				<?php printf( __( 'Theme: %2$s by %1$s.', 'flymag' ), 'Themeisle', '<a href="http://themeisle.com/themes/flymag/" rel="nofollow">FlyMag</a>' ); ?>
 			</div><!-- .site-info -->
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
 			<nav class="social-navigation col-md-6 col-sm-6 clearfix">

@@ -45,7 +45,7 @@ get_header(); ?>
                         <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'flymag' ), 'after' => '</div>' ) ); ?>
                     </div>
 					<div class="images-sizes">				 
-							<?php _e('Image available in:'); ?>
+							<?php _e( 'Image available in:','flymag' ); ?>
 							<?php
 								$images = array();
 								$image_sizes = get_intermediate_image_sizes();

@@ -1,18 +1,17 @@
 <?php
 
 class Flymag_Video extends WP_Widget {
-
-// constructor
-    function flymag_video() {
+	
+	public function __construct() {
 		$widget_ops = array('classname' => 'flymag_video_widget', 'description' => __( 'Display an oEmbed video.', 'flymag') );
-        parent::WP_Widget(false, $name = __('Flymag: Video', 'flymag'), $widget_ops);
+		parent::__construct('flymag_video', __('Flymag: Video', 'flymag'), $widget_ops);
 		$this->alt_option_name = 'flymag_video';
-		
+
 		add_action( 'save_post', array($this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-		add_action( 'switch_theme', array($this, 'flush_widget_cache') );		
-    }
-	
+		add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+	}
+
 	// widget form creation
 	function form($instance) {
 
