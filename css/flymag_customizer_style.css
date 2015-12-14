@@ -1,0 +1,18 @@
+#accordion-section-flymag_featured_area .accordion-section-title, #accordion-section-flymag_footer_credits .accordion-section-title, #accordion-section-flymag_extra_widget_areas .accordion-section-title {
+	background-image:url(../images/gray-lines.png);
+	background-repeat:repeat;
+}
+
+#accordion-section-flymag_featured_area .accordion-section-title:after, #accordion-section-flymag_footer_credits .accordion-section-title:after, #accordion-section-flymag_extra_widget_areas .accordion-section-title:after {
+	content: "\f160";
+}
+
+.flymag-upgrade-to-pro-button {
+	padding: 3px 6px !important;
+	line-height: 1.5 !important;
+	font-size: 9px !important;
+	color: #ffffff !important;
+	background-color: #EA6F60;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

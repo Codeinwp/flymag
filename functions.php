@@ -213,6 +213,17 @@ function flymag_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'flymag_scripts' );
 
+
+/**
+* Enqueue customizer custom style
+*/
+function flymag_customizer_custom_css() {
+
+    wp_enqueue_style('flymag_customizer_custom_css', get_template_directory_uri() . '/css/flymag_customizer_style.css');
+
+}
+add_action('customize_controls_print_styles', 'flymag_customizer_custom_css');
+
 /* tgm-plugin-activation */
 require_once get_template_directory() . '/class-tgm-plugin-activation.php';
 
@@ -280,6 +291,7 @@ function flymag_register_required_plugins() {
 
 }
 add_action( 'tgmpa_register', 'flymag_register_required_plugins' );
+
 
 /**
  * Set custom classes for the top menu items.
