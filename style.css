@@ -1,8 +1,8 @@
 /*
 Theme Name: FlyMag
-Theme URI: http://flyfreemedia.com/themes/flymag
-Author: Fly Free Media
-Author URI: http://flyfreemedia.com/blog
+Theme URI: http://http://themeisle.com/themes/flymag/
+Author: Themeisle
+Author URI: http://themeisle.com
 Description: Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.
 Version: 1.06
 License: GNU General Public License v2 or later
@@ -193,7 +193,7 @@ Menus
 	border-top: 3px solid #444;
 	border-bottom: 3px solid #444;
 	border-left: 1px solid #ebebeb;
-	border-right: 1px solid #ebebeb;	
+	border-right: 1px solid #ebebeb;
 }
 
 .main-navigation ul {
@@ -501,7 +501,7 @@ Widgets
 }
 .widget_pages li::before {
 	content: '\f016';
-	margin-right: 5px;	
+	margin-right: 5px;
 }
 .tagcloud a {
 	border: 1px solid #41474F;
@@ -587,7 +587,7 @@ Content
 .entry-footer {
 	font-size: 13px;
 }
-.entry-meta span, 
+.entry-meta span,
 .entry-footer span {
 	margin-right: 15px;
 }
@@ -676,7 +676,7 @@ Comments
 	background-color: #fff;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 a.comment-reply-link {
 	text-decoration: none;
@@ -955,7 +955,7 @@ Mobile menu
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;  
+    border-radius: 4px;
     display: block;
 }
 /* Button Text */
@@ -1010,7 +1010,7 @@ Mobile menu
     color:#fff;
 }
 .slicknav_nav .slicknav_txtnode {
-     margin-left:15px;   
+     margin-left:15px;
 }
 /*--------------------------------------------------------------
 Structure
@@ -1063,7 +1063,7 @@ Structure
 .home-masonry .hentry {
 	width: 50%;
 	margin: 0;
-}	
+}
 .home-masonry .entry-title {
 	font-size: 24px;
 }
@@ -1196,7 +1196,7 @@ Slider
 	padding: 15px;
 	text-align: center;
 	-webkit-transition: top 0.3s;
-	transition: top 0.3s;	
+	transition: top 0.3s;
 }
 .fly-slider .slide-title a,
 .posts-slider .slide-title a {
@@ -1244,7 +1244,7 @@ Slider
 	opacity: 0;
 	font-size: 28px;
 	-webkit-transition: opacity 0.3s 0.2s;
-	transition: opacity 0.3s 0.2s;	
+	transition: opacity 0.3s 0.2s;
 }
 .slide-link a {
 	color: #fff;
@@ -1291,7 +1291,7 @@ Slider
 	-o-transition: height 500ms ease-in-out;
 	transition: height 500ms ease-in-out;
 }
-	
+
 .owl-carousel .owl-item{
 	float: left;
 }
@@ -1421,7 +1421,7 @@ Social menu
 	background-color: transparent;
 }
 .social-navigation li a {
-	text-decoration: none;	
+	text-decoration: none;
 }
 .social-navigation li a::before {
 	line-height: 1;
@@ -1431,7 +1431,7 @@ Social menu
 .social-navigation li a::before {
 	font-size: 22px;
 	-webkit-transition: all 0.3s;
-	transition: all 0.3s;		
+	transition: all 0.3s;
 }
 .social-navigation li:hover > a::before {
 	color: #ddd;
@@ -1508,7 +1508,7 @@ Responsive
 @media (max-width: 1199px) {
 	.content-area {
 		width: 680px;
-	}	
+	}
 }
 @media (max-width: 1099px) {
 	.content-area {
@@ -1519,7 +1519,7 @@ Responsive
 	}
 	.widget-area .widget {
 		padding: 30px 15px;
-	}	
+	}
 }
 @media (max-width: 1024px) {
 	.main-navigation {
@@ -1533,7 +1533,7 @@ Responsive
 	}
 	.widget-area {
 		width: 100%;
-	}	
+	}
 }
 @media (max-width: 991px) {
 	.recent_posts_d .recent-post:nth-of-type(3n+1) {
@@ -1541,12 +1541,12 @@ Responsive
 	}
 	.recent_posts_d .recent-post:nth-of-type(2n+1) {
 		clear: left;
-	}	
+	}
 }
 @media (max-width: 767px) {
 	.recent_posts_a .recent-post:nth-of-type(4) {
 		clear: left;
-	}	
+	}
 	.recent-post .entry-meta {
 		margin-bottom: 15px;
 	}
@@ -1621,7 +1621,7 @@ Responsive
     }
     .nav-previous {
     	margin-bottom: 10px;
-    }    
+    }
 }
 @media (max-width: 320px) {
 	.comment-body {
@@ -1632,6 +1632,5 @@ Responsive
 	}
 	.news-ticker {
 		height: 60px !important;
-	}	
+	}
 }
-
