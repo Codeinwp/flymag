@@ -1,5 +1,15 @@
 
 
+### 1.07 - 15/01/2016
+
+ Changes: 
+
+
+ * Merge pull request #8 from abaicus/development
+
+!!! Changed author name and uri.
+
+
 ### 1.06 - 14/12/2015
 
  Changes: 
