@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
 
     if( jQuery( ".flymag-upsells" ).length ) {
 
-  		jQuery('.flymag-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="http://flyfreemedia.com/documentation/flymag/" class="button" target="_blank">{documentation}</a>'.replace('{documentation}', flymagCustomizerObject.documentation));
+  		jQuery('.flymag-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="http://docs.themeisle.com/article/310-flymag-documentation" class="button" target="_blank">{documentation}</a>'.replace('{documentation}', flymagCustomizerObject.documentation));
   		jQuery('.flymag-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="https://github.com/Codeinwp/flymag" class="button" target="_blank">{github}</a>'.replace('{github}', flymagCustomizerObject.github));
   		jQuery('.flymag-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="https://wordpress.org/support/view/theme-reviews/flymag#postform" class="button" target="_blank">{review}</a>'.replace('{review}', flymagCustomizerObject.review));
 
