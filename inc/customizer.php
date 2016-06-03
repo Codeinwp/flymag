@@ -569,7 +569,7 @@ class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
         array(
             'title' => __('Fonts', 'flymag'),
             'priority' => 15,
-            'description' => __('You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: flyfreemedia.com/documentation/flymag', 'flymag'),
+            'description' => __('You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: docs.themeisle.com/article/310-flymag-documentation', 'flymag'),
         )
     );
     //Body fonts title
