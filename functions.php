@@ -292,6 +292,21 @@ function flymag_register_required_plugins() {
 }
 add_action( 'tgmpa_register', 'flymag_register_required_plugins' );
 
+/* ti-about-page */
+require_once get_template_directory() . '/class-ti-about-page.php';
+
+/* TI About page register */
+function flymag_register_ti_about_page() {
+
+	$config = array(
+		'theme_name' => 'FlyMag',
+		'theme_short_description' => 'LaLa'
+	);
+
+	ti_about_page( $config );
+
+}
+add_action( 'ti_about_page_register', 'flymag_register_ti_about_page' );
 
 /**
  * Set custom classes for the top menu items.
