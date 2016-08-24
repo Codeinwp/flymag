@@ -1,0 +1,259 @@
+.ti-about-page-nav-tabs {
+    margin-bottom: 0;
+}
+.ti-about-page-nav-tabs:after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+.ti-about-page-nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    display: block;
+}
+.ti-about-page-nav-tabs > li > a {
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.ti-about-page-nav-tabs > li.active > a, .ti-about-page-nav-tabs > li.active > a:focus, .ti-about-page-nav-tabs > li.active > a:hover {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.ti-about-page-nav-tabs > li.ti-about-page-w-red-tab > a {
+    color: red;
+    font-weight: bold;
+}
+.ti-about-page-tab-content {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    width: 960px;
+    float: left;
+}
+.ti-about-page-tab-content > .tab-pane {
+    display: none;
+}
+.ti-about-page-tab-content > .active {
+    display: block;
+}
+
+.ti-about-page-tab-pane {
+    padding: 30px;
+}
+.ti-about-page-tab-pane {
+    display: none;
+}
+.ti-about-page-tab-pane.active {
+    display: block;
+}
+
+#ti-about-page-theme-version {
+    font-size: 50%;
+    padding: 10px;
+    background: #ccc;
+}
+#ti-about-page-w-screenshot {
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+.ti-about-page-w-activated {
+    cursor:not-allowed !important;
+}
+.ti-about-page-tab-pane-half {
+    width: 45%;
+    float:left;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    margin-top: 15px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+.ti-about-page-tab-content img {
+    max-width: 100%;
+}
+.ti-about-page-tab-pane-first-half {
+    border-left: none;
+}
+.ti-about-page-tab-pane-center {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.ti-about-page-welcome-title {
+    font-size: 32px;
+}
+.ti-about-page-clear {
+    clear: both;
+}
+.ti-about-page-child-theme-container {
+    position: relative;
+}
+.ti-about-page-child-theme-description {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0;
+    max-width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.ti-about-page-child-theme-image-container {
+    position: relative;
+    overflow: hidden;
+}
+.ti-about-page-child-theme-image-container img {
+    max-width: 100%;
+}
+.ti-about-page-child-theme-details .theme-details {
+    padding: 10px;
+    background: none repeat scroll 0 0 #F1F1F1;
+    font-size: 18px;
+}
+
+.ti-about-page-child-theme-details .theme-details.active {
+    background: none repeat scroll 0 0 #2B5F87;
+    color: #fff;
+}
+
+.ti-about-page-child-theme-details .theme-details .theme-name {
+    float:left;
+}
+.ti-about-page-child-theme-details .theme-details .preview {
+    margin-right: 2px;
+}
+.ti-about-page-fre-pro table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.ti-about-page-fre-pro table tr {
+    border-bottom: 1px solid #ddd;
+}
+.ti-about-page-fre-pro table td {
+    padding: 30px;
+}
+.ti-about-page-fre-pro table th {
+    padding-bottom: 30px;
+}
+.ti-about-page-fre-pro table td span.dashicons-before:before {
+    font-size: 50px;
+    width: auto;
+    height: auto;
+}
+.ti-about-page-fre-pro table td span.dashicons-yes:before {
+    color:green;
+}
+.ti-about-page-fre-pro table td span.dashicons-no-alt:before {
+    color:red;
+}
+.ti-about-page-fre-pro table tr.ti-about-page-text-center {
+    text-align: center;
+}
+.ti-about-page-actions-count {
+    padding: 0 6px;
+    display: inline-block;
+    background-color: #d54e21;
+    color: #fff;
+    font-size: 9px;
+    line-height: 17px;
+    font-weight: 600;
+    margin: 1px 0 0 2px;
+    vertical-align: top;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 26;
+}
+.ti-about-page-action-required-box {
+    position: relative;
+}
+.ti-about-page-dismiss-required-action {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    background-color: #D24A4A;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+}
+.ti-about-page-dismiss-required-action:hover {
+    background-color: #CC8C8C;
+}
+
+#github.ti-about-page-tab-pane {
+    text-align: center;
+}
+
+#github.ti-about-page-tab-pane .ti-about-page-tab-pane-half {
+    min-height: 160px;
+}
+
+#github.ti-about-page-tab-pane .translate-button, #github .github-button {
+    margin-top: 20px;
+}
+
+#github.ti-about-page-tab-pane .dashicons {
+    color: #0073aa;
+    font-size: 12px;
+    width: auto;
+}
+
+#github.ti-about-page-tab-pane h4 {
+    margin:10px;;
+}
+
+#github.ti-about-page-tab-pane p.review-link {
+    margin:0;
+}
+
+#github.ti-about-page-tab-pane .ti-about-page-tab-pane-half hr {
+    display: none;
+}
+
+/*Breakpoints*/
+
+@media (max-width: 1200px) {
+    .ti-about-page-tab-content {
+        width: 98%;
+    }
+    .ti-about-page-tab-pane-half {
+        width: 43%;
+    }
+}
+@media (max-width: 782px) {
+    #github.ti-about-page-tab-pane .ti-about-page-tab-pane-half hr {
+        display:block;
+    }
+
+    .ti-about-page-tab-pane-half {
+        width: auto;
+        float: none;
+        border-left: none;
+    }
+    .ti-about-page-welcome-title, .ti-about-page-tab-content h1 {
+        line-height: 30px;
+    }
+    .ti-about-page-fre-pro table td {
+        padding: 30px 10px;
+    }
+}

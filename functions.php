@@ -293,20 +293,81 @@ function flymag_register_required_plugins() {
 add_action( 'tgmpa_register', 'flymag_register_required_plugins' );
 
 /* ti-about-page */
-require_once get_template_directory() . '/class-ti-about-page.php';
+require_once get_template_directory() . '/ti-about-page/class-ti-about-page.php';
 
 /* TI About page register */
-function flymag_register_ti_about_page() {
+$config = array(
+	'theme_name' => 'FlyMag',
+	'theme_slug' => 'flymag',
+	'text_domain' => 'flymag',
+	'theme_short_description' => __( 'Our best free magazine WordPress theme, FlyMag!','flymag' ),
+	'documentation' => 'http://docs.themeisle.com/article/310-flymag-documentation',
+	'github' => 'https://github.com/Codeinwp/flymag',
+	'translations_wporg' => 'https://translate.wordpress.org/projects/wp-themes/flymag',
+	'review_wporg' => 'https://wordpress.org/support/view/theme-reviews/flymag',
+	'free_pro' => array(
+		'free_theme_name' => 'FlyMag',
+		'pro_theme_name' => 'FlyMag PRO',
 
-	$config = array(
-		'theme_name' => 'FlyMag',
-		'theme_short_description' => 'LaLa'
-	);
-
-	ti_about_page( $config );
-
-}
-add_action( 'ti_about_page_register', 'flymag_register_ti_about_page' );
+	),
+	'child_themes' => array(
+		array(
+			'title' => __( 'ZBlackBeard', 'zerif-lite' ),
+			'image' => '',
+			'link' => ''
+		)
+	),
+	'required_actions' => array(
+		array(
+			"id" => 'zerif-lite-req-ac-frontpage-latest-news',
+			"title" => esc_html__( 'Get the one page template' ,'flymag' ),
+			"description"=> esc_html__( 'If you just installed Zerif Lite, and are not able to see the one page template, you need to go to Settings -> Reading , Front page displays and select "Your latest posts".','zerif-lite' ),
+			"check" => ''
+		),
+		array(
+			"id" => 'zerif-lite-req-ac-install-pirate-forms',
+			"title" => esc_html__( 'Install Pirate Forms' ,'flymag' ),
+			"description"=> esc_html__( 'In the next updates, Zerif Lite\'s default contact form will be removed. Please make sure you install the Pirate Forms plugin to keep your site updated, and experience a smooth transition to the latest version.','zerif-lite' ),
+			"check" => defined("PIRATE_FORMS_VERSION"),
+			"plugin_slug" => 'pirate-forms'
+		),
+		array(
+			"id" => 'zerif-lite-req-ac-check-pirate-forms',
+			"title" => esc_html__( 'Check the contact form after installing Pirate Forms' ,'flymag' ),
+			"description"=> esc_html__( "After installing the Pirate Forms plugin, please make sure you check your frontpage contact form is working fine. Also, if you use Zerif Lite in other language(s) please make sure the translation is ok. If not, please translate the contact form again.",'zerif-lite' ),
+		)
+	),
+	'docs' => array(
+		array(
+			'title' => 'Create a child theme',
+			'description' => 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below',
+			'link_url' => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme/',
+			'link_label' => 'View how to do this'
+		),
+		array(
+			'title' => 'Build a landing page with a drag-and-drop content builder',
+			'description' => 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.',
+			'link_url' => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
+			'link_label' => 'View how to do this'
+		),
+		array(
+			'title' => 'Speed up your site',
+			'description' => 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.',
+			'link_url' => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site/',
+			'link_label' => 'View how to do this'
+		)
+	),
+	'plugins' => array(
+		array(
+			'title' => 'Page Builder by SiteOrigin',
+			'description' => 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.',
+			'link_label' => 'Install Page Builder by SiteOrigin',
+			'check' => is_plugin_active( 'adblock-notify-by-bweb/adblock-notify.php' ),
+			'slug' => 'adblock-notify-by-bweb'
+		)
+	)
+);
+$ti_about_page = new TI_About_Page($config);
 
 /**
  * Set custom classes for the top menu items.
