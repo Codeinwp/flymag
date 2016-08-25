@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 
     /* Number of required actions */
     if ((typeof ti_aboutpage !== 'undefined') && (typeof ti_about_page_nr_actions_required !== 'undefined') && (ti_about_page_nr_actions_required != '0')) {
-        jQuery('#accordion-section-themes .accordion-section-title').append('<a href="' + ti_aboutpage + '"><span class="zerif-lite-actions-count">' + ti_about_page_nr_actions_required + '</span></a>');
+        jQuery('#accordion-section-themes .accordion-section-title').append('<a href="' + ti_aboutpage + '"><span class="ti-about-page-actions-count">' + ti_about_page_nr_actions_required + '</span></a>');
     }
 
     /* Upsell in Customizer (Link to Welcome page) */

@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     var ti_about_page_nr_actions_required = tiAboutPageObject.nr_actions_required;
 
     if ( (typeof ti_about_page_nr_actions_required !== 'undefined') && (ti_about_page_nr_actions_required != '0') ) {
-        jQuery('li.ti-about-page-lite-w-red-tab a').append('<span class="ti-about-page-lite-actions-count">' + ti_about_page_nr_actions_required + '</span>');
+        jQuery('li.ti-about-page-w-red-tab a').append('<span class="ti-about-page-actions-count">' + ti_about_page_nr_actions_required + '</span>');
     }
 
     /* Dismiss required actions */
@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
                 jQuery("#temp_load").remove(); /* Remove loading gif */
                 jQuery('#'+ data).parent().remove(); /* Remove required action box */
 
-                var ti_about_page_actions_count = jQuery('.ti-about-page-lite-actions-count').text(); /* Decrease or remove the counter for required actions */
+                var ti_about_page_actions_count = jQuery('.ti-about-page-actions-count').text(); /* Decrease or remove the counter for required actions */
                 if( typeof ti_about_page_actions_count !== 'undefined' ) {
                     if( ti_about_page_actions_count == '1' ) {
                         jQuery('.ti-about-page-actions-count').remove();

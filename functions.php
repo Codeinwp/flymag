@@ -308,14 +308,61 @@ $config = array(
 	'free_pro' => array(
 		'free_theme_name' => 'FlyMag',
 		'pro_theme_name' => 'FlyMag PRO',
-
+		'pro_theme_link' => 'http://themeisle.com/themes/zerif-pro-one-page-wordpress-theme/',
+		'features' => array(
+			array(
+				'title' => __( 'Mobile friendly', 'flymag' ),
+				'description' => __( 'Responsive layout. Works on every device.','flymag' ),
+				'is_in_lite' => 'true',
+				'is_in_pro' => 'true'
+			),
+			array(
+				'title' => __( 'Unlimited color option', 'flymag' ),
+				'description' => __( 'You can change the colors of each section. You have unlimited options.','flymag' ),
+				'is_in_lite' => 'true',
+				'is_in_pro' => 'true'
+			),
+			array(
+				'title' => __( 'Featured Area','flymag' ),
+				'description' => '',
+				'is_in_lite' => 'false',
+				'is_in_pro' => 'true',
+			),
+			array(
+				'title' => __( 'Footer credits','flymag' ),
+				'description' => '',
+				'is_in_lite' => 'false',
+				'is_in_pro' => 'true'
+			),
+			array(
+				'title' => __( 'Extra widgets areas','flymag' ),
+				'description' => __( 'More widgets areas for your theme.','flymag' ),
+				'is_in_lite' => 'false',
+				'is_in_pro' => 'true'
+			)
+		)
 	),
 	'child_themes' => array(
 		array(
-			'title' => __( 'ZBlackBeard', 'zerif-lite' ),
-			'image' => '',
-			'link' => ''
-		)
+			'title' => __( 'ZBlackBeard', 'flymag' ),
+			'image' => get_template_directory_uri().'/images/placeholder.png',
+			'image_alt' => __( 'ZBlackBeard Child Theme','flymag' ),
+			'description' => __( 'ZBlackBeard', 'flymag' ),
+			'download_link' => 'http://themeisle.com/themes/zblackbeard/#pricing-single',
+			'preview_link' => 'https://wp-themes.com/zblackbeard',
+		),
+		array(
+			'title' => __( 'ResponsiveBoat', 'flymag' ),
+			'image' => get_template_directory_uri().'/images/placeholder.png',
+			'download_link' => 'http://themeisle.com/themes/reponsiveboat-theme/#pricing-single',
+			'preview_link' => 'https://wp-themes.com/responsiveboat',
+		),
+		array(
+			'title' => __( 'ResponsiveBoat', 'flymag' ),
+			'image' => get_template_directory_uri().'/images/placeholder.png',
+			'download_link' => 'http://themeisle.com/themes/reponsiveboat-theme/#pricing-single',
+			'preview_link' => 'https://wp-themes.com/responsiveboat',
+		),
 	),
 	'required_actions' => array(
 		array(
@@ -339,29 +386,29 @@ $config = array(
 	),
 	'docs' => array(
 		array(
-			'title' => 'Create a child theme',
-			'description' => 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below',
+			'title' => __('Create a child theme','flymag'),
+			'description' => __('If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below','flymag'),
 			'link_url' => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme/',
-			'link_label' => 'View how to do this'
+			'link_label' => __('View how to do this','flymag')
 		),
 		array(
-			'title' => 'Build a landing page with a drag-and-drop content builder',
-			'description' => 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.',
+			'title' => __('Build a landing page with a drag-and-drop content builder','flymag'),
+			'description' => __('In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.','flymag'),
 			'link_url' => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
-			'link_label' => 'View how to do this'
+			'link_label' => __('View how to do this','flymag')
 		),
 		array(
-			'title' => 'Speed up your site',
-			'description' => 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.',
+			'title' => __('Speed up your site','flymag'),
+			'description' => __('If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.','flymag'),
 			'link_url' => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site/',
-			'link_label' => 'View how to do this'
+			'link_label' => __('View how to do this','flymag')
 		)
 	),
 	'plugins' => array(
 		array(
-			'title' => 'Page Builder by SiteOrigin',
-			'description' => 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.',
-			'link_label' => 'Install Page Builder by SiteOrigin',
+			'title' => __('Page Builder by SiteOrigin','flymag'),
+			'description' => __('Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.','flymag'),
+			'link_label' => __('Install Page Builder by SiteOrigin','flymag'),
 			'check' => is_plugin_active( 'adblock-notify-by-bweb/adblock-notify.php' ),
 			'slug' => 'adblock-notify-by-bweb'
 		)
