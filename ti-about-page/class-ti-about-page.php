@@ -108,9 +108,6 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                 /* enqueue script and style for about page */
                 add_action( 'admin_enqueue_scripts', array( $this, 'ti_about_page_style_and_scripts' ) );
 
-                /* enqueue script and style for customizer */
-                add_action( 'customize_controls_enqueue_scripts', array( $this, 'ti_about_page_style_scripts_for_customizer' ) );
-
                 /* load main content for about page */
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_getting_started' ),	10 );
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_actions_required' ), 	20 );
