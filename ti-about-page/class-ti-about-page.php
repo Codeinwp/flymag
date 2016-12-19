@@ -1,6 +1,91 @@
 <?php
 /**
  * ThemeIsle - About page class
+ *
+ * Example of config array with all parameters ( This needs to be defined in the theme's functions.php:
+ *
+ * $config = array(
+ *
+ *      === General infos ===
+ *
+ *      'theme_name' => 'Theme name',
+ *		'theme_slug' => 'Theme slug',
+ *		'text_domain' => 'Text domain',
+ *		'theme_short_description' => 'Theme short description',
+ *		'documentation' => 'Documentation link',
+ *		'github' => 'Github link',
+ *		'translations_wporg' => 'Wporg translations link',
+ *		'review_wporg' => 'Leave a review link',
+ *
+ *      === Getting started tab - FAQ section ===
+ *
+ *	    'docs' => array(
+ *			array(
+ *				'title' => 'Title',
+ *				'description' => 'Description',
+ *				'link_url' => 'Doc link',
+ *				'link_label' => 'Button label'
+ *			)
+ *		),
+ *
+ *      === Getting started tab - Recommended plugins section ===
+ *
+ *		'plugins' => array(
+ *		    array(
+ *			    'title' => 'Title',
+ *			    'description' => 'Description',
+ *			    'link_label' => 'Button label',
+ *			    'check' => 'Check to see if the plugin is installed or not',
+ *			    'slug' => 'Slug for wporg plugins',
+ *              'link' => 'Download link for non wporg plugins'
+ *		    )
+ *	    )
+ *
+ *
+ *      === Actions required tab ===
+ *
+ *		'required_actions' => array(
+ *			array(
+ *				'id' => 'Id',
+ *				'title' => 'Title',
+ *				'description' => 'Description',
+ *				'check' => 'Check to see if the action is needed or not'
+ *				'plugin_slug' => 'Plugin slug - if a the required action needs a plugin install'
+ *			)
+ *		),
+ *
+ *      === Child themes ===
+ *
+ *      'child_themes' => array(
+ *			array(
+ *				'title' => 'Title',
+ *              'image' => 'Image',
+ *              'image_alt' => 'Alternative text for image',
+ *				'description' => 'Description',
+ *				'download_link' => 'Download link'
+ *				'preview_link' => 'Preview link'
+ *			)
+ *		),
+ *
+ *      === Free VS Pro tab ===
+ *
+ *		'free_pro' => array(
+ *			'free_theme_name' => 'Free theme name',
+ *			'pro_theme_name' => 'Pro theme name',
+ *			'pro_theme_link' => 'Pro theme link',
+ *
+ *           Array of features for the Free VS Pro table
+ *
+ *		    'features' => array(
+ *			    array(
+ *					'title' => 'Feature title',
+ *					'description' => 'Feature description',
+ *					'is_in_lite' => '(Boolean) If feature is available in lite version',
+ *					'is_in_pro' => '(Boolean) If feature is available in pro version',
+ *				)
+ *			)
+ *		)
+ * );
  */
 
 if ( ! class_exists( 'TI_About_Page' ) ) {
@@ -112,7 +197,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_getting_started' ),	10 );
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_actions_required' ), 	20 );
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_child_themes' ), 	   	30 );
-                add_action( 'ti_about_page', array( $this, 'ti_about_page_contribute' ), 		    40 );
+                add_action( 'ti_about_page', array( $this, 'ti_about_page_contribute' ), 		40 );
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_changelog' ), 		50 );
                 add_action( 'ti_about_page', array( $this, 'ti_about_page_free_pro' ), 			60 );
 
@@ -172,15 +257,20 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
             require_once( ABSPATH . 'wp-load.php' );
             require_once( ABSPATH . 'wp-admin/admin.php' );
             require_once( ABSPATH . 'wp-admin/admin-header.php' );
+
             ?>
 
             <ul class="ti-about-page-nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e( 'Getting started',$this->text_domain); ?></a></li>
-                <li role="presentation" class="ti-about-page-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions required',$this->text_domain); ?></a></li>
-                <li role="presentation"><a href="#child_themes" aria-controls="child_themes" role="tab" data-toggle="tab"><?php esc_html_e( 'Child themes',$this->text_domain); ?></a></li>
-                <li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><?php esc_html_e( 'Contribute',$this->text_domain); ?></a></li>
-                <li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e( 'Changelog',$this->text_domain); ?></a></li>
-                <li role="presentation"><a href="#free_pro" aria-controls="free_pro" role="tab" data-toggle="tab"><?php esc_html_e( 'Free VS PRO',$this->text_domain); ?></a></li>
+                <li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e( 'Getting started',$this->text_domain ); ?></a></li>
+                <li role="presentation" class="ti-about-page-w-red-tab"><a href="#actions_required" aria-controls="actions_required" role="tab" data-toggle="tab"><?php esc_html_e( 'Actions required',$this->text_domain ); ?></a></li>
+                <?php if ( !empty( $this->child_themes ) ) { ?>
+                    <li role="presentation"><a href="#child_themes" aria-controls="child_themes" role="tab" data-toggle="tab"><?php esc_html_e( 'Child themes',$this->text_domain ); ?></a></li>
+                <?php } ?>
+                <li role="presentation"><a href="#github" aria-controls="github" role="tab" data-toggle="tab"><?php esc_html_e( 'Contribute',$this->text_domain ); ?></a></li>
+                <li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e( 'Changelog',$this->text_domain ); ?></a></li>
+                <?php if ( !empty( $this->free_pro ) ) { ?>
+                    <li role="presentation"><a href="#free_pro" aria-controls="free_pro" role="tab" data-toggle="tab"><?php esc_html_e( 'Free VS PRO',$this->text_domain ); ?></a></li>
+                <?php } ?>
             </ul>
 
             <div class="ti-about-page-tab-content">
@@ -313,22 +403,22 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                 $nr_actions_required = 0;
 
                 /* get number of required actions */
-                if( get_option('ti_about_page_show_required_actions') ) {
-                    $ti_about_page_show_required_actions = get_option('ti_about_page_show_required_actions');
+                if( get_option( 'ti_about_page_show_required_actions' ) ) {
+                    $ti_about_page_show_required_actions = get_option( 'ti_about_page_show_required_actions' );
                 } else {
                     $ti_about_page_show_required_actions = array();
                 }
 
-                if( !empty($ti_about_page_required_actions) ) {
-                    foreach ($ti_about_page_required_actions as $ti_about_page_required_action_value) {
-                        if ((!isset($ti_about_page_required_action_value['check']) || (isset($ti_about_page_required_action_value['check']) && ($ti_about_page_required_action_value['check'] == false))) && ((isset($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']]) && ($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']] == true)) || !isset($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']]))) {
+                if( !empty( $this->required_actions ) ) {
+                    foreach ( $this->required_actions as $ti_about_page_required_action_value ) {
+                        if ( ( !isset( $ti_about_page_required_action_value['check'] ) || ( isset($ti_about_page_required_action_value['check'] ) && ( $ti_about_page_required_action_value['check'] == false ) ) ) && ( ( isset( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] ) && ( $ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']] == true ) ) || !isset( $ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']] ) ) ) {
                             $nr_actions_required++;
                         }
                     }
                 }
 
                 if( $nr_actions_required == 0 ) {
-                    echo '<p>'.__('Hooray! There are no required actions for you right now.', $this->text_domain).'</p>';
+                    echo '<p>'.__( 'Hooray! There are no required actions for you right now.', $this->text_domain ).'</p>';
                 }
 
             echo '</div>';
@@ -342,11 +432,11 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
                 if( !empty( $this->child_themes ) && is_array( $this->child_themes ) ) {
 
-                    $child_length = count($this->child_themes);
+                    $child_length = count( $this->child_themes );
 
-                    if( function_exists('array_slice') ) {
-                        $child_firsthalf = array_slice($this->child_themes, 0, round($child_length / 2));
-                        $child_secondhalf = array_slice($this->child_themes, round($child_length / 2));
+                    if( function_exists( 'array_slice' ) ) {
+                        $child_firsthalf = array_slice( $this->child_themes, 0, round( $child_length / 2 ) );
+                        $child_secondhalf = array_slice( $this->child_themes, round( $child_length / 2 ) );
                     }
 
                     echo '<div class="ti-about-page-tab-pane-center">';
@@ -354,11 +444,11 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                         echo '<p>'.sprintf( __( 'Below you will find a selection of %s child themes that will totally transform the look of your site.', $this->text_domain ), $this->theme_name ).'</p>';
                     echo '</div>';
 
-                    if( !empty($child_firsthalf) ) {
-                        $this->ti_about_page_child_themes_display_column($child_firsthalf);
+                    if( !empty( $child_firsthalf ) ) {
+                        $this->ti_about_page_child_themes_display_column( $child_firsthalf );
                     }
-                    if( !empty($child_secondhalf) ) {
-                        $this->ti_about_page_child_themes_display_column($child_secondhalf);
+                    if( !empty( $child_secondhalf ) ) {
+                        $this->ti_about_page_child_themes_display_column( $child_secondhalf );
                     }
 
                 }
@@ -397,7 +487,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                 echo '<div class="ti-about-page-tab-pane-center">';
 
                     echo '<h1>'.$this->theme_name;
-                        if( !empty($theme_obj['Version']) ){
+                        if( !empty( $theme_obj['Version'] ) ){
                             echo '<sup id="ti-about-page-theme-version">'.esc_attr( $theme_obj['Version'] ).'</sup>';
                         }
                     echo '</h1>';
@@ -407,10 +497,10 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                 WP_Filesystem();
                 global $wp_filesystem;
                 $ti_about_page_changelog = $wp_filesystem->get_contents( get_template_directory().'/CHANGELOG.md' );
-                $ti_about_page_changelog_lines = explode(PHP_EOL, $ti_about_page_changelog);
-                foreach($ti_about_page_changelog_lines as $ti_about_page_changelog_line){
+                $ti_about_page_changelog_lines = explode( PHP_EOL, $ti_about_page_changelog );
+                foreach( $ti_about_page_changelog_lines as $ti_about_page_changelog_line ){
                     if(substr( $ti_about_page_changelog_line, 0, 3 ) === "###"){
-                        echo '<hr /><h1>'.substr($ti_about_page_changelog_line,3).'</h1>';
+                        echo '<hr /><h1>'.substr( $ti_about_page_changelog_line,3 ).'</h1>';
                     } else {
                         echo $ti_about_page_changelog_line.'<br/>';
                     }
@@ -424,7 +514,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_free_pro() {
 
-            if ( !empty($this->free_pro['free_theme_name']) && !empty($this->free_pro['pro_theme_name']) && !empty($this->free_pro['features']) && is_array($this->free_pro['features']) ) {
+            if ( !empty( $this->free_pro['free_theme_name'] ) && !empty( $this->free_pro['pro_theme_name' ]) && !empty( $this->free_pro['features'] ) && is_array( $this->free_pro['features'] ) ) {
 
                 echo '<div id="free_pro" class="ti-about-page-tab-pane ti-about-page-fre-pro">';
 
@@ -440,25 +530,25 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
                         echo '<tbody>';
 
-                        foreach ($this->free_pro['features'] as $feature) {
+                        foreach ( $this->free_pro['features'] as $feature ) {
 
                             echo '<tr>';
-                            if ( !empty($feature['title']) || !empty($feature['description']) ) {
+                            if ( !empty( $feature['title'] ) || !empty( $feature['description'] ) ) {
                                 echo '<td>';
-                                if ( !empty($feature['title']) ) {
+                                if ( !empty( $feature['title'] ) ) {
                                     echo '<h3>' . $feature['title'] . '</h3>';
                                 }
-                                if ( !empty($feature['description']) ) {
+                                if ( !empty( $feature['description'] ) ) {
                                     echo '<p>' . $feature['description'] . '</p>';
                                 }
                                 echo '</td>';
                             }
-                            if ( !empty($feature['is_in_lite']) && ($feature['is_in_lite'] == 'true') ) {
+                            if ( !empty( $feature['is_in_lite'] ) && ( $feature['is_in_lite'] == 'true' ) ) {
                                 echo '<td><span class="dashicons-before dashicons-yes"></span></td>';
                             } else {
                                 echo '<td><span class="dashicons-before dashicons-no-alt"></span></td>';
                             }
-                            if ( !empty($feature['is_in_pro']) && ($feature['is_in_pro'] == 'true') ) {
+                            if ( !empty( $feature['is_in_pro'] ) && ( $feature['is_in_pro'] == 'true' ) ) {
                                 echo '<td><span class="dashicons-before dashicons-yes"></span></td>';
                             } else {
                                 echo '<td><span class="dashicons-before dashicons-no-alt"></span></td>';
@@ -483,23 +573,23 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
             if( !empty( $this->docs ) && is_array( $this->docs ) ) {
 
-                $docs_length = count($this->docs);
+                $docs_length = count( $this->docs );
 
-                if( function_exists('array_slice') ) {
-                    $docs_firsthalf = array_slice($this->docs, 0, round($docs_length / 2));
-                    $docs_secondhalf = array_slice($this->docs, round($docs_length / 2));
+                if( function_exists( 'array_slice' ) ) {
+                    $docs_firsthalf = array_slice( $this->docs, 0, round( $docs_length / 2 ));
+                    $docs_secondhalf = array_slice( $this->docs, round( $docs_length / 2 ));
                 }
 
                 echo '<div class="ti-about-page-tab-pane-center">';
-                echo '<h1>'.__( 'FAQ', $this->text_domain ).'</h1>';
+                    echo '<h1>'.__( 'FAQ', $this->text_domain ).'</h1>';
                 echo '</div>';
 
-                if( !empty($docs_firsthalf) ) {
-                    $this->ti_about_page_docs_display_column($docs_firsthalf);
+                if( !empty( $docs_firsthalf ) ) {
+                    $this->ti_about_page_docs_display_column( $docs_firsthalf );
                 }
 
-                if( !empty($docs_secondhalf) ) {
-                    $this->ti_about_page_docs_display_column($docs_secondhalf);
+                if( !empty( $docs_secondhalf ) ) {
+                    $this->ti_about_page_docs_display_column( $docs_secondhalf );
                 }
 
             }
@@ -511,17 +601,17 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_docs_display_column( $ti_about_page_docs_array ) {
 
-            if ( !empty($ti_about_page_docs_array) ) {
+            if ( !empty( $ti_about_page_docs_array ) ) {
                 echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
-                foreach ($ti_about_page_docs_array as $doc) {
+                foreach ( $ti_about_page_docs_array as $doc ) {
 
-                    if (!empty($doc['title'])) {
+                    if ( !empty( $doc['title'] ) ) {
                         echo '<h4>' . $doc['title'] . '</h4>';
                     }
-                    if (!empty($doc['description'])) {
+                    if ( !empty( $doc['description'] ) ) {
                         echo '<p>' . $doc['description'] . '</p>';
                     }
-                    if (!empty($doc['link_url']) && !empty($doc['link_label'])) {
+                    if ( !empty( $doc['link_url'] ) && !empty( $doc['link_label'] ) ) {
                         echo '<p><a href="' . esc_url($doc['link_url']) . '" class="button">' . $doc['link_label'] . '</a></p>';
                     }
 
@@ -538,47 +628,59 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
         public function ti_about_page_plugins_display() {
             if( !empty( $this->plugins ) && is_array( $this->plugins ) ) {
 
-                $plugins_length = count($this->plugins);
+                $plugins_length = count( $this->plugins );
 
                 if( function_exists('array_slice') ) {
-                    $plugins_firsthalf = array_slice($this->plugins, 0, round($plugins_length / 2));
-                    $plugins_secondhalf = array_slice($this->plugins, round($plugins_length / 2));
+                    $plugins_firsthalf = array_slice( $this->plugins, 0, round( $plugins_length / 2 ) );
+                    $plugins_secondhalf = array_slice( $this->plugins, round( $plugins_length / 2 ) );
                 }
 
                 echo '<div class="ti-about-page-tab-pane-center">';
-                echo '<h1>'.__( 'Recommended plugins', $this->text_domain).'</h1>';
+                    echo '<h1>'.__( 'Recommended plugins', $this->text_domain ).'</h1>';
                 echo '</div>';
 
-                if( !empty($plugins_firsthalf) ) {
-                    $this->ti_about_page_plugins_display_column($plugins_firsthalf);
+                if( !empty( $plugins_firsthalf ) ) {
+                    $this->ti_about_page_plugins_display_column( $plugins_firsthalf );
                 }
 
-                if( !empty($plugins_secondhalf) ) {
-                    $this->ti_about_page_plugins_display_column($plugins_secondhalf);
+                if( !empty( $plugins_secondhalf ) ) {
+                    $this->ti_about_page_plugins_display_column( $plugins_secondhalf );
                 }
             }
         }
 
         /**
          * Display recommended plugins - one column
+         *
+         * title - Title of plugin
+         * description - Description of plugin
+         * link_label - Install button label
+         * check - condition to check if the plugin is installed
+         * slug - wordpress.org slug of the plugin
+         * link - external link of the recommended plugin (for non wporg plugins)
+         *
          */
         public function ti_about_page_plugins_display_column( $ti_about_page_plugins_array ) {
-            if( !empty($ti_about_page_plugins_array) ) {
+            if( !empty( $ti_about_page_plugins_array ) ) {
                 echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
-                foreach ($ti_about_page_plugins_array as $plugin) {
+                foreach ( $ti_about_page_plugins_array as $plugin ) {
 
-                    if( !empty($plugin['title']) ) {
+                    if( !empty( $plugin['title'] ) ) {
                         echo '<h4>'.$plugin['title'].'</h4>';
                     }
-                    if( !empty($plugin['description']) ) {
+                    if( !empty( $plugin['description'] ) ) {
                         echo '<p>'.$plugin['description'].'</p>';
                     }
-                    if( !empty($plugin['check']) && !empty($plugin['link_label']) && !empty($plugin['slug']) ) {
+                    if( isset($plugin['check']) && !empty($plugin['link_label']) ) {
                         if( $plugin['check'] ) {
                             echo '<p><span class="ti-about-page-w-activated button">'.__( 'Already activated', $this->text_domain ).'</span></p>';
                         }
                         else {
-                            echo '<p><a href="'.esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin='.$plugin['slug'] ), 'install-plugin_'.$plugin['slug'] ) ).'" class="button button-primary">'.$plugin['link_label'].'</a></p>';
+                            if( !empty( $plugin['slug'] ) ) {
+                                echo '<p><a href="' . esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $plugin['slug'] ), 'install-plugin_' . $plugin['slug'] ) ) . '" class="button button-primary">' . $plugin['link_label'] . '</a></p>';
+                            } elseif( !empty( $plugin['link'] ) ) {
+                                echo '<p><a href="' . esc_url( $plugin['link'] ) . '" class="button button-primary">' . $plugin['link_label'] . '</a></p>';
+                            }
                         }
                     }
 
@@ -592,10 +694,10 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_documentation() {
 
-            if( !empty($this->documentation) ) {
+            if( !empty( $this->documentation ) ) {
                 echo '<div class="ti-about-page-tab-pane-center">';
                     echo '<h1>'.__( 'View full documentation', $this->text_domain ).'</h1>';
-                    echo '<p>'.sprintf( __('Need more details? Please check our full documentation for detailed information on how to use %s.', $this->text_domain), $this->theme_name ).'</p>';
+                    echo '<p>'.sprintf( __( 'Need more details? Please check our full documentation for detailed information on how to use %s.', $this->text_domain ), $this->theme_name ).'</p>';
                     echo '<p><a href="'.esc_url( $this->documentation ).'" class="button button-primary">'.__( 'Read full documentation', $this->text_domain ).'</a></p>';
                 echo '</div>';
             }
@@ -606,7 +708,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_github() {
 
-            if( !empty($this->github) ) {
+            if( !empty( $this->github ) ) {
 
                 echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
                     echo '<p><strong>'.__( 'Found a bug? Want to contribute with a fix or create a new feature?',$this->text_domain).'</strong></p>';
@@ -623,7 +725,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_wporg_translations() {
 
-            if( !empty($this->translations_wporg) ) {
+            if( !empty( $this->translations_wporg ) ) {
 
                 echo '<div class="ti-about-page-tab-pane-half">';
                     echo '<p><strong>'.sprintf( __( 'Are you a polyglot? Want to translate %s into your own language?', $this->text_domain ), $this->theme_name ).'</strong></p>';
@@ -640,7 +742,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_wporg_reviews() {
 
-            if( !empty($this->review_wporg) ) {
+            if( !empty( $this->review_wporg ) ) {
                 echo '<div>';
                     echo '<h4>'.sprintf( __( 'Are you enjoying %s?', $this->text_domain ),$this->theme_name ).'</h4>';
                     echo '<p class="review-link">'.sprintf( __( 'Rate our theme on %sWordPress.org%s. We\'d really appreciate it!', $this->text_domain ), '<a href="'.$this->review_wporg.'">', '</a>' ).'</p>';
@@ -651,6 +753,14 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
         /**
          * Display child themes - one column
+         *
+         * title - Name of child theme
+         * image - Image
+         * image_alt - Alternative text for image
+         * description - Description
+         * download_link - Download link
+         * preview_link - Preview link
+         *
          */
         public function ti_about_page_child_themes_display_column( $ti_about_page_child_array ) {
 
@@ -678,17 +788,17 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                                 echo '<div class="theme-details">';
                                 echo '<span class="theme-name">' . $child['title'] . '</span>';
                                 if (!empty($child['download_link'])) {
-                                    echo '<a href="' . $child['download_link'] . '" class="button button-primary install right">' . __('Get now', $this->text_domain) . '</a>';
+                                    echo '<a href="' . $child['download_link'] . '" class="button button-primary install right">' . __( 'Get now', $this->text_domain ) . '</a>';
                                 }
                                 if (!empty($child['preview_link'])) {
-                                    echo '<a class="button button-secondary preview right" target="_blank" href="' . $child['preview_link'] . '">' . __('Live Preview', $this->text_domain) . '</a>';
+                                    echo '<a class="button button-secondary preview right" target="_blank" href="' . $child['preview_link'] . '">' . __( 'Live Preview', $this->text_domain ) . '</a>';
                                 }
                                 echo '<div class="ti-about-page-clear"></div>';
                                 echo '</div>';
                             } else {
                                 echo '<div class="theme-details active">';
-                                echo '<span class="theme-name">' . $this->theme_name . ' - ' . __('Current theme', $this->text_domain) . '</span>';
-                                echo '<a class="button button-secondary customize right" target="_blank" href="' . get_site_url() . '/wp-admin/customize.php">' . __('Customize', $this->text_domain) . '</a>';
+                                echo '<span class="theme-name">' . $this->theme_name . ' - ' . __( 'Current theme', $this->text_domain ) . '</span>';
+                                echo '<a class="button button-secondary customize right" target="_blank" href="' . get_site_url() . '/wp-admin/customize.php">' . __( 'Customize', $this->text_domain ) . '</a>';
                                 echo '<div class="ti-about-page-clear"></div>';
                                 echo '</div>';
                             }
@@ -715,21 +825,20 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
                 wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css' );
                 wp_enqueue_script( 'ti-about-page-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts.js', array('jquery') );
 
-                global $ti_about_page_required_actions;
                 $nr_actions_required = 0;
                 /* get number of required actions */
-                if( get_option('ti_about_page_show_required_actions') ):
-                    $ti_about_page_show_required_actions = get_option('ti_about_page_show_required_actions');
-                else:
+                if( get_option('ti_about_page_show_required_actions') ) {
+                    $ti_about_page_show_required_actions = get_option( 'ti_about_page_show_required_actions' );
+                } else {
                     $ti_about_page_show_required_actions = array();
-                endif;
-                if( !empty($ti_about_page_required_actions) ):
-                    foreach( $ti_about_page_required_actions as $ti_about_page_required_action_value ):
-                        if(( !isset( $ti_about_page_required_action_value['check'] ) || ( isset( $ti_about_page_required_action_value['check'] ) && ( $ti_about_page_required_action_value['check'] == false ) ) ) && ((isset($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']]) && ($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']] == true)) || !isset($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']]) )) :
-                            $nr_actions_required++;
-                        endif;
-                    endforeach;
-                endif;
+                }
+                if( !empty( $this->required_actions ) ) {
+                    foreach ( $this->required_actions as $ti_about_page_required_action_value ) {
+                        if ( ( ! isset( $ti_about_page_required_action_value['check'] ) || ( isset( $ti_about_page_required_action_value['check'] ) && ( $ti_about_page_required_action_value['check'] == false ) ) ) && ( ( isset( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] ) && ( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] == true ) ) || ! isset( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] ) ) ) {
+                            $nr_actions_required ++;
+                        }
+                    }
+                }
                 wp_localize_script( 'ti-about-page-js', 'tiAboutPageObject', array(
                     'nr_actions_required' => $nr_actions_required,
                     'ajaxurl' => admin_url( 'admin-ajax.php' ),
@@ -746,23 +855,23 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
         public function ti_about_page_css_and_scripts_for_customizer() {
 
             wp_enqueue_style( 'ti-about-page-customizer-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css_customizer.css' );
-            wp_enqueue_script( 'ti-about-page-customizer-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts_customizer.js', array('jquery'), '20120206', true );
+            wp_enqueue_script( 'ti-about-page-customizer-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts_customizer.js', array( 'jquery' ), '20120206', true );
 
-            global $ti_about_page_required_actions;
             $nr_actions_required = 0;
             /* get number of required actions */
-            if( get_option('ti_about_page_show_required_actions') ):
-                $ti_about_page_show_required_actions = get_option('ti_about_page_show_required_actions');
-            else:
+            if ( get_option( 'ti_about_page_show_required_actions' ) ) {
+                $ti_about_page_show_required_actions = get_option( 'ti_about_page_show_required_actions' );
+            } else {
                 $ti_about_page_show_required_actions = array();
-            endif;
-            if( !empty($ti_about_page_required_actions) ):
-                foreach( $ti_about_page_required_actions as $ti_about_page_required_action_value ):
-                    if(( !isset( $ti_about_page_required_action_value['check'] ) || ( isset( $ti_about_page_required_action_value['check'] ) && ( $ti_about_page_required_action_value['check'] == false ) ) ) && ((isset($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']]) && ($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']] == true)) || !isset($ti_about_page_show_required_actions[$ti_about_page_required_action_value['id']]) )) :
-                        $nr_actions_required++;
-                    endif;
-                endforeach;
-            endif;
+            }
+            if( !empty( $this->required_actions ) ) {
+                foreach ( $this->required_actions as $ti_about_page_required_action_value ) {
+                    if ( ( ! isset( $ti_about_page_required_action_value['check'] ) || ( isset( $ti_about_page_required_action_value['check'] ) && ( $ti_about_page_required_action_value['check'] == false ) ) ) && ( ( isset( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] ) && ( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] == true ) ) || ! isset( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] ) ) ) {
+                        $nr_actions_required ++;
+                    }
+                }
+            }
+
             wp_localize_script( 'ti-about-page-customizer-js', 'tiAboutPageCustomizerObject', array(
                 'nr_actions_required' => $nr_actions_required,
                 'aboutpage' => esc_url( admin_url( 'themes.php?page='.$this->theme_slug.'-welcome#actions_required' ) ),
@@ -777,32 +886,31 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
          */
         public function ti_about_page_dismiss_required_action_callback() {
 
-            $ti_about_page_dismiss_id = (isset($_GET['dismiss_id'])) ? $_GET['dismiss_id'] : 0;
+            $ti_about_page_dismiss_id = ( isset( $_GET['dismiss_id'] ) ) ? $_GET['dismiss_id'] : 0;
             echo $ti_about_page_dismiss_id; /* this is needed and it's the id of the dismissable required action */
-            if( !empty($ti_about_page_dismiss_id) ):
+            if ( ! empty( $ti_about_page_dismiss_id ) ) {
                 /* if the option exists, update the record for the specified id */
-                if( get_option('ti_about_page_show_required_actions') ):
-                    $ti_about_page_show_required_actions = get_option('ti_about_page_show_required_actions');
-                    $ti_about_page_show_required_actions[$ti_about_page_dismiss_id] = false;
-                    update_option( 'ti_about_page_show_required_actions',$ti_about_page_show_required_actions );
-                /* create the new option,with false for the specified id */
-                else:
+                if ( get_option( 'ti_about_page_show_required_actions' ) ) {
+                    $ti_about_page_show_required_actions                              = get_option( 'ti_about_page_show_required_actions' );
+                    $ti_about_page_show_required_actions[ $ti_about_page_dismiss_id ] = false;
+                    update_option( 'ti_about_page_show_required_actions', $ti_about_page_show_required_actions );
+                    /* create the new option,with false for the specified id */
+                } else {
                     $ti_about_page_show_required_actions_new = array();
-                    if( !empty($ti_about_page_required_actions) ):
-                        foreach( $ti_about_page_required_actions as $ti_about_page_required_action ):
-                            if( $ti_about_page_required_action['id'] == $ti_about_page_dismiss_id ):
-                                $ti_about_page_show_required_actions_new[$ti_about_page_required_action['id']] = false;
-                            else:
-                                $ti_about_page_show_required_actions_new[$ti_about_page_required_action['id']] = true;
-                            endif;
-                        endforeach;
+                    if ( ! empty( $this->required_actions ) ) {
+                        foreach ( $this->required_actions as $ti_about_page_required_action ) {
+                            if ( $ti_about_page_required_action['id'] == $ti_about_page_dismiss_id ) {
+                                $ti_about_page_show_required_actions_new[ $ti_about_page_required_action['id'] ] = false;
+                            } else {
+                                $ti_about_page_show_required_actions_new[ $ti_about_page_required_action['id'] ] = true;
+                            }
+                        }
                         update_option( 'ti_about_page_show_required_actions', $ti_about_page_show_required_actions_new );
-                    endif;
-                endif;
-            endif;
+                    }
+                }
+            }
             die(); // this is required to return a proper result
         }
-
 
     }
 }

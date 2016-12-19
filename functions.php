@@ -295,7 +295,9 @@ add_action( 'tgmpa_register', 'flymag_register_required_plugins' );
 /* ti-about-page */
 require_once get_template_directory() . '/ti-about-page/class-ti-about-page.php';
 
-/* TI About page register */
+/*
+ * TI About page register
+ */
 $config = array(
 	'theme_name' => 'FlyMag',
 	'theme_slug' => 'flymag',
@@ -323,8 +325,14 @@ $config = array(
 				'is_in_pro' => 'true'
 			),
 			array(
+				'title' => __( 'Background image', 'flymag' ),
+				'description' => __( 'You can use any background image you want.','flymag' ),
+				'is_in_lite' => 'true',
+				'is_in_pro' => 'true'
+			),
+			array(
 				'title' => __( 'Featured Area','flymag' ),
-				'description' => '',
+				'description' => __( 'Have access to a new featured area.','flymag' ),
 				'is_in_lite' => 'false',
 				'is_in_pro' => 'true',
 			),
@@ -339,78 +347,69 @@ $config = array(
 				'description' => __( 'More widgets areas for your theme.','flymag' ),
 				'is_in_lite' => 'false',
 				'is_in_pro' => 'true'
+			),
+			array(
+				'title' => __( 'Support','flymag' ),
+				'description' => __( 'You will benefit of our full support for any issues you have with the theme.','flymag' ),
+				'is_in_lite' => 'false',
+				'is_in_pro' => 'true'
 			)
-		)
-	),
-	'child_themes' => array(
-		array(
-			'title' => __( 'ZBlackBeard', 'flymag' ),
-			'image' => get_template_directory_uri().'/images/placeholder.png',
-			'image_alt' => __( 'ZBlackBeard Child Theme','flymag' ),
-			'description' => __( 'ZBlackBeard', 'flymag' ),
-			'download_link' => 'http://themeisle.com/themes/zblackbeard/#pricing-single',
-			'preview_link' => 'https://wp-themes.com/zblackbeard',
-		),
-		array(
-			'title' => __( 'ResponsiveBoat', 'flymag' ),
-			'image' => get_template_directory_uri().'/images/placeholder.png',
-			'download_link' => 'http://themeisle.com/themes/reponsiveboat-theme/#pricing-single',
-			'preview_link' => 'https://wp-themes.com/responsiveboat',
-		),
-		array(
-			'title' => __( 'ResponsiveBoat', 'flymag' ),
-			'image' => get_template_directory_uri().'/images/placeholder.png',
-			'download_link' => 'http://themeisle.com/themes/reponsiveboat-theme/#pricing-single',
-			'preview_link' => 'https://wp-themes.com/responsiveboat',
-		),
-	),
-	'required_actions' => array(
-		array(
-			"id" => 'zerif-lite-req-ac-frontpage-latest-news',
-			"title" => esc_html__( 'Get the one page template' ,'flymag' ),
-			"description"=> esc_html__( 'If you just installed Zerif Lite, and are not able to see the one page template, you need to go to Settings -> Reading , Front page displays and select "Your latest posts".','zerif-lite' ),
-			"check" => ''
-		),
-		array(
-			"id" => 'zerif-lite-req-ac-install-pirate-forms',
-			"title" => esc_html__( 'Install Pirate Forms' ,'flymag' ),
-			"description"=> esc_html__( 'In the next updates, Zerif Lite\'s default contact form will be removed. Please make sure you install the Pirate Forms plugin to keep your site updated, and experience a smooth transition to the latest version.','zerif-lite' ),
-			"check" => defined("PIRATE_FORMS_VERSION"),
-			"plugin_slug" => 'pirate-forms'
-		),
-		array(
-			"id" => 'zerif-lite-req-ac-check-pirate-forms',
-			"title" => esc_html__( 'Check the contact form after installing Pirate Forms' ,'flymag' ),
-			"description"=> esc_html__( "After installing the Pirate Forms plugin, please make sure you check your frontpage contact form is working fine. Also, if you use Zerif Lite in other language(s) please make sure the translation is ok. If not, please translate the contact form again.",'zerif-lite' ),
 		)
 	),
 	'docs' => array(
 		array(
-			'title' => __('Create a child theme','flymag'),
-			'description' => __('If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below','flymag'),
+			'title' => __( 'Create a child theme','flymag' ),
+			'description' => __( 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below','flymag' ),
 			'link_url' => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme/',
-			'link_label' => __('View how to do this','flymag')
+			'link_label' => __( 'View how to do this','flymag' )
 		),
 		array(
-			'title' => __('Build a landing page with a drag-and-drop content builder','flymag'),
-			'description' => __('In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.','flymag'),
+			'title' => __( 'Build a landing page with a drag-and-drop content builder','flymag' ),
+			'description' => __( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.','flymag' ),
 			'link_url' => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
-			'link_label' => __('View how to do this','flymag')
+			'link_label' => __( 'View how to do this','flymag' )
 		),
 		array(
-			'title' => __('Speed up your site','flymag'),
-			'description' => __('If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.','flymag'),
+			'title' => __( 'Speed up your site','flymag' ),
+			'description' => __( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.','flymag' ),
 			'link_url' => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site/',
-			'link_label' => __('View how to do this','flymag')
+			'link_label' => __( 'View how to do this','flymag' )
+		),
+		array(
+			'title' => __( 'How to Internationalize Your Website','flymag' ),
+			'description' => __( 'Although English is the most used language on the internet, you should consider all your web users as well. Find out what it takes to make your website ready for foreign markets from this document.','flymag' ),
+			'link_url' => 'http://docs.themeisle.com/article/80-how-to-translate-zerif',
+			'link_label' => __( 'View how to do this','flymag' )
 		)
 	),
 	'plugins' => array(
 		array(
-			'title' => __('Page Builder by SiteOrigin','flymag'),
-			'description' => __('Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.','flymag'),
-			'link_label' => __('Install Page Builder by SiteOrigin','flymag'),
-			'check' => is_plugin_active( 'adblock-notify-by-bweb/adblock-notify.php' ),
-			'slug' => 'adblock-notify-by-bweb'
+			'title' => __( 'Pirate Forms','flymag' ),
+			'description' => __( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.','flymag' ),
+			'link_label' => __( 'Install Pirate Forms','flymag' ),
+			'check' => defined( 'PIRATE_FORMS_VERSION' ),
+			'slug' => 'pirate-forms'
+		),
+		array(
+			'title' => __( 'Easy Content Types','flymag' ),
+			'description' => __( 'Custom Post Types, Taxonomies and Metaboxes in Minutes.','flymag' ),
+			'link_label' => __( 'Download Easy Content Types','flymag' ),
+			'check' => defined( 'ECPT_PLUGIN_VERSION' ),
+			'link' => 'http://themeisle.com/plugins/easy-content-types/'
+		),
+		array(
+			'title' => __( 'Page Builder by SiteOrigin','flymag' ),
+			'description' => __( 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.','flymag' ),
+			'link_label' => __( 'Install Page Builder by SiteOrigin','flymag' ),
+			'check' => defined( 'SITEORIGIN_PANELS_VERSION' ),
+			'slug' => 'siteorigin-panels'
+		),
+		array(
+			'title' => __( 'Intergeo Maps - Google Maps Plugin','flymag' ),
+			'description' => '',
+			'link_label' => __( 'Install Intergeo Maps','flymag' ),
+			'check' => defined( 'INTERGEO_PLUGIN_NAME' ),
+			'slug' => 'intergeo-maps'
 		)
 	)
 );
