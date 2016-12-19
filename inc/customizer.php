@@ -55,41 +55,24 @@ function flymag_customize_register( $wp_customize ) {
         }
     }
 
-    class Flymag_Info extends WP_Customize_Control {
-        public $type = 'info';
-        public $label = '';
-        public function render_content() {
-        ?>
-            <h3 style="text-decoration: underline; color: #DA4141; text-transform: uppercase;"><?php echo esc_html( $this->label ); ?></h3>
-        <?php
-        }
-    }
+	require_once( 'class/flymag-info.php' );
+	require_once( 'class/flymag-text-control.php' );
 
 
-class Flymag_Theme_Support_Featured_Area extends WP_Customize_Control
-{
-	public function render_content()
-	{
-	echo __('Check out the <a href="http://themeisle.com/themes/flymag-pro/">PRO version</a> for access to the featured area!','flymag');
-	}
-}
+	$wp_customize->add_section('flymag_theme_info', array(
+		'title' => __( 'View theme info', 'flymag' ),
+		'priority' => 0,
+	) );
 
+	$wp_customize->add_setting('flymag_theme_info', array(
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'flymag_sanitize_text',
+	) );
 
-class Flymag_Theme_Support_Footer_Credits extends WP_Customize_Control
-{
-	public function render_content()
-	{
-	echo __('Check out the <a href="http://themeisle.com/themes/flymag-pro/">PRO version</a> for full control over the footer credits section!','flymag');
-	}
-}
-
-class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
-{
-	public function render_content()
-	{
-	echo __('Check out the <a href="http://themeisle.com/themes/flymag-pro/">PRO version</a> to use the extra widget areas!','flymag');
-	}
-}
+	$wp_customize->add_control( new Flymag_Info( $wp_customize, 'flymag_theme_info', array(
+		'section' => 'flymag_theme_info',
+		'priority' => 10,
+	) ) );
 
     //___General___//
     $wp_customize->add_section(
@@ -208,6 +191,21 @@ class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
             'style' => 'padding: 15px;',
         ),
     ) );
+
+	$wp_customize->add_setting( 'flymag_view_pro', array(
+		'sanitize_callback' => 'flymag_sanitize_text',
+	) );
+
+	$wp_customize->add_control( new Flymag_Message( $wp_customize, 'flymag_view_pro',
+		array(
+			'section' => 'flymag_general',
+			'priority' => 100,
+			'upsell_link_url' => esc_url('https://themeisle.com/themes/flymag-pro/'),
+            'link_text' => __('View pro version', 'flymag'),
+            'control_text' => __('It adds extra widget areas, the ability to change footer credits and a featured area.','flymag'),
+		)
+	));
+
     //___Latest news___//
     $wp_customize->add_section(
         'flymag_latest_news',
@@ -367,21 +365,7 @@ class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
             'priority'  => 12
         )
     );
-		//___Featured Area___//
-		$wp_customize->add_section( 'flymag_featured_area' , array(
-				'title'       => __( 'Featured Area', 'flymag' ),
-				'priority'    => 13
-		));
 
-		$wp_customize->add_setting(
-					'flymag_featured_area',array('sanitize_callback' => 'flymag_sanitize_text')
-		);
-
-		$wp_customize->add_control( new Flymag_Theme_Support_Featured_Area( $wp_customize, 'flymag_featured_area',
-				array(
-						'section' => 'flymag_featured_area',
-			 )
-		));
 
     //___Blog options___//
     $wp_customize->add_section(
@@ -893,39 +877,6 @@ class Flymag_Theme_Support_Extra_Widget_Areas extends WP_Customize_Control
         ),
     ) );
 
-		//___Footer Credits___//
-
-		$wp_customize->add_section( 'flymag_footer_credits' , array(
-				'title'       => __( 'Footer Credits', 'flymag' ),
-				'priority'    => 33
-		));
-
-		$wp_customize->add_setting(
-					'flymag_footer_credits',array('sanitize_callback' => 'flymag_sanitize_text')
-		);
-
-		$wp_customize->add_control( new Flymag_Theme_Support_Footer_Credits( $wp_customize, 'flymag_footer_credits',
-				array(
-						'section' => 'flymag_footer_credits',
-			 )
-		));
-
-		//___Footer Credits___//
-
-		$wp_customize->add_section( 'flymag_extra_widget_areas' , array(
-				'title'       => __( 'Extra Widget Areas', 'flymag' ),
-				'priority'    => 33
-		));
-
-		$wp_customize->add_setting(
-					'flymag_extra_widget_areas',array('sanitize_callback' => 'flymag_sanitize_text')
-		);
-
-		$wp_customize->add_control( new Flymag_Theme_Support_Extra_Widget_Areas( $wp_customize, 'flymag_extra_widget_areas',
-				array(
-						'section' => 'flymag_extra_widget_areas',
-			 )
-		));
 
     //___Colors___//
     //Color scheme
@@ -1296,16 +1247,3 @@ function flymag_customize_preview_js() {
 	wp_enqueue_script( 'flymag_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'flymag_customize_preview_js' );
-
-
-function flymag_registers() {
-	wp_enqueue_script( 'flymag_customizer_script', get_template_directory_uri() . '/js/flymag_customizer.js', array("jquery"), '20120206', true  );
-
-	wp_localize_script( 'flymag_customizer_script', 'flymagCustomizerObject', array(
-		'pro' 					=> __('View PRO version','flymag'),
-		'github'				=> __('GitHub','flymag'),
-		'review'				=> __('Leave a Review', 'flymag'),
-		'documentation'				=> __('Documentation', 'flymag')
-		) );
-}
-add_action( 'customize_controls_enqueue_scripts', 'flymag_registers' );

@@ -524,3 +524,8 @@ require get_template_directory() . '/inc/ticker.php';
  * Dynamic styles
  */
 require get_template_directory() . '/styles.php';
+
+/**
+ *  Customizer info
+ */
+require_once get_template_directory() . '/inc/customizer-info/class/class-singleton-customizer-info-section.php';
