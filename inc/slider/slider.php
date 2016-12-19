@@ -5,7 +5,9 @@
  * @package FlyMag
  */
 
-	// Scripts
+/**
+ * Enqueue slider scripts
+ */
 function flymag_slider_scripts() {
 	wp_enqueue_script( 'flymag-owl-script', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'flymag-slider-init', get_template_directory_uri() . '/js/slider-init.js', array(), true );
@@ -25,6 +27,9 @@ function flymag_slider_scripts() {
 
 	// Template
 if ( ! function_exists( 'flymag_slider_template' ) ) {
+	/**
+	 * Display slider template
+	 */
 	function flymag_slider_template() {
 
 		// Get the user choices

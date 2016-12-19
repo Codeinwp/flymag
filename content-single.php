@@ -1,5 +1,7 @@
 <?php
 /**
+ * The template part for displaying single posts
+ *
  * @package FlyMag
  */
 ?>

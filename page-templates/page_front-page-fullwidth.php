@@ -1,7 +1,9 @@
 <?php
-/*
-Template Name: Front page - fullwidth
-*/
+/**
+ * Template Name: Front page - fullwidt
+ *
+ * @package FlyMag
+ */
 
 get_header(); ?>
 

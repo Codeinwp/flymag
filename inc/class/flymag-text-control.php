@@ -11,14 +11,24 @@
 class Flymag_Message extends WP_Customize_Control {
 
 	/**
-	 * The message to display in the controler
+	 * Link for pro version
 	 *
-	 * @var string $message The message to display in the controler
+	 * @var string $link Link for pro version.
 	 */
 	private $link = '';
 
+	/**
+	 * Text between a tags.
+	 *
+	 * @var string $link_text The text for link.
+	 */
 	private $link_text = '';
 
+	/**
+	 * Text for the rest of message.
+	 *
+	 * @var string $control_text The text the rest of message.
+	 */
 	private $control_text = '';
 
 	/**
@@ -45,7 +55,7 @@ class Flymag_Message extends WP_Customize_Control {
 	 * The render function for the controler
 	 */
 	public function render_content() {
-?>
+		?>
 		<a href="<?php echo esc_url( $this->link ); ?>">
 			<?php echo esc_html( $this->link_text ); ?>
 		</a>

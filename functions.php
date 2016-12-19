@@ -15,7 +15,6 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function flymag_setup() {
-
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.

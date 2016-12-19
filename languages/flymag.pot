@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlyMag 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/flymag/issues\n"
-"POT-Creation-Date: 2016-12-19 16:07:24+00:00\n"
+"POT-Creation-Date: 2016-12-19 17:55:24+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,29 +43,29 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:333 functions.php:278
+#: class-tgm-plugin-activation.php:333 functions.php:277
 msgid "Install Required Plugins"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:334 functions.php:279
+#: class-tgm-plugin-activation.php:334 functions.php:278
 msgid "Install Plugins"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:335 functions.php:280
+#: class-tgm-plugin-activation.php:335 functions.php:279
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:336 functions.php:281
+#: class-tgm-plugin-activation.php:336 functions.php:280
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:337 functions.php:282
+#: class-tgm-plugin-activation.php:337 functions.php:281
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:342 functions.php:283
+#: class-tgm-plugin-activation.php:342 functions.php:282
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
@@ -81,7 +81,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:352 functions.php:288
+#: class-tgm-plugin-activation.php:352 functions.php:287
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -107,13 +107,13 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:367 functions.php:285
+#: class-tgm-plugin-activation.php:367 functions.php:284
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:372 functions.php:286
+#: class-tgm-plugin-activation.php:372 functions.php:285
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
@@ -129,7 +129,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:382 functions.php:290
+#: class-tgm-plugin-activation.php:382 functions.php:289
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
@@ -141,13 +141,13 @@ msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:392 functions.php:291
+#: class-tgm-plugin-activation.php:392 functions.php:290
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:397 functions.php:292
+#: class-tgm-plugin-activation.php:397 functions.php:291
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
@@ -156,7 +156,7 @@ msgid "Return to the dashboard"
 msgstr ""
 
 #: class-tgm-plugin-activation.php:399 class-tgm-plugin-activation.php:3029
-#: functions.php:293
+#: functions.php:292
 msgid "Plugin activated successfully."
 msgstr ""
 
@@ -420,19 +420,19 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: comments.php:35 comments.php:53
+#: comments.php:51 comments.php:69
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:54
+#: comments.php:52 comments.php:70
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:55
+#: comments.php:53 comments.php:71
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:65
+#: comments.php:81
 msgid "Comments are closed."
 msgstr ""
 
@@ -456,7 +456,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:29 content.php:35 image.php:45
+#: content-page.php:18 content-single.php:31 content.php:37 image.php:45
 msgid "Pages:"
 msgstr ""
 
@@ -476,49 +476,49 @@ msgstr ""
 msgid "Theme: %2$s by %1$s."
 msgstr ""
 
-#: functions.php:55
+#: functions.php:54
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:55
 msgid "Social"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:99
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:108
 msgid "Home page"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:110
 msgid "Widgets added here will be displayed on pages using the Front Page template"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:118
 msgid "Home page top"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:120
 msgid ""
 "Widgets added here will be displayed above the main content area and "
 "sidebar on pages using the Front Page template"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:128
 msgid "Footer left"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:136
 msgid "Footer center"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:144
 msgid "Footer right"
 msgstr ""
 
-#: functions.php:284
+#: functions.php:283
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -530,7 +530,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:287
+#: functions.php:286
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -542,7 +542,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:289
+#: functions.php:288
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
 "Contact the administrator of this site for help on getting the plugin "
@@ -554,71 +554,71 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:294
+#: functions.php:293
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: functions.php:314
+#: functions.php:313
 msgid "Our best free magazine WordPress theme, FlyMag!"
 msgstr ""
 
-#: functions.php:325
+#: functions.php:324
 msgid "Mobile friendly"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:325
 msgid "Responsive layout. Works on every device."
 msgstr ""
 
-#: functions.php:331
+#: functions.php:330
 msgid "Unlimited color option"
 msgstr ""
 
-#: functions.php:332
+#: functions.php:331
 msgid "You can change the colors of each section. You have unlimited options."
 msgstr ""
 
-#: functions.php:337
+#: functions.php:336
 msgid "Background image"
 msgstr ""
 
-#: functions.php:338
+#: functions.php:337
 msgid "You can use any background image you want."
 msgstr ""
 
-#: functions.php:343
+#: functions.php:342
 msgid "Featured Area"
 msgstr ""
 
-#: functions.php:344
+#: functions.php:343
 msgid "Have access to a new featured area."
 msgstr ""
 
-#: functions.php:349
+#: functions.php:348
 msgid "Footer credits"
 msgstr ""
 
-#: functions.php:355
+#: functions.php:354
 msgid "Extra widgets areas"
 msgstr ""
 
-#: functions.php:356
+#: functions.php:355
 msgid "More widgets areas for your theme."
 msgstr ""
 
-#: functions.php:361
+#: functions.php:360
 msgid "Support"
 msgstr ""
 
-#: functions.php:362
+#: functions.php:361
 msgid "You will benefit of our full support for any issues you have with the theme."
 msgstr ""
 
-#: functions.php:370
+#: functions.php:369
 msgid "Create a child theme"
 msgstr ""
 
-#: functions.php:371
+#: functions.php:370
 msgid ""
 "If you want to make changes to the theme's files, those changes are likely "
 "to be overwritten when you next update the theme. In order to prevent that "
@@ -626,25 +626,25 @@ msgid ""
 "the documentation below"
 msgstr ""
 
-#: functions.php:373 functions.php:379 functions.php:385 functions.php:391
+#: functions.php:372 functions.php:378 functions.php:384 functions.php:390
 msgid "View how to do this"
 msgstr ""
 
-#: functions.php:376
+#: functions.php:375
 msgid "Build a landing page with a drag-and-drop content builder"
 msgstr ""
 
-#: functions.php:377
+#: functions.php:376
 msgid ""
 "In the below documentation you will find an easy way to build a great "
 "looking landing page using a drag-and-drop content builder plugin."
 msgstr ""
 
-#: functions.php:382
+#: functions.php:381
 msgid "Speed up your site"
 msgstr ""
 
-#: functions.php:383
+#: functions.php:382
 msgid ""
 "If you find yourself in the situation where everything on your site is "
 "running very slow, you might consider having a look at the below "
@@ -652,70 +652,70 @@ msgid ""
 "possible solutions for each of the issues."
 msgstr ""
 
-#: functions.php:388
+#: functions.php:387
 msgid "How to Internationalize Your Website"
 msgstr ""
 
-#: functions.php:389
+#: functions.php:388
 msgid ""
 "Although English is the most used language on the internet, you should "
 "consider all your web users as well. Find out what it takes to make your "
 "website ready for foreign markets from this document."
 msgstr ""
 
-#: functions.php:396
+#: functions.php:395
 msgid "Pirate Forms"
 msgstr ""
 
-#: functions.php:397
+#: functions.php:396
 msgid ""
 "Makes your contact page more engaging by creating a good-looking contact "
 "form on your website. The interaction with your visitors was never easier."
 msgstr ""
 
-#: functions.php:398
+#: functions.php:397
 msgid "Install Pirate Forms"
 msgstr ""
 
-#: functions.php:403
+#: functions.php:402
 msgid "Easy Content Types"
 msgstr ""
 
-#: functions.php:404
+#: functions.php:403
 msgid "Custom Post Types, Taxonomies and Metaboxes in Minutes."
 msgstr ""
 
-#: functions.php:405
+#: functions.php:404
 msgid "Download Easy Content Types"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:409
 msgid "Page Builder by SiteOrigin"
 msgstr ""
 
-#: functions.php:411
+#: functions.php:410
 msgid ""
 "Build responsive page layouts using the widgets you know and love using "
 "this simple drag and drop page builder."
 msgstr ""
 
-#: functions.php:412
+#: functions.php:411
 msgid "Install Page Builder by SiteOrigin"
 msgstr ""
 
-#: functions.php:417
+#: functions.php:416
 msgid "Intergeo Maps - Google Maps Plugin"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:418
 msgid "Install Intergeo Maps"
 msgstr ""
 
-#: functions.php:462
+#: functions.php:461
 msgid "Create your menu here"
 msgstr ""
 
-#: functions.php:483
+#: functions.php:482
 msgid "See all posts in %s"
 msgstr ""
 
@@ -761,280 +761,280 @@ msgstr ""
 msgid "Get it"
 msgstr ""
 
-#: inc/customizer.php:35
+#: inc/customizer.php:60
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: inc/customizer.php:62
+#: inc/customizer.php:93
 msgid "View theme info"
 msgstr ""
 
-#: inc/customizer.php:80
+#: inc/customizer.php:110
 msgid "General"
 msgstr ""
 
-#: inc/customizer.php:99
+#: inc/customizer.php:123
 msgid "Upload your logo"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:140
 msgid "Logo size"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:141
 msgid "Max-width for the logo. Default 200px"
 msgstr ""
 
-#: inc/customizer.php:141
+#: inc/customizer.php:156
 msgid "Logo style"
 msgstr ""
 
-#: inc/customizer.php:142
+#: inc/customizer.php:157
 msgid "This option applies only if you are using a logo"
 msgstr ""
 
-#: inc/customizer.php:146 inc/customizer.php:1210
+#: inc/customizer.php:161 inc/customizer.php:1007
 msgid "Only logo"
 msgstr ""
 
-#: inc/customizer.php:147 inc/customizer.php:1211
+#: inc/customizer.php:162 inc/customizer.php:1008
 msgid "Logo plus site title&amp;description"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:175
 msgid "Padding"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:176
 msgid "Top&amp;bottom padding for the branding. Default: 150px"
 msgstr ""
 
-#: inc/customizer.php:183
+#: inc/customizer.php:193
 msgid "View pro version"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:194
 msgid ""
 "It adds extra widget areas, the ability to change footer credits and a "
 "featured area."
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:200
 msgid "Latest news"
 msgstr ""
 
-#: inc/customizer.php:208
+#: inc/customizer.php:212
 msgid "Check this box to display the latest news ribbon."
 msgstr ""
 
-#: inc/customizer.php:220
+#: inc/customizer.php:223
 msgid "Select which category to show in the slider"
 msgstr ""
 
-#: inc/customizer.php:236 inc/customizer.php:341
+#: inc/customizer.php:234 inc/customizer.php:307
 msgid "Enter the number of posts you want to show"
 msgstr ""
 
-#: inc/customizer.php:246
+#: inc/customizer.php:242
 msgid "Carousel"
 msgstr ""
 
-#: inc/customizer.php:262
+#: inc/customizer.php:252
 msgid "Show carousel on front page?"
 msgstr ""
 
-#: inc/customizer.php:279
+#: inc/customizer.php:263
 msgid "Show carousel on blog index/archives/etc?"
 msgstr ""
 
-#: inc/customizer.php:296
+#: inc/customizer.php:274
 msgid "Show carousel on single posts and pages?"
 msgstr ""
 
-#: inc/customizer.php:308
+#: inc/customizer.php:285
 msgid "Select which category to show in the carousel"
 msgstr ""
 
-#: inc/customizer.php:324
+#: inc/customizer.php:296
 msgid "Enter the carousel speed in miliseconds [Default: 4000]"
 msgstr ""
 
-#: inc/customizer.php:352
+#: inc/customizer.php:315
 msgid "Blog options"
 msgstr ""
 
-#: inc/customizer.php:364
+#: inc/customizer.php:325
 msgid "Blog page"
 msgstr ""
 
-#: inc/customizer.php:382
+#: inc/customizer.php:337
 msgid "Blog layout"
 msgstr ""
 
-#: inc/customizer.php:386 inc/customizer.php:1191
+#: inc/customizer.php:341 inc/customizer.php:974
 msgid "Classic"
 msgstr ""
 
-#: inc/customizer.php:387 inc/customizer.php:1192
+#: inc/customizer.php:342 inc/customizer.php:975
 msgid "Full width (no sidebar)"
 msgstr ""
 
-#: inc/customizer.php:388 inc/customizer.php:1193
+#: inc/customizer.php:343 inc/customizer.php:976
 msgid "Masonry (grid style)"
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:355
 msgid "Excerpt lenght"
 msgstr ""
 
-#: inc/customizer.php:405
+#: inc/customizer.php:356
 msgid "Choose your excerpt length. Default: 55 words"
 msgstr ""
 
-#: inc/customizer.php:425
+#: inc/customizer.php:371
 msgid "Hide post date on index?"
 msgstr ""
 
-#: inc/customizer.php:442
+#: inc/customizer.php:382
 msgid "Hide post categories on index?"
 msgstr ""
 
-#: inc/customizer.php:455
+#: inc/customizer.php:393
 msgid "Single posts"
 msgstr ""
 
-#: inc/customizer.php:473
+#: inc/customizer.php:405
 msgid "Hide post date &amp; author on single posts?"
 msgstr ""
 
-#: inc/customizer.php:490
+#: inc/customizer.php:416
 msgid "Hide post categories on single posts?"
 msgstr ""
 
-#: inc/customizer.php:507
+#: inc/customizer.php:427
 msgid "Hide post tags on single posts?"
 msgstr ""
 
-#: inc/customizer.php:523
+#: inc/customizer.php:437
 msgid "Full width single posts?"
 msgstr ""
 
-#: inc/customizer.php:532
+#: inc/customizer.php:444
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:534
+#: inc/customizer.php:446
 msgid ""
 "You can use any Google Fonts you want for the heading and/or body. See the "
 "fonts here: google.com/fonts. See the documentation if you need help with "
 "this: docs.themeisle.com/article/310-flymag-documentation"
 msgstr ""
 
-#: inc/customizer.php:545
+#: inc/customizer.php:455
 msgid "Body fonts"
 msgstr ""
 
-#: inc/customizer.php:562 inc/customizer.php:610
+#: inc/customizer.php:466 inc/customizer.php:500
 msgid "Font name/style/sets"
 msgstr ""
 
-#: inc/customizer.php:579 inc/customizer.php:627
+#: inc/customizer.php:477 inc/customizer.php:511
 msgid "Font family"
 msgstr ""
 
-#: inc/customizer.php:593
+#: inc/customizer.php:489
 msgid "Headings fonts"
 msgstr ""
 
-#: inc/customizer.php:641
+#: inc/customizer.php:523
 msgid "Font sizes"
 msgstr ""
 
-#: inc/customizer.php:660 inc/customizer.php:1034
+#: inc/customizer.php:538 inc/customizer.php:836
 msgid "Site title"
 msgstr ""
 
-#: inc/customizer.php:681 inc/customizer.php:1055
+#: inc/customizer.php:556 inc/customizer.php:851
 msgid "Site description"
 msgstr ""
 
-#: inc/customizer.php:702 inc/customizer.php:1095
+#: inc/customizer.php:574 inc/customizer.php:879
 msgid "Menu items"
 msgstr ""
 
-#: inc/customizer.php:723
+#: inc/customizer.php:592
 msgid "H1 font size"
 msgstr ""
 
-#: inc/customizer.php:744
+#: inc/customizer.php:610
 msgid "H2 font size"
 msgstr ""
 
-#: inc/customizer.php:765
+#: inc/customizer.php:628
 msgid "H3 font size"
 msgstr ""
 
-#: inc/customizer.php:786
+#: inc/customizer.php:646
 msgid "H4 font size"
 msgstr ""
 
-#: inc/customizer.php:807
+#: inc/customizer.php:664
 msgid "H5 font size"
 msgstr ""
 
-#: inc/customizer.php:828
+#: inc/customizer.php:682
 msgid "H6 font size"
 msgstr ""
 
-#: inc/customizer.php:849
+#: inc/customizer.php:700
 msgid "Body font size"
 msgstr ""
 
-#: inc/customizer.php:872
+#: inc/customizer.php:722
 msgid "Color scheme"
 msgstr ""
 
-#: inc/customizer.php:890
+#: inc/customizer.php:734
 msgid "Color 1 (primary color)"
 msgstr ""
 
-#: inc/customizer.php:909
+#: inc/customizer.php:747
 msgid "Color 2"
 msgstr ""
 
-#: inc/customizer.php:928
+#: inc/customizer.php:760
 msgid "Color 3"
 msgstr ""
 
-#: inc/customizer.php:947
+#: inc/customizer.php:773
 msgid "Color 4"
 msgstr ""
 
-#: inc/customizer.php:966
+#: inc/customizer.php:786
 msgid "Color 5"
 msgstr ""
 
-#: inc/customizer.php:993
+#: inc/customizer.php:807
 msgid "Latest news background"
 msgstr ""
 
-#: inc/customizer.php:1013
+#: inc/customizer.php:821
 msgid "Header background"
 msgstr ""
 
-#: inc/customizer.php:1075
+#: inc/customizer.php:865
 msgid "Menu background"
 msgstr ""
 
-#: inc/customizer.php:1121
+#: inc/customizer.php:899
 msgid "Body text"
 msgstr ""
 
-#: inc/customizer.php:1142
+#: inc/customizer.php:914
 msgid "Widgets color"
 msgstr ""
 
-#: inc/customizer.php:1163
+#: inc/customizer.php:929
 msgid "Footer"
 msgstr ""
 
@@ -1268,120 +1268,120 @@ msgstr ""
 msgid "View Theme Info"
 msgstr ""
 
-#: widgets/recent-comments.php:6
+#: widgets/recent-comments.php:17
 msgid "Display your site&#8217;s recent comments with avatars."
 msgstr ""
 
-#: widgets/recent-comments.php:7
+#: widgets/recent-comments.php:18
 msgid "Flymag: Recent Comments"
 msgstr ""
 
-#: widgets/recent-comments.php:42
+#: widgets/recent-comments.php:55
 msgid "Recent Comments"
 msgstr ""
 
-#: widgets/recent-comments.php:69
+#: widgets/recent-comments.php:83
 #. translators: comments widget: 1: comment author, 2: post link
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: widgets/recent-comments.php:101 widgets/recent-posts-a.php:148
-#: widgets/recent-posts-b.php:158 widgets/recent-posts-d.php:126
-#: widgets/recent-posts-slider.php:123
+#: widgets/recent-comments.php:133 widgets/recent-posts-a.php:178
+#: widgets/recent-posts-b.php:188 widgets/recent-posts-d.php:156
+#: widgets/recent-posts-slider.php:153
 msgid "Title:"
 msgstr ""
 
-#: widgets/recent-comments.php:104
+#: widgets/recent-comments.php:136
 msgid "Number of comments to show:"
 msgstr ""
 
-#: widgets/recent-posts-a.php:10
+#: widgets/recent-posts-a.php:17
 msgid "Recent posts widget Type A (front page)"
 msgstr ""
 
-#: widgets/recent-posts-a.php:11
+#: widgets/recent-posts-a.php:18
 msgid "Flymag: Recent posts type A"
 msgstr ""
 
-#: widgets/recent-posts-a.php:151 widgets/recent-posts-b.php:161
-#: widgets/recent-posts-d.php:128 widgets/recent-posts-slider.php:126
+#: widgets/recent-posts-a.php:181 widgets/recent-posts-b.php:191
+#: widgets/recent-posts-d.php:158 widgets/recent-posts-slider.php:156
 msgid ""
 "Enter the slug for your category or leave empty to show posts from all "
 "categories."
 msgstr ""
 
-#: widgets/recent-posts-a.php:154 widgets/recent-posts-b.php:164
-#: widgets/recent-posts-c.php:215 widgets/recent-posts-d.php:133
-#: widgets/recent-posts-slider.php:132
+#: widgets/recent-posts-a.php:184 widgets/recent-posts-b.php:194
+#: widgets/recent-posts-c.php:242 widgets/recent-posts-d.php:163
+#: widgets/recent-posts-slider.php:162
 msgid "Background color"
 msgstr ""
 
-#: widgets/recent-posts-a.php:157 widgets/recent-posts-b.php:167
-#: widgets/recent-posts-c.php:218 widgets/recent-posts-d.php:136
+#: widgets/recent-posts-a.php:187 widgets/recent-posts-b.php:197
+#: widgets/recent-posts-c.php:245 widgets/recent-posts-d.php:166
 msgid "Text color"
 msgstr ""
 
-#: widgets/recent-posts-b.php:10
+#: widgets/recent-posts-b.php:17
 msgid "Recent posts widget Type B (front page)"
 msgstr ""
 
-#: widgets/recent-posts-b.php:11
+#: widgets/recent-posts-b.php:18
 msgid "Flymag: Recent posts type B"
 msgstr ""
 
-#: widgets/recent-posts-c.php:10
+#: widgets/recent-posts-c.php:17
 msgid "Recent posts widget Type C - two categories (front page)"
 msgstr ""
 
-#: widgets/recent-posts-c.php:11
+#: widgets/recent-posts-c.php:18
 msgid "Flymag: Recent posts type C"
 msgstr ""
 
-#: widgets/recent-posts-c.php:209
+#: widgets/recent-posts-c.php:236
 msgid "Enter the slug for your first category."
 msgstr ""
 
-#: widgets/recent-posts-c.php:212
+#: widgets/recent-posts-c.php:239
 msgid "Enter the slug for your second category."
 msgstr ""
 
-#: widgets/recent-posts-d.php:10
+#: widgets/recent-posts-d.php:17
 msgid "Recent posts widget Type D - only images (front page)"
 msgstr ""
 
-#: widgets/recent-posts-d.php:11
+#: widgets/recent-posts-d.php:18
 msgid "Flymag: Recent posts type D"
 msgstr ""
 
-#: widgets/recent-posts-d.php:130 widgets/recent-posts-slider.php:129
+#: widgets/recent-posts-d.php:160 widgets/recent-posts-slider.php:159
 msgid "Number of posts to show:"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:10
+#: widgets/recent-posts-slider.php:17
 msgid "Recent posts slider (front page)"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:11
+#: widgets/recent-posts-slider.php:18
 msgid "Flymag: Recent posts slider"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:135
+#: widgets/recent-posts-slider.php:165
 msgid "Title color"
 msgstr ""
 
-#: widgets/video-widget.php:6
+#: widgets/video-widget.php:17
 msgid "Display an oEmbed video."
 msgstr ""
 
-#: widgets/video-widget.php:7
+#: widgets/video-widget.php:18
 msgid "Flymag: Video"
 msgstr ""
 
-#: widgets/video-widget.php:24
+#: widgets/video-widget.php:39
 msgid "Title"
 msgstr ""
 
-#: widgets/video-widget.php:28
+#: widgets/video-widget.php:43
 msgid ""
 "Paste the URL of the video (only from a network that supports oEmbed, like "
 "Youtube, Vimeo etc.):"
@@ -1413,7 +1413,7 @@ msgid "http://themeisle.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "Front page - fullwidth"
+msgid "Front page - fullwidt"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -1466,9 +1466,16 @@ msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Activate %2$s"
 msgstr ""
 
-#: comments.php:28
+#: comments.php:31
+#. translators: %s: post title
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:35
+#. translators: 1: number of comments, 2: post title
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""

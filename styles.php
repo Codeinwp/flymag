@@ -1,9 +1,15 @@
 <?php
 /**
+ * Custom theme style
+ *
  * @package FlyMag
  */
 
-// Dynamic styles
+/**
+ * Add custom style
+ *
+ * @param string $custom Input string.
+ */
 function flymag_custom_styles( $custom ) {
 
 	// __COLORS

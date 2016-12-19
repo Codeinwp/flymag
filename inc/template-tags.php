@@ -18,18 +18,18 @@ if ( ! function_exists( 'flymag_paging_nav' ) ) :
 		}
 		?>
 		<nav class="navigation paging-navigation clearfix" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'flymag' ); ?></h1>
-		<div class="nav-links">
+			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'flymag' ); ?></h1>
+			<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous button"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'flymag' ) ); ?></div>
-			<?php endif; ?>
+				<?php if ( get_next_posts_link() ) : ?>
+					<div class="nav-previous button"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'flymag' ) ); ?></div>
+				<?php endif; ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next button"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'flymag' ) ); ?></div>
-			<?php endif; ?>
+				<?php if ( get_previous_posts_link() ) : ?>
+					<div class="nav-next button"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'flymag' ) ); ?></div>
+				<?php endif; ?>
 
-		</div><!-- .nav-links -->
+			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
 		<?php
 	}
@@ -49,15 +49,15 @@ if ( ! function_exists( 'flymag_post_nav' ) ) :
 		}
 		?>
 		<nav class="navigation post-navigation clearfix" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'flymag' ); ?></h1>
-		<div class="nav-links">
-			<?php
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'flymag' ); ?></h1>
+			<div class="nav-links">
+				<?php
 				previous_post_link( '<div class="nav-previous button">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'flymag' ) );
-				next_post_link( '<div class="nav-next button">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'flymag' ) );
-			?>
+				next_post_link( '<div class="nav-next button">%link</div>', _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link', 'flymag' ) );
+				?>
 			</div><!-- .nav-links -->
-			</nav><!-- .navigation -->
-			<?php
+		</nav><!-- .navigation -->
+		<?php
 	}
 endif;
 
@@ -78,17 +78,17 @@ if ( ! function_exists( 'flymag_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-			$posted_on = sprintf(
-				'<i class="fa fa-calendar"></i> %s',
-				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-			);
+		$posted_on = sprintf(
+			'<i class="fa fa-calendar"></i> %s',
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
 
-			$byline = sprintf(
-				'<i class="fa fa-user"></i> %s',
-				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a></span>'
-			);
+		$byline = sprintf(
+			'<i class="fa fa-user"></i> %s',
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a></span>'
+		);
 
-			echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
 	}
 endif;
@@ -123,7 +123,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 *
 	 * @param string $before Optional. Content to prepend to the title. Default empty.
-	 * @param string $after  Optional. Content to append to the title. Default empty.
+	 * @param string $after Optional. Content to append to the title. Default empty.
 	 */
 	function the_archive_title( $before = '', $after = '' ) {
 		if ( is_category() ) {
@@ -161,19 +161,19 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 		} elseif ( is_post_type_archive() ) {
 			$title = sprintf( __( 'Archives: %s', 'flymag' ), post_type_archive_title( '', false ) );
 		} elseif ( is_tax() ) {
-				$tax = get_taxonomy( get_queried_object()->taxonomy );
-				/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-				$title = sprintf( __( '%1$s: %2$s', 'flymag' ), $tax->labels->singular_name, single_term_title( '', false ) );
+			$tax = get_taxonomy( get_queried_object()->taxonomy );
+			/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
+			$title = sprintf( __( '%1$s: %2$s', 'flymag' ), $tax->labels->singular_name, single_term_title( '', false ) );
 		} else {
 			$title = __( 'Archives', 'flymag' );
 		}
 
-			/**
-	 * Filter the archive title.
-	 *
-	 * @param string $title Archive title to be displayed.
-	 */
-			$title = apply_filters( 'get_the_archive_title', $title );
+		/**
+		 * Filter the archive title.
+		 *
+		 * @param string $title Archive title to be displayed.
+		 */
+		$title = apply_filters( 'get_the_archive_title', $title );
 
 		if ( ! empty( $title ) ) {
 			echo $before . $title . $after;
@@ -190,19 +190,19 @@ if ( ! function_exists( 'the_archive_description' ) ) :
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 *
 	 * @param string $before Optional. Content to prepend to the description. Default empty.
-	 * @param string $after  Optional. Content to append to the description. Default empty.
+	 * @param string $after Optional. Content to append to the description. Default empty.
 	 */
 	function the_archive_description( $before = '', $after = '' ) {
 		$description = apply_filters( 'get_the_archive_description', term_description() );
 
 		if ( ! empty( $description ) ) {
 			/**
-		 * Filter the archive description.
-		 *
-		 * @see term_description()
-		 *
-		 * @param string $description Archive description to be displayed.
-		 */
+			 * Filter the archive description.
+			 *
+			 * @see term_description()
+			 *
+			 * @param string $description Archive description to be displayed.
+			 */
 			echo $before . $description . $after;
 		}
 	}
@@ -249,5 +249,6 @@ function flymag_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'flymag_categories' );
 }
+
 add_action( 'edit_category', 'flymag_category_transient_flusher' );
-add_action( 'save_post',     'flymag_category_transient_flusher' );
+add_action( 'save_post', 'flymag_category_transient_flusher' );

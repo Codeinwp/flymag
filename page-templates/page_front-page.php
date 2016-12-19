@@ -1,7 +1,9 @@
 <?php
-/*
-Template Name: Front page
-*/
+/**
+ * Template Name: Front page
+ *
+ * @package FlyMag
+ */
 
 get_header(); ?>
 

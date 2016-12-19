@@ -1,11 +1,18 @@
 <?php
-
 /**
  * Recent posts type C widget
+ *
+ * @package FlyMag
  */
 
+/**
+ * Class Flymag_Recent_C
+ */
 class Flymag_Recent_C extends WP_Widget {
 
+	/**
+	 * Flymag_Recent_C constructor.
+	 */
 	public function __construct() {
 		$widget_ops = array( 'classname' => 'recent_posts_c clearfix', 'description' => __( 'Recent posts widget Type C - two categories (front page)', 'flymag' ) );
 		parent::__construct( 'recent_posts_c', __( 'Flymag: Recent posts type C', 'flymag' ), $widget_ops );
@@ -16,6 +23,12 @@ class Flymag_Recent_C extends WP_Widget {
 		add_action( 'switch_theme', array( $this, 'flush_widget_cache' ) );
 	}
 
+	/**
+	 * Outputs the content of the widget
+	 *
+	 * @param array $args Widget arguments.
+	 * @param array $instance Widget instance.
+	 */
 	public function widget( $args, $instance ) {
 		$cache = array();
 		if ( ! $this->is_preview() ) {
@@ -179,6 +192,12 @@ if ( ! $this->is_preview() ) {
 }
 	}
 
+	/**
+	 * Processing widget options on save
+	 *
+	 * @param array $new_instance The new options.
+	 * @param array $old_instance The previous options.
+	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance['cat_one'] 	= strip_tags( $new_instance['cat_one'] );
@@ -195,10 +214,18 @@ if ( ! $this->is_preview() ) {
 		return $instance;
 	}
 
+	/**
+	 * Flush widget cache
+	 */
 	public function flush_widget_cache() {
 		wp_cache_delete( 'recent_posts_c', 'widget' );
 	}
 
+	/**
+	 * Outputs the options form on admin
+	 *
+	 * @param array $instance The widget options.
+	 */
 	public function form( $instance ) {
 		$cat_one  	= isset( $instance['cat_one'] ) ? esc_attr( $instance['cat_one'] ) : '';
 		$cat_two  	= isset( $instance['cat_two'] ) ? esc_attr( $instance['cat_two'] ) : '';
