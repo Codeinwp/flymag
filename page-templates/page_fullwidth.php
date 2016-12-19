@@ -1,7 +1,6 @@
 <?php
 
 /*
-
 Template Name: Full width
 
 */
@@ -20,10 +19,9 @@ Template Name: Full width
 				<?php
 
 					// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || '0' != get_comments_number() ) :
 
-					if ( comments_open() || '0' != get_comments_number() ) :
-
-						comments_template();
+					comments_template();
 
 					endif;
 
@@ -36,4 +34,3 @@ Template Name: Full width
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
-

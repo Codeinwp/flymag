@@ -2,22 +2,21 @@
 
 /**
  * Recent posts type A widget
- *
  */
 
 class Flymag_Recent_D extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'recent_posts_d clearfix', 'description' => __( 'Recent posts widget Type D - only images (front page)', 'flymag') );
-		parent::__construct('recent_posts_d', __('Flymag: Recent posts type D', 'flymag'), $widget_ops);
+		$widget_ops = array( 'classname' => 'recent_posts_d clearfix', 'description' => __( 'Recent posts widget Type D - only images (front page)', 'flymag' ) );
+		parent::__construct( 'recent_posts_d', __( 'Flymag: Recent posts type D', 'flymag' ), $widget_ops );
 		$this->alt_option_name = 'recent_posts_d';
 
-		add_action( 'save_post', array($this, 'flush_widget_cache') );
-		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-		add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+		add_action( 'save_post', array( $this, 'flush_widget_cache' ) );
+		add_action( 'deleted_post', array( $this, 'flush_widget_cache' ) );
+		add_action( 'switch_theme', array( $this, 'flush_widget_cache' ) );
 	}
 
-	public function widget($args, $instance) {
+	public function widget( $args, $instance ) {
 		$cache = array();
 		if ( ! $this->is_preview() ) {
 			$cache = wp_cache_get( 'recent_posts_d', 'widget' );
@@ -40,12 +39,13 @@ class Flymag_Recent_D extends WP_Widget {
 
 		$title 		= ( ! empty( $instance['title'] ) ) ? $instance['title'] : '';
 		$title 		= apply_filters( 'widget_title', $title, $instance, $this->id_base );
-		$category 	= isset( $instance['category'] ) ? esc_attr($instance['category']) : '';
-		$bg_color 	= isset( $instance['bg_color'] ) ? esc_attr($instance['bg_color']) : '';
-		$text_color	= isset( $instance['text_color'] ) ? esc_attr($instance['text_color']) : '';	
+		$category 	= isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
+		$bg_color 	= isset( $instance['bg_color'] ) ? esc_attr( $instance['bg_color'] ) : '';
+		$text_color	= isset( $instance['text_color'] ) ? esc_attr( $instance['text_color'] ) : '';
 		$number 	= ( ! empty( $instance['number'] ) ) ? intval( $instance['number'] ) : 6;
-		if ( ! $number )
+		if ( ! $number ) {
 			$number = 6;
+		}
 		$r = new WP_Query( array(
 			'posts_per_page'      => $number,
 			'no_found_rows'       => true,
@@ -55,7 +55,7 @@ class Flymag_Recent_D extends WP_Widget {
 
 		) );
 
-		if ($r->have_posts()) :
+		if ( $r->have_posts() ) :
 ?>
 		<?php echo $args['before_widget']; ?>
 
@@ -96,29 +96,30 @@ class Flymag_Recent_D extends WP_Widget {
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['title'] 		= strip_tags($new_instance['title']);
-		$instance['category'] 	= strip_tags($new_instance['category']);
-		$instance['number'] 	= absint($new_instance['number']);
-		$instance['bg_color'] 	= strip_tags($new_instance['bg_color']);
-		$instance['text_color'] = strip_tags($new_instance['text_color']);
+		$instance['title'] 		= strip_tags( $new_instance['title'] );
+		$instance['category'] 	= strip_tags( $new_instance['category'] );
+		$instance['number'] 	= absint( $new_instance['number'] );
+		$instance['bg_color'] 	= strip_tags( $new_instance['bg_color'] );
+		$instance['text_color'] = strip_tags( $new_instance['text_color'] );
 		$this->flush_widget_cache();
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
-		if ( isset($alloptions['recent_posts_d']) )
-			delete_option('recent_posts_d');
+		if ( isset( $alloptions['recent_posts_d'] ) ) {
+			delete_option( 'recent_posts_d' );
+		}
 
 		return $instance;
 	}
 
 	public function flush_widget_cache() {
-		wp_cache_delete('recent_posts_d', 'widget');
+		wp_cache_delete( 'recent_posts_d', 'widget' );
 	}
 
 	public function form( $instance ) {
 		$title  	= isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$category  	= isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
 		$bg_color 	= isset( $instance['bg_color'] ) ? esc_attr( $instance['bg_color'] ) : '';
-		$text_color = isset( $instance['text_color'] ) ? esc_attr( $instance['text_color'] ) : '';		
+		$text_color = isset( $instance['text_color'] ) ? esc_attr( $instance['text_color'] ) : '';
 		$number    	= isset( $instance['number'] ) ? intval( $instance['number'] ) : 6;
 ?>
 
@@ -130,10 +131,10 @@ class Flymag_Recent_D extends WP_Widget {
 		<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
 
 		<p><label for="<?php echo $this->get_field_id( 'bg_color' ); ?>" style="display:block;"><?php _e( 'Background color', 'flymag' ); ?></label> 
-        <input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>" name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>" /></p>
+		<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>" name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>" /></p>
 
 		<p><label for="<?php echo $this->get_field_id( 'text_color' ); ?>" style="display:block;"><?php _e( 'Text color', 'flymag' ); ?></label> 
-        <input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'text_color' ); ?>" name="<?php echo $this->get_field_name( 'text_color' ); ?>" value="<?php echo $text_color; ?>" /></p>
+		<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'text_color' ); ?>" name="<?php echo $this->get_field_name( 'text_color' ); ?>" value="<?php echo $text_color; ?>" /></p>
 	
 <?php }
 }

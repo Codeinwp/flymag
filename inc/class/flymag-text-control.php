@@ -44,11 +44,12 @@ class Flymag_Message extends WP_Customize_Control {
 	/**
 	 * The render function for the controler
 	 */
-	public function render_content() {?>
-		<a href="<?php echo esc_url($this->link); ?>">
-			<?php echo esc_html($this->link_text); ?>
+	public function render_content() {
+?>
+		<a href="<?php echo esc_url( $this->link ); ?>">
+			<?php echo esc_html( $this->link_text ); ?>
 		</a>
-		<?php echo esc_html($this->control_text);
+		<?php echo esc_html( $this->control_text );
 	}
 }
 

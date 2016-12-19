@@ -2,22 +2,21 @@
 
 /**
  * Recent posts type A widget
- *
  */
 
 class Flymag_Recent_Slider extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'recent_posts_slider clearfix', 'description' => __( 'Recent posts slider (front page)', 'flymag') );
-		parent::__construct('recent_posts_slider', __('Flymag: Recent posts slider', 'flymag'), $widget_ops);
+		$widget_ops = array( 'classname' => 'recent_posts_slider clearfix', 'description' => __( 'Recent posts slider (front page)', 'flymag' ) );
+		parent::__construct( 'recent_posts_slider', __( 'Flymag: Recent posts slider', 'flymag' ), $widget_ops );
 		$this->alt_option_name = 'recent_posts_slider';
 
-		add_action( 'save_post', array($this, 'flush_widget_cache') );
-		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-		add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+		add_action( 'save_post', array( $this, 'flush_widget_cache' ) );
+		add_action( 'deleted_post', array( $this, 'flush_widget_cache' ) );
+		add_action( 'switch_theme', array( $this, 'flush_widget_cache' ) );
 	}
 
-	public function widget($args, $instance) {
+	public function widget( $args, $instance ) {
 		$cache = array();
 		if ( ! $this->is_preview() ) {
 			$cache = wp_cache_get( 'recent_posts_slider', 'widget' );
@@ -40,22 +39,23 @@ class Flymag_Recent_Slider extends WP_Widget {
 
 		$title 		= ( ! empty( $instance['title'] ) ) ? $instance['title'] : '';
 		$title 		= apply_filters( 'widget_title', $title, $instance, $this->id_base );
-		$category 	= isset( $instance['category'] ) ? esc_attr($instance['category']) : '';
+		$category 	= isset( $instance['category'] ) ? esc_attr( $instance['category'] ) : '';
 		$number 	= ( ! empty( $instance['number'] ) ) ? intval( $instance['number'] ) : 4;
-		if ( ! $number )
+		if ( ! $number ) {
 			$number = 4;
-		$bg_color 	= isset( $instance['bg_color'] ) ? esc_attr($instance['bg_color']) : '';
-		$title_color 	= isset( $instance['title_color'] ) ? esc_attr($instance['title_color']) : '';
+		}
+		$bg_color 	= isset( $instance['bg_color'] ) ? esc_attr( $instance['bg_color'] ) : '';
+		$title_color 	= isset( $instance['title_color'] ) ? esc_attr( $instance['title_color'] ) : '';
 
 		$r = new WP_Query( apply_filters( 'widget_posts_args', array(
 			'no_found_rows'       => true,
 			'post_status'         => 'publish',
 			'ignore_sticky_posts' => true,
 			'category_name' 	  => $category,
-			'posts_per_page'	  => $number
+			'posts_per_page'	  => $number,
 		) ) );
 
-		if ($r->have_posts()) :
+		if ( $r->have_posts() ) :
 ?>
 		<?php echo $args['before_widget']; ?>
 
@@ -69,7 +69,7 @@ class Flymag_Recent_Slider extends WP_Widget {
 							<span class="carousel-overlay"></span>
 							<?php the_post_thumbnail(); ?>
 							<?php the_title( sprintf( '<h3 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-							<span class="slide-link"><a href="<?php echo esc_url(get_permalink()); ?>"><i class="fa fa-long-arrow-right"></i></a></span>
+							<span class="slide-link"><a href="<?php echo esc_url( get_permalink() ); ?>"><i class="fa fa-long-arrow-right"></i></a></span>
 						</div>
 					<?php endif; ?>
 				<?php endwhile; ?>
@@ -92,23 +92,24 @@ class Flymag_Recent_Slider extends WP_Widget {
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['title'] 		= strip_tags($new_instance['title']);
-		$instance['category'] 	= strip_tags($new_instance['category']);
-		$instance['number'] 	= absint($new_instance['number']);
-		$instance['bg_color'] 	= strip_tags($new_instance['bg_color']);
-		$instance['title_color'] 	= strip_tags($new_instance['title_color']);
+		$instance['title'] 		= strip_tags( $new_instance['title'] );
+		$instance['category'] 	= strip_tags( $new_instance['category'] );
+		$instance['number'] 	= absint( $new_instance['number'] );
+		$instance['bg_color'] 	= strip_tags( $new_instance['bg_color'] );
+		$instance['title_color'] 	= strip_tags( $new_instance['title_color'] );
 
 		$this->flush_widget_cache();
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
-		if ( isset($alloptions['recent_posts_slider']) )
-			delete_option('recent_posts_slider');
+		if ( isset( $alloptions['recent_posts_slider'] ) ) {
+			delete_option( 'recent_posts_slider' );
+		}
 
 		return $instance;
 	}
 
 	public function flush_widget_cache() {
-		wp_cache_delete('recent_posts_slider', 'widget');
+		wp_cache_delete( 'recent_posts_slider', 'widget' );
 	}
 
 	public function form( $instance ) {
@@ -129,10 +130,10 @@ class Flymag_Recent_Slider extends WP_Widget {
 		<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
 
 		<p><label for="<?php echo $this->get_field_id( 'bg_color' ); ?>" style="display:block;"><?php _e( 'Background color', 'flymag' ); ?></label> 
-        <input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>" name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>" /></p>
+		<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>" name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>" /></p>
 
 		<p><label for="<?php echo $this->get_field_id( 'title_color' ); ?>" style="display:block;"><?php _e( 'Title color', 'flymag' ); ?></label> 
-        <input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'title_color' ); ?>" name="<?php echo $this->get_field_name( 'title_color' ); ?>" value="<?php echo $title_color; ?>" /></p>
+		<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'title_color' ); ?>" name="<?php echo $this->get_field_name( 'title_color' ); ?>" value="<?php echo $title_color; ?>" /></p>
 
 
 
