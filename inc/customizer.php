@@ -82,27 +82,7 @@ function flymag_customize_register( $wp_customize ) {
             'priority' => 9,
         )
     );
-    //Favicon Upload
-    $wp_customize->add_setting(
-        'site_favicon',
-        array(
-            'default-image' => '',
-            'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-            $wp_customize,
-            'site_favicon',
-            array(
-               'label'          => __( 'Upload your favicon', 'flymag' ),
-               'type'           => 'image',
-               'section'        => 'flymag_general',
-               'settings'       => 'site_favicon',
-               'priority' => 10,
-            )
-        )
-    );
+
     //Logo Upload
     $wp_customize->add_setting(
         'site_logo',
