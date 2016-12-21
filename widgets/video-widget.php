@@ -107,16 +107,28 @@ class Flymag_Video extends WP_Widget {
 
 		$url = isset( $instance['url'] ) ? esc_url( $instance['url'] ) : '';
 
-		echo $instance['before_widget'];
+		if ( !empty( $args['before_widget'] ) ) {
+			echo $args['before_widget'];
+		}
 
-		if ( $title ) {
-			echo $instance['before_title'] . $title . $instance['after_title'];
+		if ( !empty( $title ) ) {
+
+			if ( !empty( $args['before_title'] ) ) {
+				echo $args['before_title'];
+			}
+			echo $title;
+			if ( !empty( $args['after_title'] ) ) {
+				echo $args['after_title'];
+			}
 		}
 
 		if ( $url ) {
 			echo wp_oembed_get( $url );
 		}
-		echo $instance['after_widget'];
+
+		if ( !empty( $args['after_widget'] ) ) {
+			echo $args['after_widget'];
+		}
 
 		if ( ! $this->is_preview() ) {
 			$cache[ $args['widget_id'] ] = ob_get_flush();

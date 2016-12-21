@@ -70,13 +70,25 @@ class Flymag_Recent_Slider extends WP_Widget {
 		) ) );
 
 		if ( $r->have_posts() ) :
+
+			if ( !empty( $args['before_widget'] ) ) {
+				echo $args['before_widget'];
+			}
 			?>
-			<?php echo $args['before_widget']; ?>
 
 			<div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>">
-				<?php if ( $title ) {
-					echo $args['before_title'] . '<span style="color:' . $title_color . ';">' . $title . '</span>' . $args['after_title'];
-} ?>
+				<?php
+				if ( !empty( $title ) ) {
+
+					if ( !empty( $args['before_title'] ) ) {
+						echo $args['before_title'];
+					}
+					echo '<span style="color:' . $text_color . ';">' . $title . '</span>';
+					if ( !empty( $args['after_title'] ) ) {
+						echo $args['after_title'];
+					}
+				}
+				?>
 				<div class="posts-slider">
 					<div class="posts-slider-inner clearfix">
 						<?php while ( $r->have_posts() ) : $r->the_post(); ?>
@@ -92,8 +104,12 @@ class Flymag_Recent_Slider extends WP_Widget {
 					</div>
 				</div>
 			</div><!-- .widget-inner -->
-			<?php echo $args['after_widget']; ?>
 			<?php
+
+			if ( !empty( $args['after_widget'] ) ) {
+				echo $args['after_widget'];
+			}
+
 			wp_reset_postdata();
 
 		endif;

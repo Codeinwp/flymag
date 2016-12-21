@@ -73,8 +73,10 @@ class Flymag_Recent_C extends WP_Widget {
 
 		) );
 
-?>
-		<?php echo $args['before_widget']; ?>
+		if ( !empty( $args['before_widget'] ) ) {
+			echo $args['before_widget'];
+		}
+		?>
 
 		<div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>; color: <?php echo $text_color; ?>">
 
@@ -180,16 +182,19 @@ class Flymag_Recent_C extends WP_Widget {
 
 		</div>	
 
-		<?php echo $args['after_widget']; ?>
-<?php
+		<?php
+			if ( !empty( $args['after_widget'] ) ) {
+				echo $args['after_widget'];
+			}
+
 		wp_reset_postdata();
 
-if ( ! $this->is_preview() ) {
-	$cache[ $args['widget_id'] ] = ob_get_flush();
-	wp_cache_set( 'recent_posts_c', $cache, 'widget' );
-} else {
-	ob_end_flush();
-}
+		if ( ! $this->is_preview() ) {
+			$cache[ $args['widget_id'] ] = ob_get_flush();
+			wp_cache_set( 'recent_posts_c', $cache, 'widget' );
+		} else {
+			ob_end_flush();
+		}
 	}
 
 	/**
