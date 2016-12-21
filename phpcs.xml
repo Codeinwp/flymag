@@ -1,4 +1,3 @@
-
 <?xml version="1.0"?>
 <ruleset name="Themeisle">
     <description>Themeisle rules for PHP_CodeSniffer</description>
@@ -11,7 +10,7 @@
         <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
         <exclude name="Squiz.Commenting.InlineComment.NotCapital" />
-
+        <exclude name="WordPress.Files.FileName.UnderscoresNotAllowed" />
         <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
     </rule>
     <rule ref="WordPress-Docs">

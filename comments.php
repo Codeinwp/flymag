@@ -25,8 +25,24 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'flymag' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+			$comments_number = get_comments_number();
+			if ( 1 === $comments_number ) {
+				/* translators: %s: post title */
+				printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'flymag' ), get_the_title() );
+			} else {
+				printf(
+					/* translators: 1: number of comments, 2: post title */
+					_nx(
+						'%1$s thought on &ldquo;%2$s&rdquo;',
+						'%1$s thoughts on &ldquo;%2$s&rdquo;',
+						$comments_number,
+						'comments title',
+						'flymag'
+					),
+					number_format_i18n( $comments_number ),
+					get_the_title()
+				);
+			}
 			?>
 		</h2>
 
@@ -43,7 +59,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
-					'avatar_size'=> 60,
+					'avatar_size' => 60,
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -60,16 +76,16 @@ if ( post_password_required() ) {
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'flymag' ); ?></p>
+	<p class="no-comments"><?php _e( 'Comments are closed.', 'flymag' ); ?></p>
 	<?php endif; ?>
 
-	<?php 
+	<?php
 		$args = array(
 			'comment_notes_after'  => '',
 		);
-		comment_form($args);
+		comment_form( $args );
 	?>
 
 </div><!-- #comments -->
