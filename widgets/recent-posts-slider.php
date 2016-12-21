@@ -71,20 +71,20 @@ class Flymag_Recent_Slider extends WP_Widget {
 
 		if ( $r->have_posts() ) :
 
-			if ( !empty( $args['before_widget'] ) ) {
+			if ( ! empty( $args['before_widget'] ) ) {
 				echo $args['before_widget'];
 			}
 			?>
 
 			<div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>">
 				<?php
-				if ( !empty( $title ) ) {
+				if ( ! empty( $title ) ) {
 
-					if ( !empty( $args['before_title'] ) ) {
+					if ( ! empty( $args['before_title'] ) ) {
 						echo $args['before_title'];
 					}
 					echo '<span style="color:' . $text_color . ';">' . $title . '</span>';
-					if ( !empty( $args['after_title'] ) ) {
+					if ( ! empty( $args['after_title'] ) ) {
 						echo $args['after_title'];
 					}
 				}
@@ -106,7 +106,7 @@ class Flymag_Recent_Slider extends WP_Widget {
 			</div><!-- .widget-inner -->
 			<?php
 
-			if ( !empty( $args['after_widget'] ) ) {
+			if ( ! empty( $args['after_widget'] ) ) {
 				echo $args['after_widget'];
 			}
 

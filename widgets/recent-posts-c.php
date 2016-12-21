@@ -73,7 +73,7 @@ class Flymag_Recent_C extends WP_Widget {
 
 		) );
 
-		if ( !empty( $args['before_widget'] ) ) {
+		if ( ! empty( $args['before_widget'] ) ) {
 			echo $args['before_widget'];
 		}
 		?>
@@ -183,9 +183,9 @@ class Flymag_Recent_C extends WP_Widget {
 		</div>	
 
 		<?php
-			if ( !empty( $args['after_widget'] ) ) {
-				echo $args['after_widget'];
-			}
+		if ( ! empty( $args['after_widget'] ) ) {
+			echo $args['after_widget'];
+		}
 
 		wp_reset_postdata();
 

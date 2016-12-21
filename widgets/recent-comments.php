@@ -68,16 +68,16 @@ class Flymag_Recent_Comments extends WP_Widget {
 			'post_status' => 'publish',
 		) ) );
 
-		if ( !empty( $args['before_widget'] ) ) {
+		if ( ! empty( $args['before_widget'] ) ) {
 			$output .= $args['before_widget'];
 		}
-		if ( !empty( $title ) ) {
+		if ( ! empty( $title ) ) {
 
-			if ( !empty( $args['before_title'] ) ) {
+			if ( ! empty( $args['before_title'] ) ) {
 				$output .= $args['before_title'];
 			}
 			$output .= $title;
-			if ( !empty( $args['after_title'] ) ) {
+			if ( ! empty( $args['after_title'] ) ) {
 				$output .= $args['after_title'];
 			}
 		}
@@ -94,7 +94,7 @@ class Flymag_Recent_Comments extends WP_Widget {
 		}
 		$output .= '</ul>';
 
-		if ( !empty( $args['after_widget'] ) ) {
+		if ( ! empty( $args['after_widget'] ) ) {
 			$output .= $args['after_widget'];
 		}
 
