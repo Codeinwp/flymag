@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     /* If there are required actions, add an icon with the number of required actions in the About page -> Actions required tab */
     var ti_about_page_nr_actions_required = tiAboutPageObject.nr_actions_required;
 
-    if ( (typeof ti_about_page_nr_actions_required !== 'undefined') && (ti_about_page_nr_actions_required !== 0) ) {
+    if ( (typeof ti_about_page_nr_actions_required !== 'undefined') && (ti_about_page_nr_actions_required !== '0') ) {
         jQuery('li.ti-about-page-w-red-tab a').append('<span class="ti-about-page-actions-count">' + ti_about_page_nr_actions_required + '</span>');
     }
 
@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
             dataType   : 'html',
             url        : tiAboutPageObject.ajaxurl,
             beforeSend : function(){
-                jQuery('.ti-about-page-tab-pane#actions_required h1').append('<div id="temp_load" style="text-align:center"><img src="' + tiAboutPageObject.template_directory + '/inc/admin/welcome-screen/img/ajax-loader.gif" /></div>');
+                jQuery('.ti-about-page-tab-pane#actions_required h1').append('<div id="temp_load" style="text-align:center"><img src="' + tiAboutPageObject.template_directory + '/ti-about-page/images/ajax-loader.gif" /></div>');
             },
             success    : function(data){
                 jQuery('#temp_load').remove(); /* Remove loading gif */
