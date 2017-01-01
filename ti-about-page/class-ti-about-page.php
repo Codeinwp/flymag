@@ -457,10 +457,10 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
 					foreach ( $this->required_actions['content'] as $ti_about_page_required_action_key => $ti_about_page_required_action_value ) {
 
-						if ( @$ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] === false ) {
+						if ( $ti_about_page_show_required_actions[ $ti_about_page_required_action_value['id'] ] === false ) {
 							continue;
 						}
-						if ( @$ti_about_page_required_action_value['check'] ) {
+						if ( isset( $ti_about_page_required_action_value['check'] ) && $ti_about_page_required_action_value['check'] ) {
 							continue;
 						}
 
