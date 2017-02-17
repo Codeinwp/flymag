@@ -31,7 +31,7 @@
 	background-color: #fff;
 }
 
-.ti-about-page-nav-tabs > li.ti-about-page-w-red-tab > a {
+.ti-about-page-nav-tabs > #actions_required_handle > a {
 	color: red;
 	font-weight: bold;
 }
@@ -67,7 +67,6 @@
 
 #ti-about-page-theme-version {
 	padding: 10px;
-	background: #ccc;
 	font-size: 50%;
 }
 
@@ -231,35 +230,35 @@
 	background-color: #cc8c8c;
 }
 
-#github.ti-about-page-tab-pane {
+#contribute.ti-about-page-tab-pane {
 	text-align: center;
 }
 
-#github.ti-about-page-tab-pane .ti-about-page-tab-pane-half {
+#contribute.ti-about-page-tab-pane .ti-about-page-tab-pane-half {
 	min-height: 160px;
 }
 
-#github.ti-about-page-tab-pane .translate-button,
-#github .github-button {
+#contribute.ti-about-page-tab-pane .translate-button,
+#contribute .github-button {
 	margin-top: 20px;
 }
 
-#github.ti-about-page-tab-pane .dashicons {
+#contribute.ti-about-page-tab-pane .dashicons {
 	width: auto;
 	color: #0073aa;
 	font-size: 12px;
 }
 
-#github.ti-about-page-tab-pane h4 {
+#contribute.ti-about-page-tab-pane h4 {
 	margin: 10px;
 	;
 }
 
-#github.ti-about-page-tab-pane p.review-link {
+#contribute.ti-about-page-tab-pane p.review-link {
 	margin: 0;
 }
 
-#github.ti-about-page-tab-pane .ti-about-page-tab-pane-half hr {
+#contribute.ti-about-page-tab-pane .ti-about-page-tab-pane-half hr {
 	display: none;
 }
 
@@ -276,7 +275,7 @@
 }
 
 @media (max-width: 782px) {
-	#github.ti-about-page-tab-pane .ti-about-page-tab-pane-half hr {
+	#contribute.ti-about-page-tab-pane .ti-about-page-tab-pane-half hr {
 		display: block;
 	}
 
