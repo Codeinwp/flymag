@@ -45,32 +45,4 @@ jQuery(document).ready(function () {
         });
     });
 
-    /* Tabs in welcome page */
-    function ti_about_page_welcome_page_tabs(event) {
-        jQuery(event).parent().addClass('active');
-        jQuery(event).parent().siblings().removeClass('active');
-        var tab = jQuery(event).attr('href');
-        jQuery('.ti-about-page-tab-pane').not(tab).css('display', 'none');
-        jQuery(tab).fadeIn();
-    }
-
-    ti_about_page_welcome_page_tabs(jQuery('.ti-about-page-nav-tabs a').first());
-    var ti_about_page_actions_anchor = location.hash;
-
-    if ((typeof ti_about_page_actions_anchor !== 'undefined') && (ti_about_page_actions_anchor !== '')) {
-        ti_about_page_welcome_page_tabs('a[href="' + ti_about_page_actions_anchor + '"]');
-    }
-    jQuery('.ti-about-page-nav-tabs a').click(function (event) {
-
-        ti_about_page_welcome_page_tabs(this);
-    });
-
-    /* Tab Content height matches admin menu height for scrolling purpouses */
-    var $tab = jQuery('.ti-about-page-tab-content > div'),
-        $admin_menu_height = jQuery('#adminmenu').height();
-    if ((typeof $tab !== 'undefined') && (typeof $admin_menu_height !== 'undefined')) {
-        var $newheight = $admin_menu_height - 180;
-        $tab.css('min-height', $newheight);
-    }
-
 });

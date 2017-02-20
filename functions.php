@@ -82,8 +82,6 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'menu_name'               => __( 'About Flymag', 'flymag' ),
 			// Page title.
 			'page_name'               => __( 'Flymag Intro', 'flymag' ),
-			// Small description of the theme.
-			'theme_short_description' => __( 'Our best free magazine WordPress theme, FlyMag!', 'flymag' ),
 			// Url of the documentation.
 			'documentation'           => 'http://docs.themeisle.com/article/310-flymag-documentation',
 			// Github repository url
@@ -99,9 +97,9 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			 * the will be the name of the function which will be used to render the tab content.
 			 */
 			'tabs'                    => array(
-				'getting_started'  => __( 'Getting started', 'flymag' ),
-				'actions_required' => __( 'Actions required', 'flymag' ),
-				'child_themes'     => __( 'Child themes', 'flymag' ),
+				'getting_started'  => __( 'Getting Started', 'flymag' ),
+				'actions_required' => __( 'Recommended Actions', 'flymag' ),
+				'plugins_recommended' => __( 'Recommended Plugins','flymag' ),
 				'contribute'       => __( 'Contribute', 'flymag' ),
 				'changelog'        => __( 'Changelog', 'flymag' ),
 				'free_pro'         => __( 'Free VS PRO', 'flymag' ),
@@ -115,8 +113,8 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			),
 			// Getting started tab content.
 			'getting_started_content' => array(
-				'welcome_title'         => sprintf( __( 'Welcome to %s', 'flymag' ), 'FlyMag' ),
-				'welcome_content'       => sprintf( __( 'We want to make sure you have the best experience using %1$s and that is why we gathered here all the necessary informations for you. We hope you will enjoy using %2$s, as much as we enjoy creating great products.', 'flymag' ), 'FlyMag', 'FlyMag' ),
+				'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
+				'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
 				'customizer_content'    => '<h1>' . __( 'Getting started', 'flymag' ) . '</h1><h4>' . __( 'Customize everything in a single place.', 'flymag' ) . '</h4><p>' . __( 'Using the WordPress Customizer you can easily customize every aspect of the theme.', 'flymag' ) . '</p><p><a href="' . esc_url( admin_url( 'customize.php' ) ) . '" class="button button-primary">' . __( 'Go to Customizer', 'flymag' ) . '</a></p>',
 				'documentation_content' => '<h1>' . __( 'View full documentation', 'flymag' ) . '</h1><p>' . sprintf( __( 'Need more details? Please check our full documentation for detailed information on how to use %s.', 'flymag' ), 'FlyMag' ) . '</p><p><a href="' . esc_url( 'http://docs.themeisle.com/article/310-flymag-documentation' ) . '" class="button button-primary">' . __( 'Read full documentation', 'flymag' ) . '</a></p>',
 			),
@@ -221,9 +219,9 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 				),
 			),
 			// Plugins array.
-			'plugins'                 => array(
-				'title'                     => __( 'Recommended plugins', 'flymag' ),
+			'plugins_recommended'        => array(
 				'already_activated_message' => __( 'Already activated', 'flymag' ),
+				'version_label' => __( 'Version: ', 'flymag' ),
 				'content'                   => array(
 					array(
 						'title'       => __( 'Pirate Forms', 'flymag' ),
