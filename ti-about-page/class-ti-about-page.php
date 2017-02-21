@@ -10,42 +10,46 @@
  *            // Menu name under Appearance.
  *            'menu_name'               => __( 'About Flymag', 'flymag' ),
  *            // Page title.
- *            'page_name'               => __( 'Flymag Intro', 'flymag' ),
- *            // Url of the documentation.
- *            'documentation'           => 'http://docs.themeisle.com/article/310-flymag-documentation',
- *            // Github repository url
- *            'github'                  => 'https://github.com/Codeinwp/flymag',
- *            // Translation url.
- *            'translations_wporg'      => 'https://translate.wordpress.org/projects/wp-themes/flymag',
- *            // Review url.
- *            'review_wporg'            => 'https://wordpress.org/support/view/theme-reviews/flymag',
+ *            'page_name'               => __( 'About Flymag', 'flymag' ),
+ *            // Main welcome title
+ *            'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
+ *             // Main welcome content
+ *             'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
  *             //Tabs array.
  *             //
  *             // The key needs to be ONLY consisted from letters and underscores. If we want to define outside the class a function to render the tab,
  *             // the will be the name of the function which will be used to render the tab content.
  *            'tabs'                    => array(
  *                'getting_started'  => __( 'Getting Started', 'flymag' ),
- *                'actions_required' => __( 'Recommended Actions', 'flymag' ),
- *                'plugins_recommended' => __( 'Recommended Plugins', 'flymag' ),
+ *                'recommended_actions' => __( 'Recommended Actions', 'flymag' ),
+ *                'recommended_plugins' => __( 'Recommended Plugins', 'flymag' ),
  *                'child_themes'     => __( 'Child themes', 'flymag' ),
- *                'contribute'       => __( 'Contribute', 'flymag' ),
+ *                'support'       => __( 'Support', 'flymag' ),
  *                'changelog'        => __( 'Changelog', 'flymag' ),
  *                'free_pro'         => __( 'Free VS PRO', 'flymag' ),
  *            ),
- *            // Contribute content tab.
- *            'contribute_content'      => array(
- *                'title'               => __( 'How can I contribute?', 'flymag' ),
- *                'github_content'      => '<p><strong>' . __( 'Found a bug? Want to contribute with a fix or create a new feature?', 'flymag' ) . '</strong></p><p>' . __( 'GitHub is the place to go!', 'flymag' ) . '</p><p><a href="https://github.com/Codeinwp/flymag" class="github-button button button-primary">' . sprintf( __( '%s on GitHub', 'flymag' ), 'FlyMag' ) . '</a></p>',
- *                'translation_content' => '<p><strong>' . sprintf( __( 'Are you a polyglot? Want to translate %s into your own language?', 'flymag' ), 'FlyMag' ) . '</strong></p><p>' . __( 'Get involved at WordPress.org.', 'flymag' ) . '</p><p><a href="https://translate.wordpress.org/projects/wp-themes/flymag" class="translate-button button button-primary">' . sprintf( __( 'Translate %s', 'flymag' ), 'FlyMag' ) . '</a></p>',
- *                'review_content'      => '<h4>' . sprintf( __( 'Are you enjoying %s?', 'flymag' ), 'FlyMag' ) . '</h4><p class="review-link">' . sprintf( __( 'Rate our theme on %1$sWordPress.org%2$s. We\'d really appreciate it!', 'flymag' ), '<a href="https://wordpress.org/support/view/theme-reviews/flymag">', '</a>' ) . '</p><p><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></p>',
+ *            // Support content tab.
+ *            'support_content'      => array(
+ *                  'first' => array (
+ *						'title' => esc_html__( 'Contact Support','flymag' ),
+ *				        'icon' => 'dashicons dashicons-sos',
+ *				        'text' => esc_html__( 'We offer excellent support through our advanced ticketing system. Make sure to register your purchase before contacting support!','flymag' ),
+ *				        'button_label' => esc_html__( 'Contact Support','flymag' ),
+ *				        'button_link' => esc_url( 'https://themeisle.com/contact/' ),
+ *				        'is_button' => true
+ *				    ),
  *            ),
  *            // Getting started tab content.
- *            'getting_started_content' => array(
- *                'welcome_title'         => sprintf( __( 'Welcome to %s', 'flymag' ), 'FlyMag' ),
- *                'welcome_content'       => sprintf( __( 'We want to make sure you have the best experience using %1$s and that is why we gathered here all the necessary informations for you. We hope you will enjoy using %2$s, as much as we enjoy creating great products.', 'flymag' ), 'FlyMag', 'FlyMag' ),
- *                'customizer_content'    => '<h1>' . __( 'Getting started', 'flymag' ) . '</h1><h4>' . __( 'Customize everything in a single place.', 'flymag' ) . '</h4><p>' . __( 'Using the WordPress Customizer you can easily customize every aspect of the theme.', 'flymag' ) . '</p><p><a href="' . esc_url( admin_url( 'customize.php' ) ) . '" class="button button-primary">' . __( 'Go to Customizer', 'flymag' ) . '</a></p>',
- *                'documentation_content' => '<h1>' . __( 'View full documentation', 'flymag' ) . '</h1><p>' . sprintf( __( 'Need more details? Please check our full documentation for detailed information on how to use %s.', 'flymag' ), 'FlyMag' ) . '</p><p><a href="' . esc_url( 'http://docs.themeisle.com/article/310-flymag-documentation' ) . '" class="button button-primary">' . __( 'Read full documentation', 'flymag' ) . '</a></p>',
- *            ),
+ *            'getting_started' => array(
+ *               'first_step' => array (
+ *				    'title' => esc_html__( 'Step 1 - Implement recommended actions','flymag' ),
+ *				    'text' => esc_html__( 'We have compiled a list of steps for you, to take make sure the experience you will have using one of our products is very easy to follow.','flymag' ),
+ *				    'button_label' => esc_html__( 'Check recommended actions','flymag' ),
+ *				    'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=recommended_actions' ) ),
+ *				    'is_button' => false,
+ *				    'recommended_actions' => true
+ *				  ),
+ *             ),
  *            // Child themes array.
  *            'child_themes'            => array(
  *                'title'                 => __( 'List of child themes to use with Flymag', 'flymag' ),
@@ -121,75 +125,33 @@
  *                    ),
  *                ),
  *            ),
- *            // Important docs array.
- *            'docs'                    => array(
- *                'title'   => __( 'FAQ', 'flymag' ),
- *                'content' => array(
- *                    array(
- *                        'title'       => __( 'Create a child theme', 'flymag' ),
- *                        'description' => __( 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below', 'flymag' ),
- *                        'link_url'    => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme/',
- *                        'link_label'  => __( 'View how to do this', 'flymag' ),
- *                    ),
- *                    array(
- *                        'title'       => __( 'Build a landing page with a drag-and-drop content builder', 'flymag' ),
- *                        'description' => __( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.', 'flymag' ),
- *                        'link_url'    => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
- *                        'link_label'  => __( 'View how to do this', 'flymag' ),
- *                    ),
- *                    array(
- *                        'title'       => __( 'Speed up your site', 'flymag' ),
- *                        'description' => __( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.', 'flymag' ),
- *                        'link_url'    => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site/',
- *                        'link_label'  => __( 'View how to do this', 'flymag' ),
- *                    ),
- *                    array(
- *                        'title'       => __( 'How to Internationalize Your Website', 'flymag' ),
- *                        'description' => __( 'Although English is the most used language on the internet, you should consider all your web users as well. Find out what it takes to make your website ready for foreign markets from this document.', 'flymag' ),
- *                        'link_url'    => 'http://docs.themeisle.com/article/80-how-to-translate-zerif',
- *                        'link_label'  => __( 'View how to do this', 'flymag' ),
- *                    ),
- *                ),
- *            ),
  *            // Recommended plugins tab.
- *            'plugins_recommended'     => array(
- *                'already_activated_message' => __( 'Already activated', 'flymag' ),
- *                'version_label' => __( 'Version: ', 'flymag' ),
- *                'content'                   => array(
+ *            'recommended_plugins'     => array(
+ *                'already_activated_message' => esc_html__( 'Already activated', 'flymag' ),
+ *                'version_label' => esc_html__( 'Version: ', 'flymag' ),
+ *                'install_label' => esc_html__( 'Install', 'flymag' ),
+ *        	      'activate_label' => esc_html__( 'Activate', 'flymag' ),
+ *				  'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
+ *                'content'             => array(
  *                    array(
- *                        'title'       => __( 'Pirate Forms', 'flymag' ),
- *                        'description' => __( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.', 'flymag' ),
- *                        'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
- *                        'check'       => defined( 'PIRATE_FORMS_VERSION' ),
  *                        'slug'        => 'pirate-forms',
  *                    ),
  *                    array(
- *                        'title'       => __( 'Easy Content Types', 'flymag' ),
- *                        'description' => __( 'Custom Post Types, Taxonomies and Metaboxes in Minutes.', 'flymag' ),
- *                        'link_label'  => __( 'Download Easy Content Types', 'flymag' ),
- *                        'check'       => defined( 'ECPT_PLUGIN_VERSION' ),
  *                        'link'        => 'http://themeisle.com/plugins/easy-content-types/',
  *                    ),
  *                    array(
- *                        'title'       => __( 'Page Builder by SiteOrigin', 'flymag' ),
- *                        'description' => __( 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.', 'flymag' ),
- *                        'link_label'  => __( 'Install Page Builder by SiteOrigin', 'flymag' ),
- *                        'check'       => defined( 'SITEORIGIN_PANELS_VERSION' ),
  *                        'slug'        => 'siteorigin-panels',
  *                    ),
  *                    array(
- *                        'title'       => __( 'Intergeo Maps - Google Maps Plugin', 'flymag' ),
- *                        'description' => '',
- *                        'link_label'  => __( 'Install Intergeo Maps', 'flymag' ),
- *                        'check'       => defined( 'INTERGEO_PLUGIN_NAME' ),
  *                        'slug'        => 'intergeo-maps',
  *                    ),
  *                ),
  *            ),
  *            // Required actions array.
- *            'required_actions'        => array(
- *                'title'              => sprintf( __( 'Keep up with %s\'s latest news', 'flymag' ), 'FlyMag' ),
- *                'no_actions_message' => __( 'Hooray! There are no required actions for you right now.', 'flymag' ),
+ *            'recommended_actions'        => array(
+ *                'install_label' => esc_html__( 'Install', 'flymag' ),
+ *                'activate_label' => esc_html__( 'Activate', 'flymag' ),
+ *                'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
  *                'content'            => array(
  *                    'pirate-forms' => array(
  *                        'title'       => __( 'Pirate Forms', 'flymag' ),
@@ -197,6 +159,7 @@
  *                        'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
  *                        'check'       => defined( 'PIRATE_FORMS_VERSION' ),
  *                        'id'          => 'pirate-forms',
+ *                        'plugin_slug' => 'pirate-forms'
  *                    ),
  *                ),
  *            ),
@@ -346,18 +309,16 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 */
 		public function setup_actions() {
 			add_filter( 'ti_about_tab_show', array( $this, 'hide_required' ), 11, 2 );
-			add_filter( 'ti_about_tab_show', array( $this, 'hide_childs' ), 12, 2 );
-			add_filter( 'ti_about_tab_show', array( $this, 'hide_free_pro' ), 13, 2 );
+
 			add_action( 'admin_menu', array( $this, 'register' ) );
 			/* activation notice */
 			add_action( 'load-themes.php', array( $this, 'activation_admin_notice' ) );
 			/* enqueue script and style for about page */
 			add_action( 'admin_enqueue_scripts', array( $this, 'style_and_scripts' ) );
 
-			add_action( 'wp_ajax_ti_about_page_dismiss_required_action', array(
-				$this,
-				'dismiss_required_action_callback',
-			) );
+			/* ajax callback for dismissable required actions */
+			add_action( 'wp_ajax_ti_about_page_dismiss_required_action', array( $this, 'dismiss_required_action_callback' ) );
+			add_action( 'wp_ajax_nopriv_ti_about_page_dismiss_required_action', array( $this, 'dismiss_required_action_callback') );
 		}
 
 		/**
@@ -366,7 +327,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 * @return bool Either hide the tab or not.
 		 */
 		public function hide_required( $value, $tab ) {
-			if ( $tab != 'actions_required' ) {
+			if ( $tab != 'recommended_actions' ) {
 				return $value;
 			}
 			$required = $this->get_required_actions();
@@ -377,47 +338,24 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			}
 		}
 
-		/**
-		 * Hide child themes if empty.
-		 *
-		 * @return bool Either hide the tab or not.
-		 */
-		public function hide_childs( $value, $tab ) {
-			if ( $tab != 'child_themes' ) {
-				return $value;
-			}
-			$required = isset( $this->config['child_themes'] ) ? $this->config['child_themes'] : array();
-			$required = isset( $required['content'] ) ? $required['content'] : array();
-			if ( count( $required ) == 0 ) {
-				return false;
-			} else {
-				return true;
-			}
-		}
-		/**
-		 * Hide free pro tab if empty.
-		 *
-		 * @return bool Either hide the tab or not.
-		 */
-		public function hide_free_pro( $value, $tab ) {
-			if ( $tab != 'free_pro' ) {
-				return $value;
-			}
-			$required = isset( $this->config['free_pro'] ) ? $this->config['free_pro'] : array();
-			$required = isset( $required['features'] ) ? $required['features'] : array();
-			if ( count( $required ) == 0 ) {
-				return false;
-			} else {
-				return true;
-			}
-		}
 
 		/**
 		 * Register the menu page under Appearance menu.
 		 */
 		function register() {
 			if ( ! empty( $this->menu_name ) && ! empty( $this->page_name ) ) {
-				add_theme_page( $this->menu_name, $this->page_name, 'activate_plugins', $this->theme_slug . '-welcome', array(
+
+				$count = 0;
+
+				$actions_count = $this->get_required_actions();
+
+				if ( ! empty( $actions_count ) ) {
+					$count = count( $actions_count );
+				}
+
+				$title = $count > 0 ? $this->page_name . '<span class="badge-action-count">' . esc_html( $count ) . '</span>' : $this->page_name;
+
+				add_theme_page( $this->menu_name, $title, 'activate_plugins', $this->theme_slug . '-welcome', array(
 					$this,
 					'ti_about_page_render',
 				) );
@@ -450,47 +388,65 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 */
 		public function ti_about_page_render() {
 
-			if ( ! empty( $this->config['getting_started_content'] ) ) {
+			if ( ! empty( $this->config['welcome_title'] ) ) {
+				$welcome_title = $this->config['welcome_title'];
+			}
+			if ( ! empty( $this->config['welcome_content'] ) ) {
+				$welcome_content = $this->config['welcome_content'];
+			}
 
-				$getting_started = $this->config['getting_started_content'];
+			if ( ! empty( $welcome_title ) || ! empty( $welcome_content ) || ! empty( $this->tabs ) ) {
 
-				if ( ! empty( $getting_started ) ) {
+				echo '<div class="wrap about-wrap epsilon-wrap">';
 
-					echo '<div class="wrap about-wrap epsilon-wrap">';
-
-						if ( ! empty( $getting_started['welcome_title'] ) ) {
-							echo '<h1>';
-								echo esc_html( $getting_started['welcome_title'] );
-								if ( ! empty( $this->theme_version ) ) {
-									echo esc_html( $this->theme_version ) . ' </sup>';
-								}
-							echo '</h1>';
+				if ( ! empty( $welcome_title ) ) {
+					echo '<h1>';
+						echo esc_html( $welcome_title );
+						if ( ! empty( $this->theme_version ) ) {
+							echo esc_html( $this->theme_version ) . ' </sup>';
 						}
-						if ( ! empty( $getting_started['welcome_content'] ) ) {
-							echo '<div class="about-text">' . wp_kses_post( $getting_started['welcome_content'] ) . '</div>';
-						}
-
-						echo '<div class="wp-badge epsilon-welcome-logo"></div>';
-
+					echo '</h1>';
 				}
+				if ( ! empty( $welcome_content ) ) {
+					echo '<div class="about-text">' . wp_kses_post( $welcome_content ) . '</div>';
+				}
+
+				echo '<div class="wp-badge epsilon-welcome-logo"></div>';
+
+				/* Display tabs */
 				if ( ! empty( $this->tabs ) ) {
-					$active_tab   = isset( $_GET['tab'] ) ? wp_unslash( $_GET['tab'] ) : 'getting_started';
-					?>
-					<h2 class="nav-tab-wrapper wp-clearfix">
-						<?php
-						foreach ( $this->tabs as $tab_key => $tab_name ) {
-							echo '<a href="'.esc_url( admin_url( 'themes.php?page=' . $this->theme_slug . '-welcome' ) ).'&tab=' . $tab_key . '" class="nav-tab '. ( $active_tab == $tab_key ? 'nav-tab-active' : '' ).'" role="tab" data-toggle="tab">' . esc_html( $tab_name ) . '</a>';
-						}
-						?>
-					</h2>
-					<?php
+					$active_tab = isset( $_GET['tab'] ) ? wp_unslash( $_GET['tab'] ) : 'getting_started';
+
+					echo '<h2 class="nav-tab-wrapper wp-clearfix">';
+
+					foreach ( $this->tabs as $tab_key => $tab_name ) {
+						echo '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->theme_slug . '-welcome' ) ) . '&tab=' . $tab_key . '" class="nav-tab ' . ( $active_tab == $tab_key ? 'nav-tab-active' : '' ) . '" role="tab" data-toggle="tab">';
+							echo esc_html( $tab_name );
+							if ( $tab_key == 'recommended_actions' ) {
+								$count = 0;
+
+								$actions_count = $this->get_required_actions();
+
+								if ( ! empty( $actions_count ) ) {
+									$count = count( $actions_count );
+								}
+								if ( $count > 0 ) {
+									echo '<span class="badge-action-count">' . esc_html( $count ) . '</span>';
+								}
+							}
+						echo '</a>';
+					}
+
+					echo '</h2>';
+
+					/* Display content for current tab */
 					if ( method_exists( $this, $active_tab ) ) {
 						$this->$active_tab();
 					}
 				}
+
 				echo '</div><!--/.wrap.about-wrap-->';
 			}
-
 		}
 
 		/*
@@ -547,6 +503,12 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			return array( 'status' => false, 'needs' => 'install' );
 		}
 
+		/**
+		 * Get icon of wordpress.org plugin
+		 * @param $arr
+		 *
+		 * @return mixed
+		 */
 		public function get_plugin_icon( $arr ) {
 			if ( ! empty( $arr['svg'] ) ) {
 				$plugin_icon_url = $arr['svg'];
@@ -598,85 +560,226 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		}
 
 		/**
-		 * Render getting started content.
+		 * Getting started tab
 		 */
 		public function getting_started() {
 
-			if ( ! empty( $this->config['getting_started_content'] ) ) {
+			if ( ! empty( $this->config['getting_started'] ) ) {
 
-				/* DOCS */
-				$this->docs_display();
-				echo '<div class="ti-about-page-clear"></div>';
-				echo '<hr />';
-				/* Documentation */
-				$this->page_documentation();
-				echo '<hr />';
-				/* PLUGINS */
-				$this->plugins_display();
-				echo '<div class="ti-about-page-clear"></div>';
+				$getting_started = $this->config['getting_started'];
+
+				if ( ! empty( $getting_started ) ) {
+
+					echo '<div class="feature-section three-col">';
+
+					foreach ( $getting_started as $getting_started_item ) {
+
+						echo '<div class="col">';
+							if ( ! empty( $getting_started_item['title'] ) ) {
+								echo '<h3>' . $getting_started_item['title'] . '</h3>';
+							}
+							if ( ! empty( $getting_started_item['text'] ) ) {
+								echo '<p>' . $getting_started_item['text'] . '</p>';
+							}
+							if ( ! empty( $getting_started_item['button_link'] ) && ! empty( $getting_started_item['button_label'] ) ) {
+
+								echo '<p>';
+									$button_class = '';
+									if ( $getting_started_item['is_button'] ) {
+										$button_class = 'button button-primary';
+									}
+
+									$count = 0;
+
+									$actions_count = $this->get_required_actions();
+
+									if ( ! empty( $actions_count ) ) {
+										$count = count( $actions_count );
+									}
+
+									if ( $getting_started_item['recommended_actions'] && isset( $count ) ) {
+										if ( $count == 0 ) {
+											echo '<span class="dashicons dashicons-yes"></span>';
+										} else {
+											echo '<span class="dashicons dashicons-no-alt"></span>';
+										}
+									}
+
+									echo '<a target="_blank" href="' . $getting_started_item['button_link'] . '"class="' . $button_class . '">' . $getting_started_item['button_label'] . '</a>';
+								echo '</p>';
+							}
+
+						echo '</div><!-- .col -->';
+					}
+					echo '</div><!-- .feature-section three-col -->';
+				}
+
+			}
+		}
+
+		/**
+		 * Recommended Actions tab
+		 */
+		public function recommended_actions() {
+
+			$recommended_actions = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
+
+			if ( ! empty( $recommended_actions ) ) {
+
+				echo '<div class="feature-section action-required demo-import-boxed" id="plugin-filter">';
+
+				$actions = array();
+				$req_actions = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
+				foreach ( $req_actions['content'] as $req_action ) {
+					$actions[] = $req_action;
+				}
+
+				if ( ! empty( $actions ) && is_array( $actions ) ) {
+
+					$ti_about_page_show_required_actions = get_option( $this->theme_slug . '_required_actions' );
+
+					$hooray = true;
+
+					foreach ( $actions as $action_key => $action_value ) {
+
+						$hidden = false;
+
+						if ( @$ti_about_page_show_required_actions[ $action_value['id'] ] === false ) {
+							$hidden = true;
+						}
+						if ( @$action_value['check'] ) {
+							continue;
+						}
+
+						echo '<div class="ti-about-page-action-required-box">';
+
+						if ( ! $hidden ) {
+							echo '<span data-action="dismiss" class="dashicons dashicons-visibility ti-about-page-required-action-button" id="' . esc_attr( $action_value['id'] ) . '"></span>';
+						} else {
+							echo '<span data-action="add" class="dashicons dashicons-hidden ti-about-page-required-action-button" id="' . esc_attr( $action_value['id'] ) .'"></span>';
+						}
+
+						if ( ! empty( $action_value['title'] ) ) {
+							echo '<h3>' . wp_kses_post( $action_value['title'] ) . '</h3>';
+						}
+
+						if ( ! empty( $action_value['description'] ) ) {
+							echo '<p>' . wp_kses_post( $action_value['description'] ) . '</p>';
+						}
+
+						if ( ! empty( $action_value['plugin_slug'] ) ) {
+
+							$active = $this->check_if_plugin_active( $action_value['plugin_slug'] );
+							$url    = $this->create_action_link( $active['needs'], $action_value['plugin_slug'] );
+							$label  = '';
+
+							switch ( $active['needs'] ) {
+
+								case 'install':
+									$class = 'install-now button';
+									if ( ! empty( $this->config['recommended_actions']['install_label'] ) ) {
+										$label = $this->config['recommended_actions']['install_label'];
+									}
+									break;
+								case 'activate':
+									$class = 'activate-now button button-primary';
+									if ( ! empty( $this->config['recommended_actions']['activate_label'] ) ) {
+										$label = $this->config['recommended_actions']['activate_label'];
+									}
+									break;
+								case 'deactivate':
+									$class = 'deactivate-now button';
+									if ( ! empty( $this->config['recommended_actions']['deactivate_label'] ) ) {
+										$label = $this->config['recommended_actions']['deactivate_label'];
+									}
+									break;
+							}
+
+							?>
+							<p class="plugin-card-<?php echo esc_attr( $action_value['plugin_slug'] ) ?> action_button <?php echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ?>">
+								<a data-slug="<?php echo esc_attr( $action_value['plugin_slug'] ) ?>"
+								   class="<?php echo esc_attr( $class ); ?>"
+								   href="<?php echo esc_url( $url ) ?>"> <?php echo esc_html( $label ) ?> </a>
+							</p>
+
+							<?php
+
+						}
+						echo '</div>';
+					}
+				}
 				echo '</div>';
-			} // End if().
+			}
 		}
 
 		/**
 		 * Recommended plugins tab
 		 */
-		public function plugins_recommended() {
-			$plugins = $this->config['plugins_recommended'];
-			if ( ! empty( $plugins ) ) {
-				if ( ! empty( $plugins['content'] ) && is_array( $plugins['content'] ) ) {
+		public function recommended_plugins() {
+			$recommended_plugins = $this->config['recommended_plugins'];
+			if ( ! empty( $recommended_plugins ) ) {
+				if ( ! empty( $recommended_plugins['content'] ) && is_array( $recommended_plugins['content'] ) ) {
 
 					echo '<div class="feature-section recommended-plugins three-col demo-import-boxed" id="plugin-filter">';
 
-					foreach ( $plugins['content'] as $plugin ) {
+					foreach ( $recommended_plugins['content'] as $recommended_plugins_item ) {
 
-						if ( ! empty( $plugin['slug'] ) ) {
-							$info   = $this->call_plugin_api( $plugin['slug'] );
+						if ( ! empty( $recommended_plugins_item['slug'] ) ) {
+							$info   = $this->call_plugin_api( $recommended_plugins_item['slug'] );
 							if ( ! empty( $info->icons ) ) {
 								$icon = $this->get_plugin_icon( $info->icons );
 							}
-							if ( ! empty( $plugin['check'] ) ) {
-								$active = $this->check_if_plugin_active( $plugin['slug'] );
-							}
+
+							$active = $this->check_if_plugin_active( $recommended_plugins_item['slug'] );
+
 							if ( ! empty( $active['needs'] ) ) {
-								$url = $this->create_action_link( $active['needs'], $plugin['slug'] );
+								$url = $this->create_action_link( $active['needs'], $recommended_plugins_item['slug'] );
 							}
 
 							echo '<div class="col plugin_box">';
-								if ( ! empty( $icon ) ) {
-									echo '<img src="'.esc_url( $icon ).'" alt="plugin box image">';
-								}
-								if ( ! empty(  $info->version ) ) {
-									echo '<span class="version">'. ( ! empty( $this->config['plugins_recommended']['version_label'] ) ? esc_html( $this->config['plugins_recommended']['version_label'] ) : '' ) . esc_html( $info->version ).'</span>';
-								}
-								if ( ! empty( $info->author ) ) {
-									echo '<span class="separator"> | </span>' . wp_kses_post( $info->author );
-								}
-								if ( ! empty( $info->name ) && ! empty( $active ) ) {
-									echo '<div class="action_bar ' . ( ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ) . '">';
-										echo '<span class="plugin_name">' . ( ( $active['needs'] !== 'install' && $active['status'] ) ? 'Active: ' : '' ) . esc_html( $info->name ) . '</span>';
-									echo '</div>';
+							if ( ! empty( $icon ) ) {
+								echo '<img src="'.esc_url( $icon ).'" alt="plugin box image">';
+							}
+							if ( ! empty(  $info->version ) ) {
+								echo '<span class="version">'. ( ! empty( $this->config['recommended_plugins']['version_label'] ) ? esc_html( $this->config['recommended_plugins']['version_label'] ) : '' ) . esc_html( $info->version ).'</span>';
+							}
+							if ( ! empty( $info->author ) ) {
+								echo '<span class="separator"> | </span>' . wp_kses_post( $info->author );
+							}
 
-									echo '<span class="plugin-card-' . esc_attr( $plugin['slug'] ) . ' action_button ' . ( ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ) . '"g>
-				<a data-slug="<?php /*echo esc_attr( $plugin ) */?>" class="<?php /*echo esc_attr( $class ); */?>"
-				   href="<?php /*echo esc_url( $url ) */?>"> <?php /*echo esc_html( $label ) */?> </a>';
-									</span>
-								}
-						        ?>
-								<!--
+							if ( ! empty( $info->name ) && ! empty( $active ) ) {
+								echo '<div class="action_bar ' . ( ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ) . '">';
+								echo '<span class="plugin_name">' . ( ( $active['needs'] !== 'install' && $active['status'] ) ? 'Active: ' : '' ) . esc_html( $info->name ) . '</span>';
+								echo '</div>';
 
-								<div
-									class="action_bar <?php /*echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' */?>">
-				<span
-					class="plugin_name"><?php /*echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'Active: ' : '' */?><?php /*echo esc_html( $info->name ); */?></span>
-								</div>
-								<span
-									class="plugin-card-<?php /*echo esc_attr( $plugin ) */?> action_button <?php /*echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' */?>">
-				<a data-slug="<?php /*echo esc_attr( $plugin ) */?>" class="<?php /*echo esc_attr( $class ); */?>"
-				   href="<?php /*echo esc_url( $url ) */?>"> <?php /*echo esc_html( $label ) */?> </a>
-			</span>-->
-							</div>
-							<?php
+								$label = '';
+
+								switch ( $active['needs'] ) {
+									case 'install':
+										$class = 'install-now button';
+										if ( ! empty( $this->config['recommended_plugins']['install_label'] ) ) {
+											$label = $this->config['recommended_plugins']['install_label'];
+										}
+										break;
+									case 'activate':
+										$class = 'activate-now button button-primary';
+										if ( ! empty( $this->config['recommended_plugins']['activate_label'] ) ) {
+											$label = $this->config['recommended_plugins']['activate_label'];
+										}
+										break;
+									case 'deactivate':
+										$class = 'deactivate-now button';
+										if ( ! empty( $this->config['recommended_plugins']['deactivate_label'] ) ) {
+											$label = $this->config['recommended_plugins']['deactivate_label'];
+										}
+										break;
+								}
+
+								echo '<span class="plugin-card-' . esc_attr( $recommended_plugins_item['slug'] ) . ' action_button ' . ( ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ) . '">';
+								echo '<a data-slug="' . esc_attr( $recommended_plugins_item['slug'] ) . '" class="' . esc_attr( $class ) . '" href="' . esc_url( $url ) . '">' . esc_html( $label ) . '</a>';
+								echo '</span>';
+							}
+							echo '</div><!-- .col.plugin_box -->';
 						}
 
 					}
@@ -685,53 +788,6 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
 				}
 			}
-		}
-
-		/**
-		 * Actions required tab
-		 */
-		public function actions_required() {
-			$req_actions = isset( $this->config['required_actions'] ) ? $this->config['required_actions'] : array();
-			if ( ! empty( $req_actions ) ) {
-				echo '<div id="actions_required" class="ti-about-page-tab-pane">';
-				if ( ! empty( $req_actions['title'] ) ) {
-					echo '<h1>' . esc_html( $req_actions['title'] ) . '</h1>';
-					echo '<hr />';
-
-				}
-				$actions = $this->get_required_actions();
-				if ( ! empty( $actions ) && is_array( $actions ) ) {
-					foreach ( $actions as $action_key => $action_value ) {
-						echo '<div class="ti-about-page-action-required-box">';
-						echo '<span class="dashicons dashicons-no-alt ti-about-page-dismiss-required-action" id="' . esc_attr( $action_value['id'] ) . '"></span>';
-						echo '<h4>' . ( $action_key + 1 ) . '.';
-						if ( ! empty( $action_value['title'] ) ) {
-							echo wp_kses_post( $action_value['title'] );
-						}
-						echo '</h4>';
-						echo '<p>';
-						if ( ! empty( $action_value['description'] ) ) {
-							echo wp_kses_post( $action_value['description'] );
-						}
-						echo '</p>';
-						if ( ! empty( $action_value['plugin_slug'] ) ) {
-							echo '<p>';
-							echo '<a href="' . esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $action_value['plugin_slug'] ), 'install-plugin_' . $action_value['plugin_slug'] ) ) . '" class="button button-primary">';
-							if ( ! empty( $action_value['title'] ) ) {
-								echo wp_kses_post( $action_value['title'] );
-							}
-							echo '</a>';
-							echo '</p>';
-						}
-						echo '<hr/>';
-						echo '</div>';
-					}
-				}
-				if ( count( $actions ) == 0 && ! empty( $req_actions['no_actions_message'] ) ) {
-					echo '<p>' . wp_kses_post( $req_actions['no_actions_message'] ) . '</p>';
-				}
-				echo '</div>';
-			} // End if().
 		}
 
 		/**
@@ -790,18 +846,56 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		}
 
 		/**
-		 * Contribute tab
+		 * Support tab
 		 */
-		public function contribute() {
-			echo '<div id="contribute" class="ti-about-page-tab-pane">';
-			if ( ! empty( $this->config['contribute_content'] ) ) {
-				if ( ! empty( $this->config['contribute_content']['title'] ) ) {
-					echo '<h1>' . wp_kses_post( $this->config['contribute_content']['title'] ) . '</h1><hr />';
+		public function support() {
+			echo '<div class="feature-section three-col">';
+
+				if ( ! empty( $this->config['support_content'] ) ) {
+
+					$support_steps = $this->config['support_content'];
+
+					if ( ! empty( $support_steps ) ) {
+						echo '<div class="feature-section three-col">';
+
+						foreach ( $support_steps as $support_step ) {
+
+							echo '<div class="col">';
+
+								if ( ! empty( $support_step['title'] ) ) {
+									echo '<h3>';
+									if ( ! empty( $support_step['icon'] ) ) {
+										echo '<i class="' . $support_step['icon'] . '"></i>';
+									}
+									echo $support_step['title'];
+									echo '</h3>';
+								}
+
+								if ( ! empty( $support_step['text'] ) ) {
+									echo '<p><i>' . $support_step['text'] . '</i></p>';
+								}
+
+								if ( ! empty( $support_step['button_link'] ) && ! empty( $support_step['button_label'] ) ) {
+
+									echo '<p>';
+									$button_class = '';
+									if ( $support_step['is_button'] ) {
+										$button_class = 'button button-primary';
+									}
+
+									echo '<a target="_blank" href="' . $support_step['button_link'] . '"class="' . $button_class . '">' . $support_step['button_label'] . '</a>';
+									echo '</p>';
+								}
+
+							echo '</div>';
+
+						}
+
+						echo '</div>';
+					}
+
 				}
-			}
-			$this->github();
-			$this->wporg_translations();
-			$this->wporg_reviews();
+
 			echo '</div>';
 		}
 
@@ -809,19 +903,19 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 * Changelog tab
 		 */
 		public function changelog() {
-			echo '<div class="ti-about-page-tab-pane" id="changelog">';
-			echo '<div class="ti-about-page-tab-pane-center">';
-			echo '<h1>' . esc_html( $this->theme_name );
-			echo '<sup id="ti-about-page-theme-version">' . esc_attr( $this->theme_version ) . '</sup>';
-			echo '</h1>';
-			echo '</div>';
 			$changelog = $this->parse_changelog();
-			foreach ( $changelog as $release ) {
-				echo ' <hr /><h1>' . $release['title'] . ' </h1 > ';
-				echo implode( '<br/>', $release['changes'] );
+			if ( ! empty( $changelog ) ) {
+				echo '<div class="featured-section changelog">';
+				foreach ( $changelog as $release ) {
+					if ( ! empty( $release['title'] ) ) {
+						echo '<h2>' . $release['title'] . ' </h2 > ';
+					}
+					if ( ! empty( $release['changes'] ) ) {
+						echo implode( '<br/>', $release['changes'] );
+					}
+				}
+				echo '</div><!-- .featured-section.changelog -->';
 			}
-			echo '</div > ';
-
 		}
 
 		/**
@@ -909,96 +1003,6 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					echo '</table>';
 					echo '</div>';
 
-				}// End if().
-			}// End if().
-		}
-
-		/**
-		 * Recommended docs section
-		 */
-		public function docs_display() {
-			$docs = isset( $this->config['docs'] ) ? $this->config['docs'] : array();
-			if ( ! empty( $docs ) ) {
-				if ( ! empty( $docs ['content'] ) && is_array( $docs ['content'] ) ) {
-					if ( ! empty( $docs['title'] ) ) {
-						echo '<div class="ti-about-page-tab-pane-center">';
-						echo '<h1>' . wp_kses_post( $docs['title'] ) . '</h1>';
-						echo '</div>';
-					}
-					echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
-					for ( $i = 0; $i < count( $docs['content'] ); $i ++ ) {
-						$doc = $docs['content'][ $i ];
-						if ( $i == ceil( count( $docs['content'] ) / 2 ) ) {
-							echo '</div>';
-							echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
-						}
-						if ( ! empty( $doc['title'] ) ) {
-							echo '<h4>' . wp_kses_post( $doc['title'] ) . '</h4>';
-						}
-						if ( ! empty( $doc['description'] ) ) {
-							echo '<p>' . wp_kses_post( $doc['description'] ) . '</p>';
-						}
-						if ( ! empty( $doc['link_url'] ) && ! empty( $doc['link_label'] ) ) {
-							echo '<p><a target="_blank" href="' . esc_url( $doc['link_url'] ) . '" class="button">' . esc_html( $doc['link_label'] ) . '</a></p>';
-						}
-					}
-					echo '</div>';
-				}
-			}
-
-		}
-
-		/**
-		 * Documentation section
-		 */
-		public function page_documentation() {
-			if ( ! empty( $this->config['documentation'] ) && ! empty( $this->config['getting_started_content'] ) ) {
-				if ( ! empty( $this->config['getting_started_content']['documentation_content'] ) ) {
-					echo '<div class="ti-about-page-tab-pane-center">';
-					echo wp_kses_post( $this->config['getting_started_content']['documentation_content'] );
-					echo '</div>';
-				}
-			}
-		}
-
-		/**
-		 * Github section
-		 */
-		public function github() {
-			if ( ! empty( $this->config['github'] ) && ! empty( $this->config['contribute_content'] ) ) {
-				if ( ! empty( $this->config['contribute_content']['github_content'] ) ) {
-					echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
-					echo wp_kses_post( $this->config['contribute_content']['github_content'] );
-					echo '<hr>';
-					echo '</div>';
-				}
-			}
-		}
-
-		/**
-		 * WordPress.org translations section
-		 */
-		public function wporg_translations() {
-			if ( ! empty( $this->config['translations_wporg'] ) && ! empty( $this->config['contribute_content'] ) ) {
-				if ( ! empty( $this->config['contribute_content']['translation_content'] ) ) {
-					echo '<div class="ti-about-page-tab-pane-half">';
-					echo wp_kses_post( $this->config['contribute_content']['translation_content'] );
-					echo '<hr>';
-					echo '</div>';
-				}
-			}
-		}
-
-		/**
-		 * WordPress.org ratings section
-		 */
-		public function wporg_reviews() {
-			if ( ! empty( $this->config['review_wporg'] ) && ! empty( $this->config['contribute_content'] ) ) {
-				if ( ! empty( $this->config['contribute_content']['review_content'] ) ) {
-					echo '<div>';
-					echo wp_kses_post( $this->config['contribute_content']['review_content'] );
-					echo '<hr>';
-					echo '</div>';
 				}
 			}
 		}
@@ -1010,20 +1014,13 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			if ( 'appearance_page_' . $this->theme_slug . '-welcome' == $hook_suffix ) {
 				wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css' );
 				wp_enqueue_script( 'ti-about-page-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts.js', array( 'jquery' ) );
-				$required_actions         = isset( $this->config['required_actions'] ) ? $this->config['required_actions'] : array();
-				$no_required_actions_text = '';
-				if ( ! empty( $required_actions ) ) {
-					if ( ! empty( $required_actions['no_actions_message'] ) ) {
-						$no_required_actions_text = esc_html( $required_actions['no_actions_message'] );
-					}
-				}
+				$recommended_actions         = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
 				$required_actions = $this->get_required_actions();
 				wp_localize_script( 'ti-about-page-js', 'tiAboutPageObject', array(
 					'nr_actions_required'      => count( $required_actions ),
 					'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 					'nonce'                    => wp_create_nonce( 'ti_about_nonce' ),
-					'template_directory'       => get_template_directory_uri(),
-					'no_required_actions_text' => $no_required_actions_text,
+					'template_directory'       => get_template_directory_uri()
 				) );
 
 			}
@@ -1040,7 +1037,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			if ( ! is_array( $saved_actions ) ) {
 				$saved_actions = array();
 			}
-			$req_actions = isset( $this->config['required_actions'] ) ? $this->config['required_actions'] : array();
+			$req_actions = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
 			$valid       = array();
 			foreach ( $req_actions['content'] as $req_action ) {
 				if ( ( ! isset( $req_action['check'] ) || ( isset( $req_action['check'] ) && ( $req_action['check'] == false ) ) ) && ( ! isset( $saved_actions[ $req_action['id'] ] ) ) ) {
@@ -1055,19 +1052,60 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 * Dismiss required actions
 		 */
 		public function dismiss_required_action_callback() {
-			check_ajax_referer( 'ti_about_nonce', 'nonce' );
-			$id = ( isset( $_POST['dismiss_id'] ) ) ? $_POST['dismiss_id'] : 0;
-			if ( ! empty( $id ) ) {
-				$saved_actions = get_option( $this->theme_slug . '_required_actions' );
-				if ( ! is_array( $saved_actions ) ) {
-					$saved_actions = array();
-				}
-				$saved_actions[ $id ] = 'yes';
-				update_option( $this->theme_slug . '_required_actions', $saved_actions );
-				wp_send_json_success( array( 'id' => $id ) );
+
+			$recommended_actions = array();
+			$req_actions = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
+			foreach ( $req_actions['content'] as $req_action ) {
+				$recommended_actions[] = $req_action;
 			}
-			die(); // this is required to return a proper result
+
+			$action_id = ( isset( $_GET['id'] ) ) ? $_GET['id'] : 0;
+
+			echo esc_html( wp_unslash( $action_id ) ); /* this is needed and it's the id of the dismissable required action */
+
+			if ( ! empty( $action_id ) ) {
+
+				/* if the option exists, update the record for the specified id */
+				if ( get_option( $this->theme_slug . '_required_actions' ) ) {
+
+					$ti_about_page_show_required_actions = get_option( $this->theme_slug . '_required_actions' );
+
+					switch ( esc_html( $_GET['todo'] ) ) {
+						case 'add';
+							$ti_about_page_show_required_actions[ absint( $action_id ) ] = true;
+							break;
+						case 'dismiss';
+							$ti_about_page_show_required_actions[ absint( $action_id ) ] = false;
+							break;
+					}
+
+					update_option( $this->theme_slug . '_required_actions', $ti_about_page_show_required_actions );
+
+					/* create the new option,with false for the specified id */
+				} else {
+
+					$ti_about_page_show_required_actions_new = array();
+
+					if ( ! empty( $recommended_actions ) ) {
+
+						foreach ( $recommended_actions as $ti_about_page_required_action ) {
+
+							if ( $ti_about_page_required_action['id'] == $action_id ) {
+								$ti_about_page_show_required_actions_new[ $ti_about_page_required_action['id'] ] = false;
+							} else {
+								$ti_about_page_show_required_actions_new[ $ti_about_page_required_action['id'] ] = true;
+							}
+
+						}
+
+						update_option( $this->theme_slug . '_required_actions', $ti_about_page_show_required_actions_new );
+
+					}
+
+				}
+
+			}
 		}
 
 	}
-}// End if().
+}

@@ -81,15 +81,11 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			// Menu name under Appearance.
 			'menu_name'               => __( 'About Flymag', 'flymag' ),
 			// Page title.
-			'page_name'               => __( 'Flymag Intro', 'flymag' ),
-			// Url of the documentation.
-			'documentation'           => 'http://docs.themeisle.com/article/310-flymag-documentation',
-			// Github repository url
-			'github'                  => 'https://github.com/Codeinwp/flymag',
-			// Translation url.
-			'translations_wporg'      => 'https://translate.wordpress.org/projects/wp-themes/flymag',
-			// Review url.
-			'review_wporg'            => 'https://wordpress.org/support/view/theme-reviews/flymag',
+			'page_name'               => __( 'About Flymag', 'flymag' ),
+			// Main welcome title
+			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
+			// Main welcome content
+			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
 			/**
 			 * Tabs array.
 			 *
@@ -98,25 +94,65 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			 */
 			'tabs'                    => array(
 				'getting_started'  => __( 'Getting Started', 'flymag' ),
-				'actions_required' => __( 'Recommended Actions', 'flymag' ),
-				'plugins_recommended' => __( 'Recommended Plugins','flymag' ),
-				'contribute'       => __( 'Contribute', 'flymag' ),
+				'recommended_actions' => __( 'Recommended Actions', 'flymag' ),
+				'recommended_plugins' => __( 'Recommended Plugins','flymag' ),
+				'support'       => __( 'Support', 'flymag' ),
 				'changelog'        => __( 'Changelog', 'flymag' ),
 				'free_pro'         => __( 'Free VS PRO', 'flymag' ),
 			),
-			// Contribute content tab.
-			'contribute_content'      => array(
-				'title'               => __( 'How can I contribute?', 'flymag' ),
-				'github_content'      => '<p><strong>' . __( 'Found a bug? Want to contribute with a fix or create a new feature?', 'flymag' ) . '</strong></p><p>' . __( 'GitHub is the place to go!', 'flymag' ) . '</p><p><a href="https://github.com/Codeinwp/flymag" class="github-button button button-primary">' . sprintf( __( '%s on GitHub', 'flymag' ), 'FlyMag' ) . '</a></p>',
-				'translation_content' => '<p><strong>' . sprintf( __( 'Are you a polyglot? Want to translate %s into your own language?', 'flymag' ), 'FlyMag' ) . '</strong></p><p>' . __( 'Get involved at WordPress.org.', 'flymag' ) . '</p><p><a href="https://translate.wordpress.org/projects/wp-themes/flymag" class="translate-button button button-primary">' . sprintf( __( 'Translate %s', 'flymag' ), 'FlyMag' ) . '</a></p>',
-				'review_content'      => '<h4>' . sprintf( __( 'Are you enjoying %s?', 'flymag' ), 'FlyMag' ) . '</h4><p class="review-link">' . sprintf( __( 'Rate our theme on %1$sWordPress.org%2$s. We\'d really appreciate it!', 'flymag' ), '<a href="https://wordpress.org/support/view/theme-reviews/flymag">', '</a>' ) . '</p><p><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></p>',
+			// Support content tab.
+			'support_content'      => array(
+				'first' => array (
+					'title' => esc_html__( 'Contact Support','flymag' ),
+					'icon' => 'dashicons dashicons-sos',
+					'text' => esc_html__( 'We offer excellent support through our advanced ticketing system. Make sure to register your purchase before contacting support!','flymag' ),
+					'button_label' => esc_html__( 'Contact Support','flymag' ),
+					'button_link' => esc_url( 'https://themeisle.com/contact/' ),
+					'is_button' => true
+				),
+				'second' => array(
+					'title' => esc_html__( 'Documentation','flymag' ),
+					'icon' => 'dashicons dashicons-book-alt',
+					'text' => sprintf( esc_html__( 'This is the place to go to reference different aspects of the theme. Our online documentation is an incredible resource for learning the ins and outs of using %s.','flymag' ), 'FlyMag' ),
+					'button_label' => esc_html__( 'See our full documentation','flymag' ),
+					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
+					'is_button' => false
+				),
+				'third' => array(
+					'title' => esc_html__( 'Changelog','flymag' ),
+					'icon' => 'dashicons dashicons-portfolio',
+					'text' => esc_html__( 'Want to get the gist on the latest theme changes? Just consult our changelog below to get a taste of the recent fixes and features implemented.','flymag' ),
+					'button_label' => esc_html__( 'See changelog','flymag' ),
+					'button_link' => esc_url( admin_url( 'customize.php' ) ),
+					'is_button' => false
+				)
 			),
-			// Getting started tab content.
-			'getting_started_content' => array(
-				'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
-				'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
-				'customizer_content'    => '<h1>' . __( 'Getting started', 'flymag' ) . '</h1><h4>' . __( 'Customize everything in a single place.', 'flymag' ) . '</h4><p>' . __( 'Using the WordPress Customizer you can easily customize every aspect of the theme.', 'flymag' ) . '</p><p><a href="' . esc_url( admin_url( 'customize.php' ) ) . '" class="button button-primary">' . __( 'Go to Customizer', 'flymag' ) . '</a></p>',
-				'documentation_content' => '<h1>' . __( 'View full documentation', 'flymag' ) . '</h1><p>' . sprintf( __( 'Need more details? Please check our full documentation for detailed information on how to use %s.', 'flymag' ), 'FlyMag' ) . '</p><p><a href="' . esc_url( 'http://docs.themeisle.com/article/310-flymag-documentation' ) . '" class="button button-primary">' . __( 'Read full documentation', 'flymag' ) . '</a></p>',
+			// Getting started tab
+			'getting_started' => array(
+				'first' => array (
+					'title' => esc_html__( 'Step 1 - Implement recommended actions','flymag' ),
+					'text' => esc_html__( 'We have compiled a list of steps for you, to take make sure the experience you will have using one of our products is very easy to follow.','flymag' ),
+					'button_label' => esc_html__( 'Check recommended actions','flymag' ),
+					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=actions_required' ) ),
+					'is_button' => false,
+					'recommended_actions' => true
+				),
+				'second' => array(
+					'title' => esc_html__( 'Step 2 - Check our documentation','flymag' ),
+					'text' => esc_html__( 'Even if you are a long-time WordPress user, we still believe you should give our documentation a very quick Read.','flymag' ),
+					'button_label' => esc_html__( 'Full documentation','flymag' ),
+					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
+					'is_button' => false,
+					'recommended_actions' => false
+				),
+				'third' => array(
+					'title' => esc_html__( 'Step 3 - Customize everything','flymag' ),
+					'text' => esc_html__( 'Using the WordPress Customizer you can easily customize every aspect of the theme.','flymag' ),
+					'button_label' => esc_html__( 'Go to Customizer','flymag' ),
+					'button_link' => esc_url( admin_url( 'customize.php' ) ),
+					'is_button' => true,
+					'recommended_actions' => false
+				)
 			),
 			// Child themes array.
 			'child_themes'            => array(
@@ -188,82 +224,48 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					),
 				),
 			),
-			// Important docs array.
-			'docs'                    => array(
-				'title'   => __( 'FAQ', 'flymag' ),
-				'content' => array(
-					array(
-						'title'       => __( 'Create a child theme', 'flymag' ),
-						'description' => __( 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below', 'flymag' ),
-						'link_url'    => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme/',
-						'link_label'  => __( 'View how to do this', 'flymag' ),
-					),
-					array(
-						'title'       => __( 'Build a landing page with a drag-and-drop content builder', 'flymag' ),
-						'description' => __( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.', 'flymag' ),
-						'link_url'    => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
-						'link_label'  => __( 'View how to do this', 'flymag' ),
-					),
-					array(
-						'title'       => __( 'Speed up your site', 'flymag' ),
-						'description' => __( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.', 'flymag' ),
-						'link_url'    => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site/',
-						'link_label'  => __( 'View how to do this', 'flymag' ),
-					),
-					array(
-						'title'       => __( 'How to Internationalize Your Website', 'flymag' ),
-						'description' => __( 'Although English is the most used language on the internet, you should consider all your web users as well. Find out what it takes to make your website ready for foreign markets from this document.', 'flymag' ),
-						'link_url'    => 'http://docs.themeisle.com/article/80-how-to-translate-zerif',
-						'link_label'  => __( 'View how to do this', 'flymag' ),
-					),
-				),
-			),
 			// Plugins array.
-			'plugins_recommended'        => array(
-				'already_activated_message' => __( 'Already activated', 'flymag' ),
-				'version_label' => __( 'Version: ', 'flymag' ),
+			'recommended_plugins'        => array(
+				'already_activated_message' => esc_html__( 'Already activated', 'flymag' ),
+				'version_label' => esc_html__( 'Version: ', 'flymag' ),
+				'install_label' => esc_html__( 'Install', 'flymag' ),
+				'activate_label' => esc_html__( 'Activate', 'flymag' ),
+				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
 				'content'                   => array(
 					array(
-						'title'       => __( 'Pirate Forms', 'flymag' ),
-						'description' => __( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.', 'flymag' ),
-						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
-						'check'       => defined( 'PIRATE_FORMS_VERSION' ),
 						'slug'        => 'pirate-forms',
 					),
 					array(
-						'title'       => __( 'Easy Content Types', 'flymag' ),
-						'description' => __( 'Custom Post Types, Taxonomies and Metaboxes in Minutes.', 'flymag' ),
-						'link_label'  => __( 'Download Easy Content Types', 'flymag' ),
-						'check'       => defined( 'ECPT_PLUGIN_VERSION' ),
 						'link'        => 'http://themeisle.com/plugins/easy-content-types/',
 					),
 					array(
-						'title'       => __( 'Page Builder by SiteOrigin', 'flymag' ),
-						'description' => __( 'Build responsive page layouts using the widgets you know and love using this simple drag and drop page builder.', 'flymag' ),
-						'link_label'  => __( 'Install Page Builder by SiteOrigin', 'flymag' ),
-						'check'       => defined( 'SITEORIGIN_PANELS_VERSION' ),
 						'slug'        => 'siteorigin-panels',
 					),
 					array(
-						'title'       => __( 'Intergeo Maps - Google Maps Plugin', 'flymag' ),
-						'description' => '',
-						'link_label'  => __( 'Install Intergeo Maps', 'flymag' ),
-						'check'       => defined( 'INTERGEO_PLUGIN_NAME' ),
 						'slug'        => 'intergeo-maps',
 					),
 				),
 			),
 			// Required actions array.
-			'required_actions'        => array(
-				'title'              => sprintf( __( 'Keep up with %s\'s latest news', 'flymag' ), 'FlyMag' ),
-				'no_actions_message' => __( 'Hooray! There are no required actions for you right now.', 'flymag' ),
+			'recommended_actions'        => array(
+				'install_label' => esc_html__( 'Install', 'flymag' ),
+				'activate_label' => esc_html__( 'Activate', 'flymag' ),
+				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
 				'content'            => array(
 					'pirate-forms' => array(
 						'title'       => __( 'Pirate Forms', 'flymag' ),
 						'description' => __( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.', 'flymag' ),
 						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
 						'check'       => defined( 'PIRATE_FORMS_VERSION' ),
-						'id'          => 'pirate-forms',
+						'plugin_slug' => 'pirate-forms',
+						'id' => 'pirate-forms'
+					),
+					'buddypress' => array(
+						'title'       => __( 'BuddyPress', 'flymag' ),
+						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
+						'check'       => class_exists( 'BuddyPress' ),
+						'plugin_slug' => 'buddypress',
+						'id' => 'buddypress'
 					),
 				),
 			),
