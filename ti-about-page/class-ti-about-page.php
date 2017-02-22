@@ -36,7 +36,8 @@
  *				        'text' => esc_html__( 'We offer excellent support through our advanced ticketing system. Make sure to register your purchase before contacting support!','flymag' ),
  *				        'button_label' => esc_html__( 'Contact Support','flymag' ),
  *				        'button_link' => esc_url( 'https://themeisle.com/contact/' ),
- *				        'is_button' => true
+ *				        'is_button' => true,
+ *                      'is_new_tab' => false
  *				    ),
  *            ),
  *            // Getting started tab content.
@@ -420,21 +421,26 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					echo '<h2 class="nav-tab-wrapper wp-clearfix">';
 
 					foreach ( $this->tabs as $tab_key => $tab_name ) {
-						echo '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->theme_slug . '-welcome' ) ) . '&tab=' . $tab_key . '" class="nav-tab ' . ( $active_tab == $tab_key ? 'nav-tab-active' : '' ) . '" role="tab" data-toggle="tab">';
-							echo esc_html( $tab_name );
-							if ( $tab_key == 'recommended_actions' ) {
-								$count = 0;
 
-								$actions_count = $this->get_required_actions();
+						if ( ( $tab_key != 'changelog' ) || ( ( $tab_key == 'changelog' ) && isset( $_GET['show'] ) && ( $_GET['show'] == 'yes' ) ) ) {
 
-								if ( ! empty( $actions_count ) ) {
-									$count = count( $actions_count );
+							echo '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->theme_slug . '-welcome' ) ) . '&tab=' . $tab_key . '" class="nav-tab ' . ( $active_tab == $tab_key ? 'nav-tab-active' : '' ) . '" role="tab" data-toggle="tab">';
+								echo esc_html( $tab_name );
+								if ( $tab_key == 'recommended_actions' ) {
+									$count = 0;
+
+									$actions_count = $this->get_required_actions();
+
+									if ( ! empty( $actions_count ) ) {
+										$count = count( $actions_count );
+									}
+									if ( $count > 0 ) {
+										echo '<span class="badge-action-count">' . esc_html( $count ) . '</span>';
+									}
 								}
-								if ( $count > 0 ) {
-									echo '<span class="badge-action-count">' . esc_html( $count ) . '</span>';
-								}
-							}
-						echo '</a>';
+							echo '</a>';
+						}
+
 					}
 
 					echo '</h2>';
@@ -882,7 +888,13 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 										$button_class = 'button button-primary';
 									}
 
-									echo '<a target="_blank" href="' . $support_step['button_link'] . '"class="' . $button_class . '">' . $support_step['button_label'] . '</a>';
+									$button_new_tab = '_self';
+									if ( isset( $support_step['is_new_tab'] ) ) {
+										if ( $support_step['is_new_tab'] ) {
+											$button_new_tab = '_blank';
+										}
+									}
+									echo '<a target="' . $button_new_tab . '" href="' . $support_step['button_link'] . '"class="' . $button_class . '">' . $support_step['button_label'] . '</a>';
 									echo '</p>';
 								}
 
