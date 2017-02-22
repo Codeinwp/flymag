@@ -411,7 +411,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					echo '<div class="about-text">' . wp_kses_post( $welcome_content ) . '</div>';
 				}
 
-				echo '<div class="wp-badge epsilon-welcome-logo"></div>';
+				echo '<a href="https://themeisle.com/" target="_blank" class="wp-badge epsilon-welcome-logo"></a>';
 
 				/* Display tabs */
 				if ( ! empty( $this->tabs ) ) {
@@ -1012,15 +1012,23 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 * Load css and scripts for the about page
 		 */
 		public function style_and_scripts( $hook_suffix ) {
+
+			// this is needed on all admin pages, not just the about page, for the badge action count in the wordpress main sidebar
+			wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css' );
+
 			if ( 'appearance_page_' . $this->theme_slug . '-welcome' == $hook_suffix ) {
-				wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css' );
+
 				wp_enqueue_script( 'ti-about-page-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts.js', array( 'jquery' ) );
+
+				wp_enqueue_style( 'plugin-install' );
+				wp_enqueue_script( 'plugin-install' );
+				wp_enqueue_script( 'updates' );
+
 				$recommended_actions         = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
 				$required_actions = $this->get_required_actions();
 				wp_localize_script( 'ti-about-page-js', 'tiAboutPageObject', array(
 					'nr_actions_required'      => count( $required_actions ),
 					'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
-					'nonce'                    => wp_create_nonce( 'ti_about_nonce' ),
 					'template_directory'       => get_template_directory_uri()
 				) );
 
