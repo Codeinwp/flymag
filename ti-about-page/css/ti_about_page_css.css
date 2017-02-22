@@ -9,9 +9,6 @@
 	background-position: center center;
 	background-size: 70%;
 	background-repeat: no-repeat;
-	margin: 0;
-	padding: 0;
-	height: 125px;
 }
 
 /* proper positioning of the icons */
@@ -32,15 +29,14 @@
 
 .ti-about-page-action-required-box {
 	background: #fff;
-	background: #fcfcfc;
-	border-bottom: 1px solid #ddd;
-	border-left: 5px solid #f8800c;
-	border-right: 1px solid #ddd;
-	border-top: 1px solid #ddd;
+	border-left: 4px solid #f8800c;
 	display: block;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	padding: 10px 30px;
 	position: relative;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
 
 .action-required .ti-about-page-action-required-box:last-of-type {
@@ -49,41 +45,6 @@
 
 .ti-about-page-action-required-box h3 {
 	margin: 0 0 10px;
-}
-
-.nav-tab {
-	margin-left: 0;
-	margin-right: .5em;
-}
-
-.nav-tab-active,
-.nav-tab-active:hover {
-	background: #fff;
-	border-bottom: 1px solid #fff;
-}
-
-.about-wrap {
-	margin: 20px 20px 0 0;
-	max-width: 100%;
-}
-
-.about-wrap h1 {
-	font-size: 36px;
-	font-weight: 600;
-	margin: 0 200px 0 0;
-}
-
-.about-wrap .about-text {
-	font-size: 16px;
-}
-
-.about-wrap .nav-tab {
-	font-size: 16px;
-}
-
-.about-wrap .nav-tab-wrapper a:focus {
-	box-shadow: none;
-	outline: none;
 }
 
 .about-wrap .ti-about-page-action-required-box h4 {
@@ -114,22 +75,22 @@
 	top: 10px;
 	right: 10px;
 	text-decoration: none;
-	color: #d54e21;
+	color: #b4b9be;
 	border-radius: 50%;
 	cursor: pointer;
 }
 
+.about-wrap .ti-about-page-required-action-button:hover:before {
+	color: #c00;
+}
+
 .about-wrap .feature-section {
-	border-bottom: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	padding: 30px;
-	background: #fff;
-	margin: 0;
+	padding: 40px 0 0;
 }
 
 .about-wrap .feature-section .col {
 	margin-top: 0;
+	margin-bottom: 5%;
 }
 
 #free_pro .free-pro-table {
@@ -279,7 +240,9 @@
 }
 
 .about-wrap .three-col .plugin_box.col {
-	width: 20%;
+	box-sizing: border-box;
+	float: left;
+	width: 30%;
 }
 
 .ti-about-page-media-control img {
