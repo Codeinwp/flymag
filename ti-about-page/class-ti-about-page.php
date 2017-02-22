@@ -996,7 +996,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					if ( ! empty( $free_pro['pro_theme_link'] ) && ! empty( $free_pro['get_pro_theme_label'] ) ) {
 						echo '<tr class="ti-about-page-text-center">';
 						echo '<td></td>';
-						echo '<td colspan="2"><a href="' . esc_url( $free_pro['pro_theme_link'] ) . '" target="_blank" class="button button-primary">' . wp_kses_post( $free_pro['get_pro_theme_label'] ) . '</a></td>';
+						echo '<td colspan="2"><a href="' . esc_url( $free_pro['pro_theme_link'] ) . '" target="_blank" class="button button-primary button-hero">' . wp_kses_post( $free_pro['get_pro_theme_label'] ) . '</a></td>';
 						echo '</tr>';
 					}
 					echo '</tbody>';

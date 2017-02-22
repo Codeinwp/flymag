@@ -179,15 +179,6 @@
 	text-align: center;
 }
 
-#free_pro .ti-about-page-text-center .button {
-	font-size: 15px;
-	font-weight: 700;
-	height: auto;
-	letter-spacing: 0.05em;
-	margin-top: 20px;
-	padding: 10px 15px;
-}
-
 .badge-action-count {
 	padding: 0 6px;
 	display: inline-block;
@@ -288,7 +279,7 @@
 }
 
 .about-wrap .three-col .plugin_box.col {
-	width: 29.81%;
+	width: 20%;
 }
 
 .ti-about-page-media-control img {
