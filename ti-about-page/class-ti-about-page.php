@@ -856,7 +856,6 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					$support_steps = $this->config['support_content'];
 
 					if ( ! empty( $support_steps ) ) {
-						echo '<div class="feature-section three-col">';
 
 						foreach ( $support_steps as $support_step ) {
 
@@ -891,7 +890,6 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
 						}
 
-						echo '</div>';
 					}
 
 				}
@@ -959,8 +957,9 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			$free_pro = isset( $this->config['free_pro'] ) ? $this->config['free_pro'] : array();
 			if ( ! empty( $free_pro ) ) {
 				if ( ! empty( $free_pro['free_theme_name'] ) && ! empty( $free_pro['pro_theme_name'] ) && ! empty( $free_pro['features'] ) && is_array( $free_pro['features'] ) ) {
+				    echo '<div class="feature-section">';
 					echo '<div id="free_pro" class="ti-about-page-tab-pane ti-about-page-fre-pro">';
-					echo '<table>';
+					echo '<table class="free-pro-table">';
 					echo '<thead>';
 					echo '<tr>';
 					echo '<th></th>';
@@ -982,25 +981,27 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 							echo '</td>';
 						}
 						if ( ! empty( $feature['is_in_lite'] ) && ( $feature['is_in_lite'] == 'true' ) ) {
-							echo '<td><span class="dashicons-before dashicons-yes"></span></td>';
+							echo '<td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>';
 						} else {
-							echo '<td><span class="dashicons-before dashicons-no-alt"></span></td>';
+							echo '<td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>';
 						}
 						if ( ! empty( $feature['is_in_pro'] ) && ( $feature['is_in_pro'] == 'true' ) ) {
-							echo '<td><span class="dashicons-before dashicons-yes"></span></td>';
+							echo '<td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>';
 						} else {
-							echo '<td><span class="dashicons-before dashicons-no-alt"></span></td>';
+							echo '<td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>';
 						}
 						echo '</tr>';
 
 					}
 					if ( ! empty( $free_pro['pro_theme_link'] ) && ! empty( $free_pro['get_pro_theme_label'] ) ) {
 						echo '<tr class="ti-about-page-text-center">';
-						echo '<td colspan="3"><a href="' . esc_url( $free_pro['pro_theme_link'] ) . '" target="_blank" class="button button-primary">' . wp_kses_post( $free_pro['get_pro_theme_label'] ) . '</a></td>';
+						echo '<td></td>';
+						echo '<td colspan="2"><a href="' . esc_url( $free_pro['pro_theme_link'] ) . '" target="_blank" class="button button-primary">' . wp_kses_post( $free_pro['get_pro_theme_label'] ) . '</a></td>';
 						echo '</tr>';
 					}
 					echo '</tbody>';
 					echo '</table>';
+					echo '</div>';
 					echo '</div>';
 
 				}
