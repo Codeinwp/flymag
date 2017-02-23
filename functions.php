@@ -74,8 +74,14 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'default-color' => 'f5f5f5',
 			'default-image' => '',
 		) ) );
+
+		/**
+		 * About page class
+		 */
+		require_once get_template_directory() . '/ti-about-page/class-ti-about-page.php';
+
 		/*
-		 * TI About page register
+		 * About page instance
 		 */
 		$config = array(
 			// Menu name under Appearance.
@@ -163,7 +169,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'title' => esc_html__( 'Step 1 - Implement recommended actions','flymag' ),
 					'text' => esc_html__( 'We have compiled a list of steps for you, to take make sure the experience you will have using one of our products is very easy to follow.','flymag' ),
 					'button_label' => esc_html__( 'Check recommended actions','flymag' ),
-					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=actions_required' ) ),
+					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=recommended_actions' ) ),
 					'is_button' => false,
 					'recommended_actions' => true
 				),
@@ -486,8 +492,7 @@ function flymag_register_required_plugins() {
 }
 
 add_action( 'tgmpa_register', 'flymag_register_required_plugins' );
-/* ti-about-page */
-require_once get_template_directory() . '/ti-about-page/class-ti-about-page.php';
+
 /**
  * Set custom classes for the top menu items.
  */
