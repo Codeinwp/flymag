@@ -800,31 +800,21 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 * Child themes
 		 */
 		public function child_themes() {
-			echo '<div id="child_themes" class="ti-about-page-tab-pane">';
+			echo '<div id="child-themes" class="ti-about-page-tab-pane">';
 			$child_themes = isset( $this->config['child_themes'] ) ? $this->config['child_themes'] : array();
 			if ( ! empty( $child_themes ) ) {
 				if ( ! empty( $child_themes['content'] ) && is_array( $child_themes['content'] ) ) {
-					if ( ! empty( $child_themes['title'] ) ) {
-						echo '<div class="ti-about-page-tab-pane-center">';
-						echo esc_html( $child_themes['title'] );
-						echo '</div>';
-					}
-					echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
+					echo '<div class="ti-about-row">';
 					for ( $i = 0; $i < count( $child_themes['content'] ); $i ++ ) {
-						if ( $i == ceil( count( $child_themes['content'] ) / 2 ) ) {
-							echo '</div>';
-							echo '<div class="ti-about-page-tab-pane-half ti-about-page-tab-pane-first-half">';
-						}
-						$child = $child_themes['content'][ $i ];
+					    if( ( $i !== 0 ) && ( $i / 3 === 0 ) ) {
+					        echo '</div>';
+						    echo '<div class="ti-about-row">';
+                        }
+					    $child = $child_themes['content'][ $i ];
 						if ( ! empty( $child['image'] ) ) {
-							echo '<div class="ti-about-page-child-theme-container">';
-							echo '<div class="ti-about-page-child-theme-image-container">';
+							echo '<div class="ti-about-child-theme">';
+							echo '<div class="ti-about-page-child-theme-image">';
 							echo '<img src="' . esc_url( $child['image'] ) . '" alt="' . ( ! empty( $child['image_alt'] ) ? esc_html( $child['image_alt'] ) : '' ) . '" />';
-							if ( ! empty( $child['description'] ) ) {
-								echo '<div class="ti-about-page-child-theme-description">';
-								echo '<h2>' . wp_kses_post( $child['description'] ) . '</h2>';
-								echo '</div>';
-							}
 							if ( ! empty( $child['title'] ) ) {
 								echo '<div class="ti-about-page-child-theme-details">';
 								if ( $child['title'] != $this->theme_name ) {
@@ -836,13 +826,12 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 									if ( ! empty( $child['preview_link'] ) && ! empty( $child_themes['preview_button_label'] ) ) {
 										echo '<a class="button button-secondary preview right" target="_blank" href="' . $child['preview_link'] . '">' . esc_html( $child_themes['preview_button_label'] ) . '</a>';
 									}
-									echo '<div class="ti-about-page-clear"></div>';
 									echo '</div>';
 								}
 								echo '</div>';
 							}
-							echo '</div><!-- .ti-about-page-child-theme-image-container -->';
-							echo '</div><!-- .ti-about-page-child-theme-container -->';
+							echo '</div><!--ti-about-page-child-theme-image-->';
+							echo '</div><!--ti-about-child-theme-->';
 						}// End if().
 					}// End for().
 					echo '</div>';
