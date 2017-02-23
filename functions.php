@@ -190,25 +190,6 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'recommended_actions' => false
 				)
 			),
-			// Child themes array.
-			'child_themes'            => array(
-				'title'                 => __( 'List of child themes to use with Flymag', 'flymag' ),
-				'download_button_label' => 'Download',
-				'preview_button_label'  => 'Live preview',
-				'content'               => array(
-
-					/*
-					 * array(
-						'title'         => 'Flymag child theme 1',
-						'image'         => 'https://github.com/Codeinwp/zerif-lite/blob/production/inc/admin/welcome-screen/img/zblackbeard.jpg?raw=true',
-						'image_alt'     => 'Image of the child theme',
-						'description'   => 'Description',
-						'download_link' => 'Download link',
-						'preview_link'  => 'Preview link',
-					),
-					*/
-				),
-			),
 			// Free vs pro array.
 			'free_pro'                => array(
 				'free_theme_name'     => 'FlyMag',
