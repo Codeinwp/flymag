@@ -85,7 +85,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			// Main welcome title
 			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
 			// Main welcome content
-			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
+			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
 			/**
 			 * Tabs array.
 			 *
@@ -128,6 +128,33 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=changelog&show=yes' ) ),
 					'is_button' => false,
 					'is_new_tab' => false
+				),
+				'fourth' => array(
+					'title' => esc_html__( 'Create a child theme','flymag' ),
+					'icon' => 'dashicons dashicons-admin-customizer',
+					'text' => esc_html__( "If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below.",'flymag' ),
+					'button_label' => esc_html__( 'View how to do this','flymag' ),
+					'button_link' => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme',
+					'is_button' => false,
+					'is_new_tab' => true
+				),
+				'fifth' => array(
+					'title' => esc_html__( 'Speed up your site','flymag' ),
+					'icon' => 'dashicons dashicons-controls-skipforward',
+					'text' => esc_html__( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.','flymag' ),
+					'button_label' => esc_html__( 'View how to do this','flymag' ),
+					'button_link' => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site',
+					'is_button' => false,
+					'is_new_tab' => true
+				),
+				'sixth' => array(
+					'title' => esc_html__( 'Build a landing page with a drag-and-drop content builder','flymag' ),
+					'icon' => 'dashicons dashicons-images-alt2',
+					'text' => esc_html__( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.','flymag' ),
+					'button_label' => esc_html__( 'View how to do this','flymag' ),
+					'button_link' => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
+					'is_button' => false,
+					'is_new_tab' => true
 				)
 			),
 			// Getting started tab
