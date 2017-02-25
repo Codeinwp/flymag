@@ -171,7 +171,8 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'Check recommended actions','flymag' ),
 					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=recommended_actions' ) ),
 					'is_button' => false,
-					'recommended_actions' => true
+					'recommended_actions' => true,
+                    'is_new_tab' => false
 				),
 				'second' => array(
 					'title' => esc_html__( 'Step 2 - Check our documentation','flymag' ),
@@ -179,7 +180,8 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'Full documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
-					'recommended_actions' => false
+					'recommended_actions' => false,
+                    'is_new_tab' => true
 				),
 				'third' => array(
 					'title' => esc_html__( 'Step 3 - Customize everything','flymag' ),
@@ -187,7 +189,8 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'Go to Customizer','flymag' ),
 					'button_link' => esc_url( admin_url( 'customize.php' ) ),
 					'is_button' => true,
-					'recommended_actions' => false
+					'recommended_actions' => false,
+                    'is_new_tab' => true
 				)
 			),
 			// Free vs pro array.
