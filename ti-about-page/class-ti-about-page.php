@@ -398,6 +398,8 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
                     $actions_count = $this->get_required_actions();
 
+		    $count = 0;	
+			
                     if ( ! empty( $actions_count ) ) {
                         $count = count( $actions_count );
                     }
