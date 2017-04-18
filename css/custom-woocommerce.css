@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+Woocommerce
+--------------------------------------------------------------*/
+.product-area {
+	padding: 30px;
+	background-color: #fff;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    border: 1px solid #eee;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 20px;
+}
+.woocommerce ul.products li.product .button {
+  border: none;
+  -webkit-appearance: inherit;
+  background-color: #f4f4f4;
+}
+.woocommerce .products .star-rating {
+	margin: 0 auto;
+}
+.woocommerce ul.products li.product .price {
+    margin: 10px 0px;
+    font-size: 15px;
+}
+.woocommerce ul.products li.product .price del {
+    display: inline-block;
+    padding-right: 5px;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title:hover{
+   font-weight: 500;
+}
+h1.woocommerce-products-header__title.page-title {
+    color: #f0696a;
+    text-align: center;
+}
+.woocommerce .flymag-sorting {
+    margin: 20px 0px;
+}
+.woocommerce div.product div.images .flex-control-thumbs li {
+	padding: 10px 10px 10px 0px;
+}
+.wc-proceed-to-checkout .checkout-button{
+	-webkit-appearance:inherit;
+}
