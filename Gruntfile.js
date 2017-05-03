@@ -23,5 +23,6 @@ module.exports = function( grunt ) {
     config.files.js.push( '!js/skip-link-focus-fix.js' );
     config.files.js.push( '!js/wow.js' );
     config.files.js.push( '!js/wow.min.js' );
+    config.files.js.push( '!ti-about-page/**' );
     loader( grunt, config ).init();
 };

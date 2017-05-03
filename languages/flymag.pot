@@ -1,14 +1,14 @@
-# Copyright (C) 2016 Themeisle
+# Copyright (C) 2017 Themeisle
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: FlyMag 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/flymag/issues\n"
-"POT-Creation-Date: 2016-12-19 17:55:24+00:00\n"
+"POT-Creation-Date: 2017-05-03 13:57:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Themeisle Translate Team <friends@themeisle.com>\n"
 "Language-Team: Themeisle Translate <friends@themeisle.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -43,380 +43,346 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:333 functions.php:277
+#: class-tgm-plugin-activation.php:327
 msgid "Install Required Plugins"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:334 functions.php:278
+#: class-tgm-plugin-activation.php:328
 msgid "Install Plugins"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:335 functions.php:279
+#: class-tgm-plugin-activation.php:330
+#. translators: %s: plugin name.
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:336 functions.php:280
+#: class-tgm-plugin-activation.php:332
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:333
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:337 functions.php:281
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:342 functions.php:282
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:347
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:352 functions.php:287
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:357
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:362
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %1$s "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:367 functions.php:284
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:372 functions.php:285
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:377
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: class-tgm-plugin-activation.php:382 functions.php:289
+#: class-tgm-plugin-activation.php:370
+#. translators: 1: plugin name(s).
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:387
+#: class-tgm-plugin-activation.php:375
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:392 functions.php:290
+#: class-tgm-plugin-activation.php:380
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:397 functions.php:291
+#: class-tgm-plugin-activation.php:385
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:398
-msgid "Return to the dashboard"
+#: class-tgm-plugin-activation.php:386 class-tgm-plugin-activation.php:827
+#: class-tgm-plugin-activation.php:2533 class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:399 class-tgm-plugin-activation.php:3029
-#: functions.php:292
+#: class-tgm-plugin-activation.php:387 class-tgm-plugin-activation.php:3159
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:400 class-tgm-plugin-activation.php:2832
+#: class-tgm-plugin-activation.php:388 class-tgm-plugin-activation.php:2952
 msgid "The following plugin was activated successfully:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:401
+#: class-tgm-plugin-activation.php:390
+#. translators: 1: plugin name.
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:402
+#: class-tgm-plugin-activation.php:392
+#. translators: 1: plugin name.
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:403
+#: class-tgm-plugin-activation.php:394
+#. translators: 1: dashboard link.
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:404
+#: class-tgm-plugin-activation.php:395
 msgid "Dismiss this notice"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:405
+#: class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:397
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:520
+#: class-tgm-plugin-activation.php:522
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:521
+#: class-tgm-plugin-activation.php:523
 msgid "Update Required"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:635
-msgid "Set the parent_slug config variable instead."
-msgstr ""
-
-#: class-tgm-plugin-activation.php:828 class-tgm-plugin-activation.php:3438
-msgid "Return to the Dashboard"
-msgstr ""
-
-#: class-tgm-plugin-activation.php:935
+#: class-tgm-plugin-activation.php:934
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:935 class-tgm-plugin-activation.php:938
+#: class-tgm-plugin-activation.php:934 class-tgm-plugin-activation.php:937
 msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:938
+#: class-tgm-plugin-activation.php:937
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2167
+#: class-tgm-plugin-activation.php:1982
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2273
 msgid "Required"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2170
+#: class-tgm-plugin-activation.php:2276
 msgid "Recommended"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2186
+#: class-tgm-plugin-activation.php:2292
 msgid "WordPress Repository"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2189
+#: class-tgm-plugin-activation.php:2295
 msgid "External Source"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2192
+#: class-tgm-plugin-activation.php:2298
 msgid "Pre-Packaged"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2209
+#: class-tgm-plugin-activation.php:2315
 msgid "Not Installed"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2213
+#: class-tgm-plugin-activation.php:2319
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2215
+#: class-tgm-plugin-activation.php:2321
 msgid "Active"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2221
+#: class-tgm-plugin-activation.php:2327
 msgid "Required Update not Available"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2224
+#: class-tgm-plugin-activation.php:2330
 msgid "Requires Update"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2227
+#: class-tgm-plugin-activation.php:2333
 msgid "Update recommended"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2283
+#: class-tgm-plugin-activation.php:2392
+#. translators: 1: number of plugins.
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:2286
+#: class-tgm-plugin-activation.php:2396
+#. translators: 1: number of plugins.
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:2289
+#: class-tgm-plugin-activation.php:2400
+#. translators: 1: number of plugins.
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:2379
+#: class-tgm-plugin-activation.php:2490
 msgid "Installed version:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2387
+#: class-tgm-plugin-activation.php:2498
 msgid "Minimum required version:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2399
+#: class-tgm-plugin-activation.php:2510
 msgid "Available version:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2422
-msgid ""
-"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
-"Dashboard</a>"
+#: class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2436
+#: class-tgm-plugin-activation.php:2547
 msgid "Plugin"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2437
+#: class-tgm-plugin-activation.php:2548
 msgid "Source"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2438
+#: class-tgm-plugin-activation.php:2549
 msgid "Type"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2442
+#: class-tgm-plugin-activation.php:2553
 msgid "Version"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2443
+#: class-tgm-plugin-activation.php:2554
 msgid "Status"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2570
+#: class-tgm-plugin-activation.php:2603
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2608
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2614
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2684
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2603
+#: class-tgm-plugin-activation.php:2717 functions.php:258 functions.php:278
 msgid "Install"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2609
+#: class-tgm-plugin-activation.php:2723
 msgid "Update"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2612
+#: class-tgm-plugin-activation.php:2726 functions.php:259 functions.php:279
 msgid "Activate"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2643
+#: class-tgm-plugin-activation.php:2757
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2645
+#: class-tgm-plugin-activation.php:2759
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2681
+#: class-tgm-plugin-activation.php:2800
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2683
+#: class-tgm-plugin-activation.php:2802
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2788
+#: class-tgm-plugin-activation.php:2908
 msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2814
+#: class-tgm-plugin-activation.php:2934
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3028
+#: class-tgm-plugin-activation.php:3158
 msgid "Plugin activation failed."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3362
+#: class-tgm-plugin-activation.php:3498
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3364
+#: class-tgm-plugin-activation.php:3501
+#. translators: 1: plugin name, 2: error message.
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3365
+#: class-tgm-plugin-activation.php:3503
+#. translators: 1: plugin name.
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3369
+#: class-tgm-plugin-activation.php:3507
 msgid ""
 "The installation and activation process is starting. This process may take "
 "a while on some hosts, so please be patient."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3370
+#: class-tgm-plugin-activation.php:3509
+#. translators: 1: plugin name.
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3370 class-tgm-plugin-activation.php:3376
+#: class-tgm-plugin-activation.php:3509 class-tgm-plugin-activation.php:3517
 msgid "Show Details"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3370 class-tgm-plugin-activation.php:3376
+#: class-tgm-plugin-activation.php:3509 class-tgm-plugin-activation.php:3517
 msgid "Hide Details"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3371
+#: class-tgm-plugin-activation.php:3510
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3372
+#: class-tgm-plugin-activation.php:3512
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3375
+#: class-tgm-plugin-activation.php:3515
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3376
+#: class-tgm-plugin-activation.php:3517
+#. translators: 1: plugin name.
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3377
+#: class-tgm-plugin-activation.php:3518
 msgid "All installations have been completed."
 msgstr ""
 
-#: class-tgm-plugin-activation.php:3378
+#: class-tgm-plugin-activation.php:3520
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
@@ -440,23 +406,24 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:19
+#: content-none.php:22
+#. translators: Add new post link
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:23
+#: content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:28
+#: content-none.php:32
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:31 content.php:37 image.php:45
+#: content-page.php:18 content-single.php:31 content.php:37 image.php:47
 msgid "Pages:"
 msgstr ""
 
@@ -464,187 +431,127 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: footer.php:19
+#: footer.php:20
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:19
+#: footer.php:23
+#. translators: %s is WordPress
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:21
+#: footer.php:28
+#. translators: %1$s is theme link , %2$s is author name
 msgid "Theme: %2$s by %1$s."
 msgstr ""
 
-#: functions.php:54
+#: functions.php:50
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:55
+#: functions.php:51
 msgid "Social"
 msgstr ""
 
+#: functions.php:93 functions.php:95
+msgid "About Flymag"
+msgstr ""
+
+#: functions.php:97
+#. translators: %s is theme name
+msgid "Welcome to %s! - Version "
+msgstr ""
+
 #: functions.php:99
-msgid "Sidebar"
+#. translators: %s is theme name
+msgid ""
+"%1$s is now installed and ready to use! We want to make sure you have the "
+"best experience using %2$s and that is why we gathered here all the "
+"necessary information for you. We hope you will enjoy using %%s, as much as "
+"we enjoy creating great products."
+msgstr ""
+
+#: functions.php:107
+msgid "Getting Started"
 msgstr ""
 
 #: functions.php:108
-msgid "Home page"
+msgid "Recommended Actions"
 msgstr ""
 
-#: functions.php:110
-msgid "Widgets added here will be displayed on pages using the Front Page template"
+#: functions.php:109
+msgid "Recommended Plugins"
 msgstr ""
 
-#: functions.php:118
-msgid "Home page top"
-msgstr ""
-
-#: functions.php:120
-msgid ""
-"Widgets added here will be displayed above the main content area and "
-"sidebar on pages using the Front Page template"
-msgstr ""
-
-#: functions.php:128
-msgid "Footer left"
-msgstr ""
-
-#: functions.php:136
-msgid "Footer center"
-msgstr ""
-
-#: functions.php:144
-msgid "Footer right"
-msgstr ""
-
-#: functions.php:283
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin installed."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:286
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins activated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:288
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"updated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins updated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:293
-msgid "All plugins installed and activated successfully. %s"
-msgstr ""
-
-#: functions.php:313
-msgid "Our best free magazine WordPress theme, FlyMag!"
-msgstr ""
-
-#: functions.php:324
-msgid "Mobile friendly"
-msgstr ""
-
-#: functions.php:325
-msgid "Responsive layout. Works on every device."
-msgstr ""
-
-#: functions.php:330
-msgid "Unlimited color option"
-msgstr ""
-
-#: functions.php:331
-msgid "You can change the colors of each section. You have unlimited options."
-msgstr ""
-
-#: functions.php:336
-msgid "Background image"
-msgstr ""
-
-#: functions.php:337
-msgid "You can use any background image you want."
-msgstr ""
-
-#: functions.php:342
-msgid "Featured Area"
-msgstr ""
-
-#: functions.php:343
-msgid "Have access to a new featured area."
-msgstr ""
-
-#: functions.php:348
-msgid "Footer credits"
-msgstr ""
-
-#: functions.php:354
-msgid "Extra widgets areas"
-msgstr ""
-
-#: functions.php:355
-msgid "More widgets areas for your theme."
-msgstr ""
-
-#: functions.php:360
+#: functions.php:110 functions.php:247
 msgid "Support"
 msgstr ""
 
-#: functions.php:361
-msgid "You will benefit of our full support for any issues you have with the theme."
+#: functions.php:111 functions.php:136
+msgid "Changelog"
 msgstr ""
 
-#: functions.php:369
+#: functions.php:112
+msgid "Free VS PRO"
+msgstr ""
+
+#: functions.php:117 functions.php:120
+msgid "Contact Support"
+msgstr ""
+
+#: functions.php:119
+msgid ""
+"We offer excellent support through our advanced ticketing system. Make sure "
+"to register your purchase before contacting support!"
+msgstr ""
+
+#: functions.php:126 inc/class/flymag-info.php:42
+msgid "Documentation"
+msgstr ""
+
+#: functions.php:129
+#. translators: %s is theme name
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and "
+"outs of using %s."
+msgstr ""
+
+#: functions.php:130
+msgid "See our full documentation"
+msgstr ""
+
+#: functions.php:138
+msgid ""
+"Want to get the gist on the latest theme changes? Just consult our "
+"changelog below to get a taste of the recent fixes and features implemented."
+msgstr ""
+
+#: functions.php:139
+msgid "See changelog"
+msgstr ""
+
+#: functions.php:145
 msgid "Create a child theme"
 msgstr ""
 
-#: functions.php:370
+#: functions.php:147
 msgid ""
 "If you want to make changes to the theme's files, those changes are likely "
 "to be overwritten when you next update the theme. In order to prevent that "
 "from happening, you need to create a child theme. For this, please follow "
-"the documentation below"
+"the documentation below."
 msgstr ""
 
-#: functions.php:372 functions.php:378 functions.php:384 functions.php:390
+#: functions.php:148 functions.php:157 functions.php:166
 msgid "View how to do this"
 msgstr ""
 
-#: functions.php:375
-msgid "Build a landing page with a drag-and-drop content builder"
-msgstr ""
-
-#: functions.php:376
-msgid ""
-"In the below documentation you will find an easy way to build a great "
-"looking landing page using a drag-and-drop content builder plugin."
-msgstr ""
-
-#: functions.php:381
+#: functions.php:154
 msgid "Speed up your site"
 msgstr ""
 
-#: functions.php:382
+#: functions.php:156
 msgid ""
 "If you find yourself in the situation where everything on your site is "
 "running very slow, you might consider having a look at the below "
@@ -652,70 +559,181 @@ msgid ""
 "possible solutions for each of the issues."
 msgstr ""
 
-#: functions.php:387
-msgid "How to Internationalize Your Website"
+#: functions.php:163
+msgid "Build a landing page with a drag-and-drop content builder"
 msgstr ""
 
-#: functions.php:388
+#: functions.php:165
 msgid ""
-"Although English is the most used language on the internet, you should "
-"consider all your web users as well. Find out what it takes to make your "
-"website ready for foreign markets from this document."
+"In the below documentation you will find an easy way to build a great "
+"looking landing page using a drag-and-drop content builder plugin."
 msgstr ""
 
-#: functions.php:395
+#: functions.php:175
+msgid "Step 1 - Implement recommended actions"
+msgstr ""
+
+#: functions.php:176
+msgid ""
+"We have compiled a list of steps for you, to take make sure the experience "
+"you will have using one of our products is very easy to follow."
+msgstr ""
+
+#: functions.php:177
+msgid "Check recommended actions"
+msgstr ""
+
+#: functions.php:184
+msgid "Step 2 - Check our documentation"
+msgstr ""
+
+#: functions.php:185
+msgid ""
+"Even if you are a long-time WordPress user, we still believe you should "
+"give our documentation a very quick Read."
+msgstr ""
+
+#: functions.php:186
+msgid "Full documentation"
+msgstr ""
+
+#: functions.php:193
+msgid "Step 3 - Customize everything"
+msgstr ""
+
+#: functions.php:194
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: functions.php:195
+msgid "Go to Customizer"
+msgstr ""
+
+#: functions.php:208
+#. translators: %s is theme name
+msgid "Get %s now!"
+msgstr ""
+
+#: functions.php:211
+msgid "Mobile friendly"
+msgstr ""
+
+#: functions.php:212
+msgid "Responsive layout. Works on every device."
+msgstr ""
+
+#: functions.php:217
+msgid "Unlimited color option"
+msgstr ""
+
+#: functions.php:218
+msgid "You can change the colors of each section. You have unlimited options."
+msgstr ""
+
+#: functions.php:223
+msgid "Background image"
+msgstr ""
+
+#: functions.php:224
+msgid "You can use any background image you want."
+msgstr ""
+
+#: functions.php:229
+msgid "Featured Area"
+msgstr ""
+
+#: functions.php:230
+msgid "Have access to a new featured area."
+msgstr ""
+
+#: functions.php:235
+msgid "Footer credits"
+msgstr ""
+
+#: functions.php:241
+msgid "Extra widgets areas"
+msgstr ""
+
+#: functions.php:242
+msgid "More widgets areas for your theme."
+msgstr ""
+
+#: functions.php:248
+msgid "You will benefit of our full support for any issues you have with the theme."
+msgstr ""
+
+#: functions.php:256
+msgid "Already activated"
+msgstr ""
+
+#: functions.php:257
+msgid "Version: "
+msgstr ""
+
+#: functions.php:260 functions.php:280
+msgid "Deactivate"
+msgstr ""
+
+#: functions.php:283
 msgid "Pirate Forms"
 msgstr ""
 
-#: functions.php:396
+#: functions.php:284
 msgid ""
 "Makes your contact page more engaging by creating a good-looking contact "
 "form on your website. The interaction with your visitors was never easier."
 msgstr ""
 
-#: functions.php:397
+#: functions.php:285 functions.php:292
 msgid "Install Pirate Forms"
 msgstr ""
 
-#: functions.php:402
-msgid "Easy Content Types"
+#: functions.php:291
+msgid "BuddyPress"
 msgstr ""
 
-#: functions.php:403
-msgid "Custom Post Types, Taxonomies and Metaboxes in Minutes."
+#: functions.php:311
+msgid "Sidebar"
 msgstr ""
 
-#: functions.php:404
-msgid "Download Easy Content Types"
+#: functions.php:320
+msgid "Home page"
 msgstr ""
 
-#: functions.php:409
-msgid "Page Builder by SiteOrigin"
+#: functions.php:322
+msgid "Widgets added here will be displayed on pages using the Front Page template"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:329
+msgid "Home page top"
+msgstr ""
+
+#: functions.php:331
 msgid ""
-"Build responsive page layouts using the widgets you know and love using "
-"this simple drag and drop page builder."
+"Widgets added here will be displayed above the main content area and "
+"sidebar on pages using the Front Page template"
 msgstr ""
 
-#: functions.php:411
-msgid "Install Page Builder by SiteOrigin"
+#: functions.php:338
+msgid "Footer left"
 msgstr ""
 
-#: functions.php:416
-msgid "Intergeo Maps - Google Maps Plugin"
+#: functions.php:346
+msgid "Footer center"
 msgstr ""
 
-#: functions.php:418
-msgid "Install Intergeo Maps"
+#: functions.php:354
+msgid "Footer right"
 msgstr ""
 
-#: functions.php:461
+#: functions.php:500
 msgid "Create your menu here"
 msgstr ""
 
-#: functions.php:482
+#: functions.php:522
+#. translators: %s is category name
 msgid "See all posts in %s"
 msgstr ""
 
@@ -723,26 +741,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: image.php:23
+#: image.php:24
+#. translators: %1$s is post url, %2$s is post title
 msgid ""
 "<i class=\"fa fa-pencil\"></i> Image posted in: <a href=\"%1$s\" "
 "title=\"Return to %2$s\" rel=\"gallery\">%2$s</a>"
 msgstr ""
 
-#: image.php:48
+#: image.php:52
 msgid "Image available in:"
 msgstr ""
 
-#: image.php:63
+#: image.php:67
 msgid "&larr; Previous"
 msgstr ""
 
-#: image.php:64
+#: image.php:68
 msgid "Next &rarr;"
-msgstr ""
-
-#: inc/class/flymag-info.php:42
-msgid "Documentation"
 msgstr ""
 
 #: inc/class/flymag-info.php:46
@@ -1038,7 +1053,8 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: inc/extras.php:64
+#: inc/extras.php:65
+#. translators: %s is page number
 msgid "Page %s"
 msgstr ""
 
@@ -1062,44 +1078,52 @@ msgstr ""
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:130
+#: inc/template-tags.php:131
+#. translators: archive category
 msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:132
+#: inc/template-tags.php:134
+#. translators: archive tag
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:134
+#: inc/template-tags.php:137
+#. translators: archive author
 msgid "Author: %s"
 msgstr ""
 
-#: inc/template-tags.php:136
+#: inc/template-tags.php:140
+#. translators: archive year
 msgid "Year: %s"
 msgstr ""
 
-#: inc/template-tags.php:138
+#: inc/template-tags.php:143
+#. translators: archive month
 msgid "Month: %s"
 msgstr ""
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:146
+#. translators: archive day
 msgid "Day: %s"
 msgstr ""
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:169
+#. translators: archive title
 msgid "Archives: %s"
 msgstr ""
 
-#: inc/template-tags.php:166
+#: inc/template-tags.php:173
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/template-tags.php:168
+#: inc/template-tags.php:175
 msgid "Archives"
 msgstr ""
 
 #: search.php:16
+#. translators: Search query
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -1111,277 +1135,120 @@ msgstr ""
 msgid "Type and press enter"
 msgstr ""
 
-#: ti-about-page/class-ti-about-page.php:245
-msgid ""
-"Welcome! Thank you for choosing %1$s! To fully take advantage of the best "
-"our theme can offer please make sure you visit our %2$swelcome page%2$s."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:246
-msgid "Get started with %s"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:263
-#: ti-about-page/class-ti-about-page.php:324
-msgid "Getting started"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:264
-msgid "Actions required"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:266
-msgid "Child themes"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:268
-msgid "Contribute"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:269
-msgid "Changelog"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:271
-msgid "Free VS PRO"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:317
-msgid ""
-"We want to make sure you have the best experience using %1$s and that is "
-"why we gathered here all the necessary informations for you. We hope you "
-"will enjoy using %2$s, as much as we enjoy creating great products."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:325
-msgid "Customize everything in a single place."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:326
-msgid ""
-"Using the WordPress Customizer you can easily customize every aspect of the "
-"theme."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:327
-msgid "Go to Customizer"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:359
-msgid "Keep up with %s's latest news"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:422
-#: ti-about-page/class-ti-about-page.php:840
-msgid "Hooray! There are no required actions for you right now."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:444
-msgid "Get a whole new look for your site"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:445
-msgid ""
-"Below you will find a selection of %s child themes that will totally "
-"transform the look of your site."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:466
-msgid "How can I contribute?"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:584
-msgid "FAQ"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:637
-msgid "Recommended plugins"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:673
-msgid "Already activated"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:694
-msgid "View full documentation"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:695
-msgid ""
-"Need more details? Please check our full documentation for detailed "
-"information on how to use %s."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:696
-msgid "Read full documentation"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:709
-msgid "Found a bug? Want to contribute with a fix or create a new feature?"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:710
-msgid "GitHub is the place to go!"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:711
-msgid "%s on GitHub"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:726
-msgid "Are you a polyglot? Want to translate %s into your own language?"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:727
-msgid "Get involved at WordPress.org."
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:728
-msgid "Translate %s"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:742
-msgid "Are you enjoying %s?"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:743
-msgid "Rate our theme on %1$sWordPress.org%1$s. We'd really appreciate it!"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:785
-msgid "Get now"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:788
-msgid "Live Preview"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:794
-msgid "Current theme"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:795
-msgid "Customize"
-msgstr ""
-
-#: ti-about-page/class-ti-about-page.php:873
-msgid "View Theme Info"
-msgstr ""
-
-#: widgets/recent-comments.php:17
+#: widgets/recent-comments.php:19
 msgid "Display your site&#8217;s recent comments with avatars."
 msgstr ""
 
-#: widgets/recent-comments.php:18
+#: widgets/recent-comments.php:21
 msgid "Flymag: Recent Comments"
 msgstr ""
 
-#: widgets/recent-comments.php:55
+#: widgets/recent-comments.php:58
 msgid "Recent Comments"
 msgstr ""
 
-#: widgets/recent-comments.php:83
+#: widgets/recent-comments.php:95
 #. translators: comments widget: 1: comment author, 2: post link
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: widgets/recent-comments.php:133 widgets/recent-posts-a.php:178
-#: widgets/recent-posts-b.php:188 widgets/recent-posts-d.php:156
-#: widgets/recent-posts-slider.php:153
+#: widgets/recent-comments.php:148 widgets/recent-posts-a.php:201
+#: widgets/recent-posts-b.php:207 widgets/recent-posts-d.php:173
+#: widgets/recent-posts-slider.php:172
 msgid "Title:"
 msgstr ""
 
-#: widgets/recent-comments.php:136
+#: widgets/recent-comments.php:151
 msgid "Number of comments to show:"
 msgstr ""
 
-#: widgets/recent-posts-a.php:17
+#: widgets/recent-posts-a.php:19
 msgid "Recent posts widget Type A (front page)"
 msgstr ""
 
-#: widgets/recent-posts-a.php:18
+#: widgets/recent-posts-a.php:21
 msgid "Flymag: Recent posts type A"
 msgstr ""
 
-#: widgets/recent-posts-a.php:181 widgets/recent-posts-b.php:191
-#: widgets/recent-posts-d.php:158 widgets/recent-posts-slider.php:156
+#: widgets/recent-posts-a.php:204 widgets/recent-posts-b.php:210
+#: widgets/recent-posts-d.php:175 widgets/recent-posts-slider.php:175
 msgid ""
 "Enter the slug for your category or leave empty to show posts from all "
 "categories."
 msgstr ""
 
-#: widgets/recent-posts-a.php:184 widgets/recent-posts-b.php:194
-#: widgets/recent-posts-c.php:242 widgets/recent-posts-d.php:163
-#: widgets/recent-posts-slider.php:162
+#: widgets/recent-posts-a.php:207 widgets/recent-posts-b.php:213
+#: widgets/recent-posts-c.php:250 widgets/recent-posts-d.php:180
+#: widgets/recent-posts-slider.php:181
 msgid "Background color"
 msgstr ""
 
-#: widgets/recent-posts-a.php:187 widgets/recent-posts-b.php:197
-#: widgets/recent-posts-c.php:245 widgets/recent-posts-d.php:166
+#: widgets/recent-posts-a.php:210 widgets/recent-posts-b.php:216
+#: widgets/recent-posts-c.php:253 widgets/recent-posts-d.php:183
 msgid "Text color"
 msgstr ""
 
-#: widgets/recent-posts-b.php:17
+#: widgets/recent-posts-b.php:19
 msgid "Recent posts widget Type B (front page)"
 msgstr ""
 
-#: widgets/recent-posts-b.php:18
+#: widgets/recent-posts-b.php:21
 msgid "Flymag: Recent posts type B"
 msgstr ""
 
-#: widgets/recent-posts-c.php:17
+#: widgets/recent-posts-c.php:19
 msgid "Recent posts widget Type C - two categories (front page)"
 msgstr ""
 
-#: widgets/recent-posts-c.php:18
+#: widgets/recent-posts-c.php:21
 msgid "Flymag: Recent posts type C"
 msgstr ""
 
-#: widgets/recent-posts-c.php:236
+#: widgets/recent-posts-c.php:244
 msgid "Enter the slug for your first category."
 msgstr ""
 
-#: widgets/recent-posts-c.php:239
+#: widgets/recent-posts-c.php:247
 msgid "Enter the slug for your second category."
 msgstr ""
 
-#: widgets/recent-posts-d.php:17
+#: widgets/recent-posts-d.php:19
 msgid "Recent posts widget Type D - only images (front page)"
 msgstr ""
 
-#: widgets/recent-posts-d.php:18
+#: widgets/recent-posts-d.php:21
 msgid "Flymag: Recent posts type D"
 msgstr ""
 
-#: widgets/recent-posts-d.php:160 widgets/recent-posts-slider.php:159
+#: widgets/recent-posts-d.php:177 widgets/recent-posts-slider.php:178
 msgid "Number of posts to show:"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:17
+#: widgets/recent-posts-slider.php:19
 msgid "Recent posts slider (front page)"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:18
+#: widgets/recent-posts-slider.php:21
 msgid "Flymag: Recent posts slider"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:165
+#: widgets/recent-posts-slider.php:184
 msgid "Title color"
 msgstr ""
 
-#: widgets/video-widget.php:17
+#: widgets/video-widget.php:19
 msgid "Display an oEmbed video."
 msgstr ""
 
-#: widgets/video-widget.php:18
+#: widgets/video-widget.php:21
 msgid "Flymag: Video"
 msgstr ""
 
-#: widgets/video-widget.php:39
+#: widgets/video-widget.php:42
 msgid "Title"
 msgstr ""
 
-#: widgets/video-widget.php:43
+#: widgets/video-widget.php:46
 msgid ""
 "Paste the URL of the video (only from a network that supports oEmbed, like "
 "Youtube, Vimeo etc.):"
@@ -1424,46 +1291,28 @@ msgstr ""
 msgid "Full width"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:1116 class-tgm-plugin-activation.php:2828
+#: class-tgm-plugin-activation.php:1121 class-tgm-plugin-activation.php:2948
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:1881
-msgctxt "%s = version number"
-msgid "TGMPA v%s"
-msgstr ""
-
-#: class-tgm-plugin-activation.php:2235
-msgctxt "%1$s = install status, %2$s = update status"
+#: class-tgm-plugin-activation.php:2342
+#. translators: 1: install status, 2: update status
+msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2280
+#: class-tgm-plugin-activation.php:2388
+#. translators: 1: number of plugins.
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-tgm-plugin-activation.php:2371
+#: class-tgm-plugin-activation.php:2482
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
-msgstr ""
-
-#: class-tgm-plugin-activation.php:2491
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Install %2$s"
-msgstr ""
-
-#: class-tgm-plugin-activation.php:2495
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Update %2$s"
-msgstr ""
-
-#: class-tgm-plugin-activation.php:2500
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Activate %2$s"
 msgstr ""
 
 #: comments.php:31
@@ -1490,62 +1339,62 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:136
+#: inc/template-tags.php:140
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/template-tags.php:138
+#: inc/template-tags.php:143
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:146
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:143
+#: inc/template-tags.php:149
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:151
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:153
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:149
+#: inc/template-tags.php:155
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:157
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:159
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:155
+#: inc/template-tags.php:161
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:157
+#: inc/template-tags.php:163
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:159
+#: inc/template-tags.php:165
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""

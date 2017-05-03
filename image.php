@@ -20,6 +20,7 @@ get_header(); ?>
 						<span class="image-parent">
 					        <?php
 					        $metadata = wp_get_attachment_metadata();
+					        /* translators: %1$s is post url, %2$s is post title */
 					        printf( __( '<i class="fa fa-pencil"></i> Image posted in: <a href="%1$s" title="Return to %2$s" rel="gallery">%2$s</a>', 'flymag' ),
 						        get_permalink( $post->post_parent ),
 						        get_the_title( $post->post_parent )
@@ -42,7 +43,10 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 					<?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'flymag' ), 'after' => '</div>' ) ); ?>
+					<?php wp_link_pages( array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'flymag' ),
+						'after' => '</div>',
+					) ); ?>
 				</div>
 				<div class="images-sizes">
 					<?php _e( 'Image available in:', 'flymag' ); ?>

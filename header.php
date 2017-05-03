@@ -39,7 +39,10 @@
 	        <?php endif; ?>
 		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'flymag_menu_fallback' ) ); ?>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'fallback_cb' => 'flymag_menu_fallback',
+			) ); ?>
 			<span class="search-toggle"><i class="fa fa-search"></i></span>
 			<?php get_search_form(); ?>	
 		</nav><!-- #site-navigation -->

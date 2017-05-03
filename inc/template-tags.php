@@ -127,16 +127,22 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 	 */
 	function the_archive_title( $before = '', $after = '' ) {
 		if ( is_category() ) {
+			/* translators: archive category */
 			$title = sprintf( __( 'Category: %s', 'flymag' ), single_cat_title( '', false ) );
 		} elseif ( is_tag() ) {
+			/* translators: archive tag */
 			$title = sprintf( __( 'Tag: %s', 'flymag' ), single_tag_title( '', false ) );
 		} elseif ( is_author() ) {
+			/* translators: archive author */
 			$title = sprintf( __( 'Author: %s', 'flymag' ), '<span class="vcard">' . get_the_author() . '</span>' );
 		} elseif ( is_year() ) {
+			/* translators: archive year */
 			$title = sprintf( __( 'Year: %s', 'flymag' ), get_the_date( _x( 'Y', 'yearly archives date format', 'flymag' ) ) );
 		} elseif ( is_month() ) {
+			/* translators: archive month */
 			$title = sprintf( __( 'Month: %s', 'flymag' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'flymag' ) ) );
 		} elseif ( is_day() ) {
+			/* translators: archive day */
 			$title = sprintf( __( 'Day: %s', 'flymag' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'flymag' ) ) );
 		} elseif ( is_tax( 'post_format' ) ) {
 			if ( is_tax( 'post_format', 'post-format-aside' ) ) {
@@ -159,6 +165,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 				$title = _x( 'Chats', 'post format archive title', 'flymag' );
 			}
 		} elseif ( is_post_type_archive() ) {
+			/* translators: archive title */
 			$title = sprintf( __( 'Archives: %s', 'flymag' ), post_type_archive_title( '', false ) );
 		} elseif ( is_tax() ) {
 			$tax = get_taxonomy( get_queried_object()->taxonomy );
@@ -166,7 +173,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 			$title = sprintf( __( '%1$s: %2$s', 'flymag' ), $tax->labels->singular_name, single_term_title( '', false ) );
 		} else {
 			$title = __( 'Archives', 'flymag' );
-		}
+		}// End if().
 
 		/**
 		 * Filter the archive title.
@@ -214,7 +221,8 @@ endif;
  * @return bool
  */
 function flymag_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'flymag_categories' ) ) ) {
+	$all_the_cool_cats = get_transient( 'flymag_categories' );
+	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',

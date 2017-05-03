@@ -27,6 +27,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		}
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
+
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -34,6 +35,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		 * provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -42,11 +44,13 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'carousel-thumb', 600, 400, true );
 		add_image_size( 'entry-thumb', 820 );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'flymag' ),
 			'social'  => __( 'Social', 'flymag' ),
 		) );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -58,6 +62,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
+
 		/*
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
@@ -88,10 +93,10 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'menu_name'               => __( 'About Flymag', 'flymag' ),
 			// Page title.
 			'page_name'               => __( 'About Flymag', 'flymag' ),
-			// Main welcome title
+			/* translators: %s is theme name */
 			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
-			// Main welcome content
-			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), 'FlyMag', 'FlyMag', 'FlyMag' ),
+			/* translators: %s is theme name */
+			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %%s, as much as we enjoy creating great products.','flymag' ), 'FlyMag' ),
 			/**
 			 * Tabs array.
 			 *
@@ -108,23 +113,24 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			),
 			// Support content tab.
 			'support_content'      => array(
-				'first' => array (
+				'first' => array(
 					'title' => esc_html__( 'Contact Support','flymag' ),
 					'icon' => 'dashicons dashicons-sos',
 					'text' => esc_html__( 'We offer excellent support through our advanced ticketing system. Make sure to register your purchase before contacting support!','flymag' ),
 					'button_label' => esc_html__( 'Contact Support','flymag' ),
 					'button_link' => esc_url( 'https://themeisle.com/contact/' ),
 					'is_button' => true,
-					'is_new_tab' => true
+					'is_new_tab' => true,
 				),
 				'second' => array(
 					'title' => esc_html__( 'Documentation','flymag' ),
 					'icon' => 'dashicons dashicons-book-alt',
+					/* translators: %s is theme name */
 					'text' => sprintf( esc_html__( 'This is the place to go to reference different aspects of the theme. Our online documentation is an incredible resource for learning the ins and outs of using %s.','flymag' ), 'FlyMag' ),
 					'button_label' => esc_html__( 'See our full documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
-					'is_new_tab' => true
+					'is_new_tab' => true,
 				),
 				'third' => array(
 					'title' => esc_html__( 'Changelog','flymag' ),
@@ -133,7 +139,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'See changelog','flymag' ),
 					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=changelog&show=yes' ) ),
 					'is_button' => false,
-					'is_new_tab' => false
+					'is_new_tab' => false,
 				),
 				'fourth' => array(
 					'title' => esc_html__( 'Create a child theme','flymag' ),
@@ -142,7 +148,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'View how to do this','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme',
 					'is_button' => false,
-					'is_new_tab' => true
+					'is_new_tab' => true,
 				),
 				'fifth' => array(
 					'title' => esc_html__( 'Speed up your site','flymag' ),
@@ -151,7 +157,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'View how to do this','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site',
 					'is_button' => false,
-					'is_new_tab' => true
+					'is_new_tab' => true,
 				),
 				'sixth' => array(
 					'title' => esc_html__( 'Build a landing page with a drag-and-drop content builder','flymag' ),
@@ -160,19 +166,19 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_label' => esc_html__( 'View how to do this','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
 					'is_button' => false,
-					'is_new_tab' => true
-				)
+					'is_new_tab' => true,
+				),
 			),
 			// Getting started tab
 			'getting_started' => array(
-				'first' => array (
+				'first' => array(
 					'title' => esc_html__( 'Step 1 - Implement recommended actions','flymag' ),
 					'text' => esc_html__( 'We have compiled a list of steps for you, to take make sure the experience you will have using one of our products is very easy to follow.','flymag' ),
 					'button_label' => esc_html__( 'Check recommended actions','flymag' ),
 					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=recommended_actions' ) ),
 					'is_button' => false,
 					'recommended_actions' => true,
-                    'is_new_tab' => false
+					'is_new_tab' => false,
 				),
 				'second' => array(
 					'title' => esc_html__( 'Step 2 - Check our documentation','flymag' ),
@@ -181,7 +187,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
 					'recommended_actions' => false,
-                    'is_new_tab' => true
+					'is_new_tab' => true,
 				),
 				'third' => array(
 					'title' => esc_html__( 'Step 3 - Customize everything','flymag' ),
@@ -190,14 +196,15 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'button_link' => esc_url( admin_url( 'customize.php' ) ),
 					'is_button' => true,
 					'recommended_actions' => false,
-                    'is_new_tab' => true
-				)
+					'is_new_tab' => true,
+				),
 			),
 			// Free vs pro array.
 			'free_pro'                => array(
 				'free_theme_name'     => 'FlyMag',
 				'pro_theme_name'      => 'FlyMag PRO',
 				'pro_theme_link'      => 'https://themeisle.com/themes/flymag-pro/',
+				/* translators: %s is theme name */
 				'get_pro_theme_label' => sprintf( __( 'Get %s now!', 'flymag' ), 'FlyMag Pro' ),
 				'features'            => array(
 					array(
@@ -278,14 +285,14 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
 						'check'       => defined( 'PIRATE_FORMS_VERSION' ),
 						'plugin_slug' => 'pirate-forms',
-						'id' => 'pirate-forms'
+						'id' => 'pirate-forms',
 					),
 					'buddypress' => array(
 						'title'       => __( 'BuddyPress', 'flymag' ),
 						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
 						'check'       => class_exists( 'BuddyPress' ),
 						'plugin_slug' => 'buddypress',
-						'id' => 'buddypress'
+						'id' => 'buddypress',
 					),
 				),
 			),
@@ -450,26 +457,6 @@ function flymag_register_required_plugins() {
 		'dismiss_msg'  => '',
 		'is_automatic' => false,
 		'message'      => '',
-		'strings'      => array(
-			'page_title'                      => esc_html__( 'Install Required Plugins', 'flymag' ),
-			'menu_title'                      => esc_html__( 'Install Plugins', 'flymag' ),
-			'installing'                      => esc_html__( 'Installing Plugin: %s', 'flymag' ),
-			'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'flymag' ),
-			'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'flymag' ),
-			'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'flymag' ),
-			'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'flymag' ),
-			'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'flymag' ),
-			'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'flymag' ),
-			'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'flymag' ),
-			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'flymag' ),
-			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'flymag' ),
-			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'flymag' ),
-			'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'flymag' ),
-			'return'                          => esc_html__( 'Return to Required Plugins Installer', 'flymag' ),
-			'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'flymag' ),
-			'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'flymag' ),
-			'nag_type'                        => 'updated',
-		),
 	);
 	tgmpa( $plugins, $config );
 
@@ -531,6 +518,7 @@ add_action( 'admin_enqueue_scripts', 'flymag_color_picker' );
  */
 function flymag_post_first_cat() {
 	$category = get_the_category();
+	/* translators: %s is category name */
 	echo '<span class="post-cat"><i class="fa fa-folder"></i><a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf( __( 'See all posts in %s', 'flymag' ), $category[0]->name ) . '">' . $category[0]->name . '</a></span>';
 }
 

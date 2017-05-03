@@ -14,7 +14,10 @@ class Flymag_Video extends WP_Widget {
 	 * Flymag_Video constructor.
 	 */
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'flymag_video_widget', 'description' => __( 'Display an oEmbed video.', 'flymag' ) );
+		$widget_ops = array(
+		        'classname' => 'flymag_video_widget',
+			'description' => __( 'Display an oEmbed video.', 'flymag' ),
+		);
 		parent::__construct( 'flymag_video', __( 'Flymag: Video', 'flymag' ), $widget_ops );
 		$this->alt_option_name = 'flymag_video';
 
