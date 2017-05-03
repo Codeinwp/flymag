@@ -1,706 +1,1405 @@
+# Copyright (C) 2017 Themeisle
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Flymag\n"
-"POT-Creation-Date: 2015-02-03 10:19+0200\n"
-"PO-Revision-Date: 2015-02-03 10:19+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: en_US\n"
+"Project-Id-Version: FlyMag 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Codeinwp/flymag/issues\n"
+"POT-Creation-Date: 2017-05-03 13:57:25+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
-"X-Poedit-Basepath: .\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Themeisle Translate Team <friends@themeisle.com>\n"
+"Language-Team: Themeisle Translate <friends@themeisle.com>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e;_x;_n\n"
-"X-Poedit-SearchPath-0: D:\\Programe\\InstantWP\\InstantWP_4.3.1\\iwpserver"
-"\\htdocs\\wordpress\\wp-content\\themes\\flymag\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/404.php:15
+#: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/404.php:19
+#: 404.php:19
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/404.php:27
+#: 404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
+#: 404.php:44
 #. translators: %1$s: smiley
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/404.php:44
-#, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:35
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:53
+#: class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:330
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:332
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:370
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:386 class-tgm-plugin-activation.php:827
+#: class-tgm-plugin-activation.php:2533 class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:387 class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:388 class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:390
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:392
+#. translators: 1: plugin name.
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:394
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:934 class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1982
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2392
+#. translators: 1: number of plugins.
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:2396
+#. translators: 1: number of plugins.
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:2400
+#. translators: 1: number of plugins.
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2603
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2608
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2614
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2717 functions.php:258 functions.php:278
+msgid "Install"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2726 functions.php:259 functions.php:279
+msgid "Activate"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3498
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3501
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3503
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take "
+"a while on some hosts, so please be patient."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3509
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3509 class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3509 class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3512
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3517
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:3520
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: comments.php:51 comments.php:69
 msgid "Comment navigation"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:36
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:54
+#: comments.php:52 comments.php:70
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:37
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:55
+#: comments.php:53 comments.php:71
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/comments.php:65
+#: comments.php:81
 msgid "Comments are closed."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-none.php:13
+#: content-none.php:13
 msgid "Nothing Found"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-none.php:19
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: content-none.php:22
+#. translators: Add new post link
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-none.php:23
+#: content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-none.php:28
+#: content-none.php:32
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-page.php:18
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-single.php:29
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content.php:35
+#: content-page.php:18 content-single.php:31 content.php:37 image.php:47
 msgid "Pages:"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/content-page.php:25
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:113
+#: content-page.php:25 inc/template-tags.php:113
 msgid "Edit"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/footer.php:19
+#: footer.php:20
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/footer.php:19
-#, php-format
+#: footer.php:23
+#. translators: %s is WordPress
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/footer.php:21
-#, php-format
+#: footer.php:28
+#. translators: %1$s is theme link , %2$s is author name
 msgid "Theme: %2$s by %1$s."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:55
+#: functions.php:50
 msgid "Primary Menu"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:56
+#: functions.php:51
 msgid "Social"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:92
+#: functions.php:93 functions.php:95
+msgid "About Flymag"
+msgstr ""
+
+#: functions.php:97
+#. translators: %s is theme name
+msgid "Welcome to %s! - Version "
+msgstr ""
+
+#: functions.php:99
+#. translators: %s is theme name
+msgid ""
+"%1$s is now installed and ready to use! We want to make sure you have the "
+"best experience using %2$s and that is why we gathered here all the "
+"necessary information for you. We hope you will enjoy using %%s, as much as "
+"we enjoy creating great products."
+msgstr ""
+
+#: functions.php:107
+msgid "Getting Started"
+msgstr ""
+
+#: functions.php:108
+msgid "Recommended Actions"
+msgstr ""
+
+#: functions.php:109
+msgid "Recommended Plugins"
+msgstr ""
+
+#: functions.php:110 functions.php:247
+msgid "Support"
+msgstr ""
+
+#: functions.php:111 functions.php:136
+msgid "Changelog"
+msgstr ""
+
+#: functions.php:112
+msgid "Free VS PRO"
+msgstr ""
+
+#: functions.php:117 functions.php:120
+msgid "Contact Support"
+msgstr ""
+
+#: functions.php:119
+msgid ""
+"We offer excellent support through our advanced ticketing system. Make sure "
+"to register your purchase before contacting support!"
+msgstr ""
+
+#: functions.php:126 inc/class/flymag-info.php:42
+msgid "Documentation"
+msgstr ""
+
+#: functions.php:129
+#. translators: %s is theme name
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and "
+"outs of using %s."
+msgstr ""
+
+#: functions.php:130
+msgid "See our full documentation"
+msgstr ""
+
+#: functions.php:138
+msgid ""
+"Want to get the gist on the latest theme changes? Just consult our "
+"changelog below to get a taste of the recent fixes and features implemented."
+msgstr ""
+
+#: functions.php:139
+msgid "See changelog"
+msgstr ""
+
+#: functions.php:145
+msgid "Create a child theme"
+msgstr ""
+
+#: functions.php:147
+msgid ""
+"If you want to make changes to the theme's files, those changes are likely "
+"to be overwritten when you next update the theme. In order to prevent that "
+"from happening, you need to create a child theme. For this, please follow "
+"the documentation below."
+msgstr ""
+
+#: functions.php:148 functions.php:157 functions.php:166
+msgid "View how to do this"
+msgstr ""
+
+#: functions.php:154
+msgid "Speed up your site"
+msgstr ""
+
+#: functions.php:156
+msgid ""
+"If you find yourself in the situation where everything on your site is "
+"running very slow, you might consider having a look at the below "
+"documentation where you will find the most common issues causing this and "
+"possible solutions for each of the issues."
+msgstr ""
+
+#: functions.php:163
+msgid "Build a landing page with a drag-and-drop content builder"
+msgstr ""
+
+#: functions.php:165
+msgid ""
+"In the below documentation you will find an easy way to build a great "
+"looking landing page using a drag-and-drop content builder plugin."
+msgstr ""
+
+#: functions.php:175
+msgid "Step 1 - Implement recommended actions"
+msgstr ""
+
+#: functions.php:176
+msgid ""
+"We have compiled a list of steps for you, to take make sure the experience "
+"you will have using one of our products is very easy to follow."
+msgstr ""
+
+#: functions.php:177
+msgid "Check recommended actions"
+msgstr ""
+
+#: functions.php:184
+msgid "Step 2 - Check our documentation"
+msgstr ""
+
+#: functions.php:185
+msgid ""
+"Even if you are a long-time WordPress user, we still believe you should "
+"give our documentation a very quick Read."
+msgstr ""
+
+#: functions.php:186
+msgid "Full documentation"
+msgstr ""
+
+#: functions.php:193
+msgid "Step 3 - Customize everything"
+msgstr ""
+
+#: functions.php:194
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: functions.php:195
+msgid "Go to Customizer"
+msgstr ""
+
+#: functions.php:208
+#. translators: %s is theme name
+msgid "Get %s now!"
+msgstr ""
+
+#: functions.php:211
+msgid "Mobile friendly"
+msgstr ""
+
+#: functions.php:212
+msgid "Responsive layout. Works on every device."
+msgstr ""
+
+#: functions.php:217
+msgid "Unlimited color option"
+msgstr ""
+
+#: functions.php:218
+msgid "You can change the colors of each section. You have unlimited options."
+msgstr ""
+
+#: functions.php:223
+msgid "Background image"
+msgstr ""
+
+#: functions.php:224
+msgid "You can use any background image you want."
+msgstr ""
+
+#: functions.php:229
+msgid "Featured Area"
+msgstr ""
+
+#: functions.php:230
+msgid "Have access to a new featured area."
+msgstr ""
+
+#: functions.php:235
+msgid "Footer credits"
+msgstr ""
+
+#: functions.php:241
+msgid "Extra widgets areas"
+msgstr ""
+
+#: functions.php:242
+msgid "More widgets areas for your theme."
+msgstr ""
+
+#: functions.php:248
+msgid "You will benefit of our full support for any issues you have with the theme."
+msgstr ""
+
+#: functions.php:256
+msgid "Already activated"
+msgstr ""
+
+#: functions.php:257
+msgid "Version: "
+msgstr ""
+
+#: functions.php:260 functions.php:280
+msgid "Deactivate"
+msgstr ""
+
+#: functions.php:283
+msgid "Pirate Forms"
+msgstr ""
+
+#: functions.php:284
+msgid ""
+"Makes your contact page more engaging by creating a good-looking contact "
+"form on your website. The interaction with your visitors was never easier."
+msgstr ""
+
+#: functions.php:285 functions.php:292
+msgid "Install Pirate Forms"
+msgstr ""
+
+#: functions.php:291
+msgid "BuddyPress"
+msgstr ""
+
+#: functions.php:311
 msgid "Sidebar"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:101
+#: functions.php:320
 msgid "Home page"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:103
-msgid ""
-"Widgets added here will be displayed on pages using the Front Page template"
+#: functions.php:322
+msgid "Widgets added here will be displayed on pages using the Front Page template"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:111
+#: functions.php:329
 msgid "Home page top"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:113
+#: functions.php:331
 msgid ""
-"Widgets added here will be displayed above the main content area and sidebar "
-"on pages using the Front Page template"
+"Widgets added here will be displayed above the main content area and "
+"sidebar on pages using the Front Page template"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:121
+#: functions.php:338
 msgid "Footer left"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:129
+#: functions.php:346
 msgid "Footer center"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:137
+#: functions.php:354
 msgid "Footer right"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:252
+#: functions.php:500
 msgid "Create your menu here"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/functions.php:273
-#, php-format
+#: functions.php:522
+#. translators: %s is category name
 msgid "See all posts in %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/header.php:25
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/search.php:16
-#, php-format
-msgid "Search Results for: %s"
+#: image.php:24
+#. translators: %1$s is post url, %2$s is post title
+msgid ""
+"<i class=\"fa fa-pencil\"></i> Image posted in: <a href=\"%1$s\" "
+"title=\"Return to %2$s\" rel=\"gallery\">%2$s</a>"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/searchform.php:13
-msgid "Search for:"
+#: image.php:52
+msgid "Image available in:"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/searchform.php:14
-msgid "Type and press enter"
+#: image.php:67
+msgid "&larr; Previous"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:35
+#: image.php:68
+msgid "Next &rarr;"
+msgstr ""
+
+#: inc/class/flymag-info.php:46
+msgid "Github"
+msgstr ""
+
+#: inc/class/flymag-info.php:50
+msgid "Leave a review"
+msgstr ""
+
+#: inc/customizer-info/class/class-singleton-customizer-info-section.php:78
+msgid "View PRO version"
+msgstr ""
+
+#: inc/customizer-info/class/class-singleton-customizer-info-section.php:80
+msgid "Get it"
+msgstr ""
+
+#: inc/customizer.php:60
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:63
+#: inc/customizer.php:93
+msgid "View theme info"
+msgstr ""
+
+#: inc/customizer.php:110
 msgid "General"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:80
-msgid "Upload your favicon"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:102
+#: inc/customizer.php:123
 msgid "Upload your logo"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:123
+#: inc/customizer.php:140
 msgid "Logo size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:124
+#: inc/customizer.php:141
 msgid "Max-width for the logo. Default 200px"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:144
+#: inc/customizer.php:156
 msgid "Logo style"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:145
+#: inc/customizer.php:157
 msgid "This option applies only if you are using a logo"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:149
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1197
+#: inc/customizer.php:161 inc/customizer.php:1007
 msgid "Only logo"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:150
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1198
+#: inc/customizer.php:162 inc/customizer.php:1008
 msgid "Logo plus site title&amp;description"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:167
+#: inc/customizer.php:175
 msgid "Padding"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:168
+#: inc/customizer.php:176
 msgid "Top&amp;bottom padding for the branding. Default: 150px"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:180
+#: inc/customizer.php:193
+msgid "View pro version"
+msgstr ""
+
+#: inc/customizer.php:194
+msgid ""
+"It adds extra widget areas, the ability to change footer credits and a "
+"featured area."
+msgstr ""
+
+#: inc/customizer.php:200
 msgid "Latest news"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:196
+#: inc/customizer.php:212
 msgid "Check this box to display the latest news ribbon."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:208
+#: inc/customizer.php:223
 msgid "Select which category to show in the slider"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:224
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:329
+#: inc/customizer.php:234 inc/customizer.php:307
 msgid "Enter the number of posts you want to show"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:234
+#: inc/customizer.php:242
 msgid "Carousel"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:250
+#: inc/customizer.php:252
 msgid "Show carousel on front page?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:267
+#: inc/customizer.php:263
 msgid "Show carousel on blog index/archives/etc?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:284
+#: inc/customizer.php:274
 msgid "Show carousel on single posts and pages?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:296
+#: inc/customizer.php:285
 msgid "Select which category to show in the carousel"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:312
+#: inc/customizer.php:296
 msgid "Enter the carousel speed in miliseconds [Default: 4000]"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:339
+#: inc/customizer.php:315
 msgid "Blog options"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:351
+#: inc/customizer.php:325
 msgid "Blog page"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:369
+#: inc/customizer.php:337
 msgid "Blog layout"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:373
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1178
+#: inc/customizer.php:341 inc/customizer.php:974
 msgid "Classic"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:374
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1179
+#: inc/customizer.php:342 inc/customizer.php:975
 msgid "Full width (no sidebar)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:375
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1180
+#: inc/customizer.php:343 inc/customizer.php:976
 msgid "Masonry (grid style)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:391
+#: inc/customizer.php:355
 msgid "Excerpt lenght"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:392
+#: inc/customizer.php:356
 msgid "Choose your excerpt length. Default: 55 words"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:412
+#: inc/customizer.php:371
 msgid "Hide post date on index?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:429
+#: inc/customizer.php:382
 msgid "Hide post categories on index?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:442
+#: inc/customizer.php:393
 msgid "Single posts"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:460
+#: inc/customizer.php:405
 msgid "Hide post date &amp; author on single posts?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:477
+#: inc/customizer.php:416
 msgid "Hide post categories on single posts?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:494
+#: inc/customizer.php:427
 msgid "Hide post tags on single posts?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:510
+#: inc/customizer.php:437
 msgid "Full width single posts?"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:519
+#: inc/customizer.php:444
 msgid "Fonts"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:521
+#: inc/customizer.php:446
 msgid ""
 "You can use any Google Fonts you want for the heading and/or body. See the "
 "fonts here: google.com/fonts. See the documentation if you need help with "
 "this: docs.themeisle.com/article/310-flymag-documentation"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:532
+#: inc/customizer.php:455
 msgid "Body fonts"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:549
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:597
+#: inc/customizer.php:466 inc/customizer.php:500
 msgid "Font name/style/sets"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:566
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:614
+#: inc/customizer.php:477 inc/customizer.php:511
 msgid "Font family"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:580
+#: inc/customizer.php:489
 msgid "Headings fonts"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:628
+#: inc/customizer.php:523
 msgid "Font sizes"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:647
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1020
+#: inc/customizer.php:538 inc/customizer.php:836
 msgid "Site title"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:668
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1041
+#: inc/customizer.php:556 inc/customizer.php:851
 msgid "Site description"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:689
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1081
+#: inc/customizer.php:574 inc/customizer.php:879
 msgid "Menu items"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:710
+#: inc/customizer.php:592
 msgid "H1 font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:731
+#: inc/customizer.php:610
 msgid "H2 font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:752
+#: inc/customizer.php:628
 msgid "H3 font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:773
+#: inc/customizer.php:646
 msgid "H4 font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:794
+#: inc/customizer.php:664
 msgid "H5 font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:815
+#: inc/customizer.php:682
 msgid "H6 font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:836
+#: inc/customizer.php:700
 msgid "Body font size"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:858
+#: inc/customizer.php:722
 msgid "Color scheme"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:876
+#: inc/customizer.php:734
 msgid "Color 1 (primary color)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:895
+#: inc/customizer.php:747
 msgid "Color 2"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:914
+#: inc/customizer.php:760
 msgid "Color 3"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:933
+#: inc/customizer.php:773
 msgid "Color 4"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:952
+#: inc/customizer.php:786
 msgid "Color 5"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:979
+#: inc/customizer.php:807
 msgid "Latest news background"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:999
+#: inc/customizer.php:821
 msgid "Header background"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1061
+#: inc/customizer.php:865
 msgid "Menu background"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1107
+#: inc/customizer.php:899
 msgid "Body text"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1128
+#: inc/customizer.php:914
 msgid "Widgets color"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/customizer.php:1149
+#: inc/customizer.php:929
 msgid "Footer"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/extras.php:64
-#, php-format
+#: inc/extras.php:65
+#. translators: %s is page number
 msgid "Page %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:21
+#: inc/template-tags.php:21
 msgid "Posts navigation"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:25
+#: inc/template-tags.php:25
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:29
+#: inc/template-tags.php:29
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:52
+#: inc/template-tags.php:52
 msgid "Post navigation"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:55
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:56
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:103
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:107
+#: inc/template-tags.php:103 inc/template-tags.php:107
 msgid ", "
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:130
-#, php-format
+#: inc/template-tags.php:131
+#. translators: archive category
 msgid "Category: %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:132
-#, php-format
+#: inc/template-tags.php:134
+#. translators: archive tag
 msgid "Tag: %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:134
-#, php-format
+#: inc/template-tags.php:137
+#. translators: archive author
 msgid "Author: %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:136
-#, php-format
+#: inc/template-tags.php:140
+#. translators: archive year
 msgid "Year: %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:136
-msgid "Y"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:138
-#, php-format
+#: inc/template-tags.php:143
+#. translators: archive month
 msgid "Month: %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:138
-msgid "F Y"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:140
-#, php-format
+#: inc/template-tags.php:146
+#. translators: archive day
 msgid "Day: %s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:140
-msgid "F j, Y"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:143
-msgid "Asides"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:145
-msgid "Galleries"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:147
-msgid "Images"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:149
-msgid "Videos"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:151
-msgid "Quotes"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:153
-msgid "Links"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:155
-msgid "Statuses"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:157
-msgid "Audio"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:159
-msgid "Chats"
-msgstr ""
-
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:162
-#, php-format
+#: inc/template-tags.php:169
+#. translators: archive title
 msgid "Archives: %s"
 msgstr ""
 
+#: inc/template-tags.php:173
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:166
-#, php-format
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/inc/template-tags.php:168
+#: inc/template-tags.php:175
 msgid "Archives"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-comments.php:6
+#: search.php:16
+#. translators: Search query
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:13
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:14
+msgid "Type and press enter"
+msgstr ""
+
+#: widgets/recent-comments.php:19
 msgid "Display your site&#8217;s recent comments with avatars."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-comments.php:7
+#: widgets/recent-comments.php:21
 msgid "Flymag: Recent Comments"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-comments.php:41
+#: widgets/recent-comments.php:58
 msgid "Recent Comments"
 msgstr ""
 
+#: widgets/recent-comments.php:95
 #. translators: comments widget: 1: comment author, 2: post link
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-comments.php:67
-#, php-format
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-comments.php:98
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-a.php:148
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-b.php:158
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:125
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:122
+#: widgets/recent-comments.php:148 widgets/recent-posts-a.php:201
+#: widgets/recent-posts-b.php:207 widgets/recent-posts-d.php:173
+#: widgets/recent-posts-slider.php:172
 msgid "Title:"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-comments.php:101
+#: widgets/recent-comments.php:151
 msgid "Number of comments to show:"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-a.php:11
+#: widgets/recent-posts-a.php:19
 msgid "Recent posts widget Type A (front page)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-a.php:12
+#: widgets/recent-posts-a.php:21
 msgid "Flymag: Recent posts type A"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-a.php:151
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-b.php:161
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:127
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:125
+#: widgets/recent-posts-a.php:204 widgets/recent-posts-b.php:210
+#: widgets/recent-posts-d.php:175 widgets/recent-posts-slider.php:175
 msgid ""
 "Enter the slug for your category or leave empty to show posts from all "
 "categories."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-a.php:154
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-b.php:164
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-c.php:215
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:132
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:131
+#: widgets/recent-posts-a.php:207 widgets/recent-posts-b.php:213
+#: widgets/recent-posts-c.php:250 widgets/recent-posts-d.php:180
+#: widgets/recent-posts-slider.php:181
 msgid "Background color"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-a.php:157
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-b.php:167
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-c.php:218
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:135
+#: widgets/recent-posts-a.php:210 widgets/recent-posts-b.php:216
+#: widgets/recent-posts-c.php:253 widgets/recent-posts-d.php:183
 msgid "Text color"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-b.php:11
+#: widgets/recent-posts-b.php:19
 msgid "Recent posts widget Type B (front page)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-b.php:12
+#: widgets/recent-posts-b.php:21
 msgid "Flymag: Recent posts type B"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-c.php:11
+#: widgets/recent-posts-c.php:19
 msgid "Recent posts widget Type C - two categories (front page)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-c.php:12
+#: widgets/recent-posts-c.php:21
 msgid "Flymag: Recent posts type C"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-c.php:209
+#: widgets/recent-posts-c.php:244
 msgid "Enter the slug for your first category."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-c.php:212
+#: widgets/recent-posts-c.php:247
 msgid "Enter the slug for your second category."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:11
+#: widgets/recent-posts-d.php:19
 msgid "Recent posts widget Type D - only images (front page)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:12
+#: widgets/recent-posts-d.php:21
 msgid "Flymag: Recent posts type D"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-d.php:129
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:128
+#: widgets/recent-posts-d.php:177 widgets/recent-posts-slider.php:178
 msgid "Number of posts to show:"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:11
+#: widgets/recent-posts-slider.php:19
 msgid "Recent posts slider (front page)"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:12
+#: widgets/recent-posts-slider.php:21
 msgid "Flymag: Recent posts slider"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/recent-posts-slider.php:134
+#: widgets/recent-posts-slider.php:184
 msgid "Title color"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/video-widget.php:7
+#: widgets/video-widget.php:19
 msgid "Display an oEmbed video."
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/video-widget.php:8
+#: widgets/video-widget.php:21
 msgid "Flymag: Video"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/video-widget.php:25
+#: widgets/video-widget.php:42
 msgid "Title"
 msgstr ""
 
-#: D:\Programe\InstantWP\InstantWP_4.3.1\iwpserver\htdocs\wordpress\wp-content\themes\flymag/widgets/video-widget.php:29
+#: widgets/video-widget.php:46
 msgid ""
 "Paste the URL of the video (only from a network that supports oEmbed, like "
 "Youtube, Vimeo etc.):"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "FlyMag"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://themeisle.com/themes/flymag/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Flymag is a responsive magazine theme with a modern look. Flymag lets you "
+"use any of the 600+ Google Fonts, provides color options for a lot of the "
+"theme elements and also offers you some useful page templates. With Flymag "
+"you can easily build your front page magazine-layout using the built in "
+"widgets specifically designed for this task."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Themeisle"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themeisle.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front page - fullwidt"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full width"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1121 class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2342
+#. translators: 1: install status, 2: update status
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2388
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: comments.php:31
+#. translators: %s: post title
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:35
+#. translators: 1: number of comments, 2: post title
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:55
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:140
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:143
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:146
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:149
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:151
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:153
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:155
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:157
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:159
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:161
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:163
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:165
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "search page"
+msgid "Search for:"
 msgstr ""
