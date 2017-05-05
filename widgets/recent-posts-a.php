@@ -14,7 +14,10 @@ class Flymag_Recent_A extends WP_Widget {
 	 * Flymag_Recent_A constructor.
 	 */
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'recent_posts_a clearfix', 'description' => __( 'Recent posts widget Type A (front page)', 'flymag' ) );
+		$widget_ops = array(
+			'classname' => 'recent_posts_a clearfix',
+			'description' => __( 'Recent posts widget Type A (front page)', 'flymag' ),
+		);
 		parent::__construct( 'recent_posts_a', __( 'Flymag: Recent posts type A', 'flymag' ), $widget_ops );
 		$this->alt_option_name = 'recent_posts_a';
 

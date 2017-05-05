@@ -44,4 +44,4 @@ if ( ! function_exists( 'flymag_ticker_template' ) ) {
 		<?php }
 		wp_reset_postdata();
 	}
-}
+}// End if().

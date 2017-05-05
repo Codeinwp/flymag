@@ -14,7 +14,10 @@ class Flymag_Recent_Comments extends WP_Widget {
 	 * Flymag_Recent_Comments constructor.
 	 */
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'flymag_recent_comments', 'description' => __( 'Display your site&#8217;s recent comments with avatars.', 'flymag' ) );
+		$widget_ops = array(
+			'classname' => 'flymag_recent_comments',
+			'description' => __( 'Display your site&#8217;s recent comments with avatars.', 'flymag' ),
+		);
 		parent::__construct( 'recent-comments', __( 'Flymag: Recent Comments', 'flymag' ), $widget_ops );
 		$this->alt_option_name = 'flymag_recent_comments';
 

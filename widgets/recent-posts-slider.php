@@ -14,7 +14,10 @@ class Flymag_Recent_Slider extends WP_Widget {
 	 * Flymag_Recent_Slider constructor.
 	 */
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'recent_posts_slider clearfix', 'description' => __( 'Recent posts slider (front page)', 'flymag' ) );
+		$widget_ops = array(
+		        'classname' => 'recent_posts_slider clearfix',
+			'description' => __( 'Recent posts slider (front page)', 'flymag' ),
+		);
 		parent::__construct( 'recent_posts_slider', __( 'Flymag: Recent posts slider', 'flymag' ), $widget_ops );
 		$this->alt_option_name = 'recent_posts_slider';
 
