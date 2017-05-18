@@ -98,9 +98,9 @@ class Flymag_Recent_Slider extends WP_Widget {
 							<?php if ( has_post_thumbnail() ) : ?>
 								<div class="recent-post">
 									<span class="carousel-overlay"></span>
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail(); ?>
-                                    </a>
+									<a href="<?php the_permalink(); ?>">
+										<?php the_post_thumbnail(); ?>
+									</a>
 									<?php the_title( sprintf( '<h3 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 									<span class="slide-link"><a href="<?php echo esc_url( get_permalink() ); ?>"><i class="fa fa-long-arrow-right"></i></a></span>
 								</div>

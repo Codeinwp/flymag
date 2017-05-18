@@ -104,13 +104,13 @@ class Flymag_Recent_B extends WP_Widget {
 
 					<div class="recent-post first-post col-md-6 col-sm-6 clearfix">
 						<div class="recent-thumb">
-                            <a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>">
 							<?php if ( has_post_thumbnail() ) : ?>
-                                <?php the_post_thumbnail( 'carousel-thumb' ); ?>
+								<?php the_post_thumbnail( 'carousel-thumb' ); ?>
 							<?php else : ?>
 								<?php echo '<img src="' . get_stylesheet_directory_uri() . '/images/placeholder.png"/>'; ?>
 							<?php endif; ?>
-                            </a>
+							</a>
 						</div>
 						<div class="recent-content">
 							<?php the_title( sprintf( '<h3 class="entry-title"><a style="color:' . $text_color . '" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
@@ -128,13 +128,13 @@ class Flymag_Recent_B extends WP_Widget {
 
 					<div class="recent-post col-md-6 col-sm-6 clearfix">
 						<div class="recent-thumb col-md-3 col-sm-3 col-xs-3">
-                            <a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>">
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'carousel-thumb' ); ?>
 							<?php else : ?>
 								<?php echo '<img src="' . get_stylesheet_directory_uri() . '/images/placeholder.png"/>'; ?>
 							<?php endif; ?>
-                            </a>
+							</a>
 						</div>
 						<div class="recent-content col-md-9 col-sm-9 col-xs-9">
 							<?php the_title( sprintf( '<h4 class="entry-title"><a style="color:' . $text_color . '" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
