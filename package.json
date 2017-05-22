@@ -3,6 +3,7 @@
   "nicename": "Flymag",
   "version": "2.0.0",
   "description": "Flymag theme",
+  "category": "themes",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Codeinwp/flymag.git"
