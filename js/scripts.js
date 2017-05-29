@@ -1,5 +1,7 @@
 //Menu dropdown animation
+/* global WOW */
 jQuery(function($) {
+	'use strict';
 	$('.sub-menu').hide();
 	$('.main-navigation .children').hide();
 	$('.menu-item').hover( 
@@ -23,11 +25,13 @@ jQuery(function($) {
 
 //Fit Vids
 jQuery(function($) {
-    $("body").fitVids();  
+    'use strict';
+	$('body').fitVids();
 });
 
 //Mobile menu
 jQuery(function($) {
+	'use strict';
 	$('.main-navigation .menu').slicknav({
 		label: '<i class="fa fa-bars"></i>',
 		prependTo: '.mobile-nav',
@@ -42,8 +46,9 @@ jQuery(function($) {
 
 //Smooth scrolling
 jQuery(function($) {
+	'use strict';
 	$('a[href*="#"]:not([href="#"])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
@@ -58,11 +63,13 @@ jQuery(function($) {
 
 //Open social links in a new tab
 jQuery(function($) {
-     $( '.social-navigation li a' ).attr( 'target','_blank' );
+    'use strict';
+	$( '.social-navigation li a' ).attr( 'target','_blank' );
 });
 
 //Search form
 jQuery(function($) {
+	'use strict';
 	$('.search-toggle').click(function() {
 		$('.search-wrapper').addClass('search-visible');
 	});
@@ -72,6 +79,7 @@ jQuery(function($) {
 });
 
 jQuery(function($) {
+	'use strict';
 	$('.news-ticker').easyTicker({
 		direction: 'up',
 		speed: 'slow',
@@ -83,6 +91,9 @@ jQuery(function($) {
 });
 
 //WOW.js init
-jQuery(function($) {
-	new WOW().init();
+jQuery(function() {
+	'use strict';
+    if (typeof WOW !== 'undefined' && jQuery.isFunction(WOW)) {
+		new WOW().init();
+	}
 });

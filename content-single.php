@@ -1,5 +1,7 @@
 <?php
 /**
+ * The template part for displaying single posts
+ *
  * @package FlyMag
  */
 ?>
@@ -8,14 +10,14 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="single-thumb">
-			<?php the_post_thumbnail('entry-thumb'); ?>
+			<?php the_post_thumbnail( 'entry-thumb' ); ?>
 		</div>	
 	<?php endif; ?>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<?php if ( get_theme_mod('flymag_single_date') != 1 ) : ?>
+		<?php if ( get_theme_mod( 'flymag_single_date' ) != 1 ) : ?>
 		<div class="entry-meta">
 			<?php flymag_posted_on(); ?>
 		</div><!-- .entry-meta -->

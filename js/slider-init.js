@@ -1,5 +1,7 @@
+/* global sliderOptions */
 jQuery(function($) {
-	$(".fly-slider .slider-inner").owlCarousel({  
+    'use strict';
+	$('.fly-slider .slider-inner').owlCarousel({
         items : 3,
         itemsCustom : false,
         singleItem: false,
@@ -11,29 +13,31 @@ jQuery(function($) {
         autoPlay : +sliderOptions.slideshowspeed,
         stopOnHover : true,
         navigation : true,
-        navigationText : ["<i class='fa fa-long-arrow-left'></i>","<i class='fa fa-long-arrow-right'></i>"],
+        navigationText : ['<i class="fa fa-long-arrow-left"></i>','<i class="fa fa-long-arrow-right"></i>'],
         rewindNav : true,
         pagination : false,
-        autoHeight : true,
-	})
+        autoHeight : true
+	});
 });
 
 jQuery(function($) {
-    $(".posts-slider .posts-slider-inner").owlCarousel({  
+    'use strict';
+    $('.posts-slider .posts-slider-inner').owlCarousel({
         itemsCustom : false,
         singleItem: true,
         autoPlay : true,
         stopOnHover : true,
         navigation : true,
-        navigationText : ["<i class='fa fa-long-arrow-left'></i>","<i class='fa fa-long-arrow-right'></i>"],
+        navigationText : ['<i class="fa fa-long-arrow-left"></i>','<i class="fa fa-long-arrow-right"></i>'],
         rewindNav : true,
         pagination : false,
-        autoHeight : true,   
-    })
+        autoHeight : true
+    });
 });
 
 
 jQuery(function($) {
+    'use strict';
     $(window).bind('load', function() {
         $('.fly-slider .slider-inner').fadeIn();
         $('.posts-slider .posts-slider-inner').fadeIn();

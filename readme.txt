@@ -91,4 +91,4 @@ License URI: http://creativecommons.org/publicdomain/zero/1.0/deed.en
 
 III. Documentation 
 
-Theme documentation is available on http://flyfreemedia.com/documentation/flymag/
+Theme documentation is available on http://docs.themeisle.com/article/310-flymag-documentation
