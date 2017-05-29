@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlyMag 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/flymag/issues\n"
-"POT-Creation-Date: 2017-05-03 13:57:25+00:00\n"
+"POT-Creation-Date: 2017-05-22 15:19:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -467,8 +467,8 @@ msgstr ""
 msgid ""
 "%1$s is now installed and ready to use! We want to make sure you have the "
 "best experience using %2$s and that is why we gathered here all the "
-"necessary information for you. We hope you will enjoy using %%s, as much as "
-"we enjoy creating great products."
+"necessary information for you. We hope you will enjoy using %3$s, as much "
+"as we enjoy creating great products."
 msgstr ""
 
 #: functions.php:107
@@ -1153,8 +1153,8 @@ msgid "%1$s on %2$s"
 msgstr ""
 
 #: widgets/recent-comments.php:148 widgets/recent-posts-a.php:201
-#: widgets/recent-posts-b.php:207 widgets/recent-posts-d.php:173
-#: widgets/recent-posts-slider.php:172
+#: widgets/recent-posts-b.php:211 widgets/recent-posts-d.php:173
+#: widgets/recent-posts-slider.php:174
 msgid "Title:"
 msgstr ""
 
@@ -1170,20 +1170,20 @@ msgstr ""
 msgid "Flymag: Recent posts type A"
 msgstr ""
 
-#: widgets/recent-posts-a.php:204 widgets/recent-posts-b.php:210
-#: widgets/recent-posts-d.php:175 widgets/recent-posts-slider.php:175
+#: widgets/recent-posts-a.php:204 widgets/recent-posts-b.php:214
+#: widgets/recent-posts-d.php:175 widgets/recent-posts-slider.php:177
 msgid ""
 "Enter the slug for your category or leave empty to show posts from all "
 "categories."
 msgstr ""
 
-#: widgets/recent-posts-a.php:207 widgets/recent-posts-b.php:213
+#: widgets/recent-posts-a.php:207 widgets/recent-posts-b.php:217
 #: widgets/recent-posts-c.php:250 widgets/recent-posts-d.php:180
-#: widgets/recent-posts-slider.php:181
+#: widgets/recent-posts-slider.php:183
 msgid "Background color"
 msgstr ""
 
-#: widgets/recent-posts-a.php:210 widgets/recent-posts-b.php:216
+#: widgets/recent-posts-a.php:210 widgets/recent-posts-b.php:220
 #: widgets/recent-posts-c.php:253 widgets/recent-posts-d.php:183
 msgid "Text color"
 msgstr ""
@@ -1220,7 +1220,7 @@ msgstr ""
 msgid "Flymag: Recent posts type D"
 msgstr ""
 
-#: widgets/recent-posts-d.php:177 widgets/recent-posts-slider.php:178
+#: widgets/recent-posts-d.php:177 widgets/recent-posts-slider.php:180
 msgid "Number of posts to show:"
 msgstr ""
 
@@ -1232,7 +1232,7 @@ msgstr ""
 msgid "Flymag: Recent posts slider"
 msgstr ""
 
-#: widgets/recent-posts-slider.php:184
+#: widgets/recent-posts-slider.php:186
 msgid "Title color"
 msgstr ""
 

@@ -53,11 +53,13 @@ if ( ! function_exists( 'flymag_slider_template' ) ) {
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="slide">
 							<span class="carousel-overlay"></span>
+							<a href="<?php the_permalink(); ?>">
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'carousel-thumb' ); ?>
 							<?php else : ?>
 								<?php echo '<img src="' . get_stylesheet_directory_uri() . '/images/placeholder.png"/>'; ?>
 							<?php endif; ?>
+							</a>
 							<?php the_title( sprintf( '<h1 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							<span class="slide-link"><a href="<?php echo esc_url( get_permalink() ); ?>"><i class="fa fa-long-arrow-right"></i></a></span>
 						</div>

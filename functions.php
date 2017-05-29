@@ -94,9 +94,9 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			// Page title.
 			'page_name'               => __( 'About Flymag', 'flymag' ),
 			/* translators: %s is theme name */
-			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), 'FlyMag' ),
+			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), esc_html( 'FlyMag' ) ),
 			/* translators: %s is theme name */
-			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %%s, as much as we enjoy creating great products.','flymag' ), 'FlyMag' ),
+			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), esc_html( 'FlyMag' ), esc_html( 'FlyMag' ), esc_html( 'FlyMag' ) ),
 			/**
 			 * Tabs array.
 			 *

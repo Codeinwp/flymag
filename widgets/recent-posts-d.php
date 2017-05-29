@@ -97,8 +97,8 @@ class Flymag_Recent_D extends WP_Widget {
 
 
 					<div class="recent-post col-md-4 col-sm-6 col-xs-6">
-						<span class="thumb-overlay"></span>
 						<a href="<?php the_permalink(); ?>">
+						    <span class="thumb-overlay"></span>
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'carousel-thumb' ); ?>
 							<?php else : ?>
