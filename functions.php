@@ -173,6 +173,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'getting_started' => array(
 				'second' => array(
 					'title' => esc_html__( 'Documentation','flymag' ),
+					/* translators: %s is theme name */
 					'text' => sprintf( esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use %s.','flymag' ), 'FlyMag' ),
 					'button_label' => esc_html__( 'Documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',

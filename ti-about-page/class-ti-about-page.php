@@ -476,7 +476,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		}
 
 		public function check_if_plugin_active( $slug ) {
-			if( ( $slug == 'intergeo-maps' ) || ( $slug == 'visualizer' ) ) {
+			if ( ( $slug == 'intergeo-maps' ) || ( $slug == 'visualizer' ) ) {
 				$plugin_root_file = 'index';
 			} elseif ( $slug == 'adblock-notify-by-bweb' ) {
 				$plugin_root_file = 'adblock-notify';
@@ -493,11 +493,14 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			if ( file_exists( $path ) ) {
 				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 				$needs = is_plugin_active( $slug . '/' . $plugin_root_file . '.php' ) ? 'deactivate' : 'activate';
-				return array( 'status' => is_plugin_active( $slug . '/' . $plugin_root_file . '.php' ), 'needs' => $needs );
+				return array(
+					'status' => is_plugin_active( $slug . '/' . $plugin_root_file . '.php' ),
+					'needs' => $needs,
+				);
 			}
 			return array(
 				'status' => false,
-				'needs' => 'install'
+				'needs' => 'install',
 			);
 		}
 
@@ -525,7 +528,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		}
 
 		public function create_action_link( $state, $slug ) {
-			if( ( $slug == 'intergeo-maps' ) || ( $slug == 'visualizer' ) ) {
+			if ( ( $slug == 'intergeo-maps' ) || ( $slug == 'visualizer' ) ) {
 				$plugin_root_file = 'index';
 			} elseif ( $slug == 'adblock-notify-by-bweb' ) {
 				$plugin_root_file = 'adblock-notify';
@@ -538,7 +541,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 						add_query_arg(
 							array(
 								'action' => 'install-plugin',
-								'plugin' => $slug
+								'plugin' => $slug,
 							),
 							network_admin_url( 'update.php' )
 						),
@@ -557,7 +560,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 				case 'activate':
 					return add_query_arg( array(
 						'action'        => 'activate',
-						'plugin'        =>  rawurlencode( $slug . '/' . $plugin_root_file . '.php' ),
+						'plugin'        => rawurlencode( $slug . '/' . $plugin_root_file . '.php' ),
 						'plugin_status' => 'all',
 						'paged'         => '1',
 						'_wpnonce'      => wp_create_nonce( 'activate-plugin_' . $slug . '/' . $plugin_root_file . '.php' ),
@@ -1035,7 +1038,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					'nr_actions_required'      => count( $required_actions ),
 					'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 					'template_directory'       => get_template_directory_uri(),
-					'activating_string'        => __( 'Activating', 'flymag' )
+					'activating_string'        => __( 'Activating', 'flymag' ),
 				) );
 
 			}
