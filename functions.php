@@ -246,7 +246,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'recommended_plugins'        => array(
 				'already_activated_message' => esc_html__( 'Already activated', 'flymag' ),
 				'version_label' => esc_html__( 'Version: ', 'flymag' ),
-				'install_label' => esc_html__( 'Install', 'flymag' ),
+				'install_label' => esc_html__( 'Install and Activate', 'flymag' ),
 				'activate_label' => esc_html__( 'Activate', 'flymag' ),
 				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
 				'content'                   => array(
@@ -266,7 +266,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			),
 			// Required actions array.
 			'recommended_actions'        => array(
-				'install_label' => esc_html__( 'Install', 'flymag' ),
+				'install_label' => esc_html__( 'Install and Activate', 'flymag' ),
 				'activate_label' => esc_html__( 'Activate', 'flymag' ),
 				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
 				'content'            => array(),
