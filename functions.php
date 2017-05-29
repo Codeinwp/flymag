@@ -116,7 +116,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 				'first' => array(
 					'title' => esc_html__( 'Contact Support','flymag' ),
 					'icon' => 'dashicons dashicons-sos',
-					'text' => esc_html__( 'We offer excellent support through our advanced ticketing system. Make sure to register your purchase before contacting support!','flymag' ),
+					'text' => esc_html__( 'We want to make sure you have the best experience using FlyMag and that is why we gathered here all the necessary informations for you. We hope you will enjoy using FlyMag, as much as we enjoy creating great products.!','flymag' ),
 					'button_label' => esc_html__( 'Contact Support','flymag' ),
 					'button_link' => esc_url( 'https://themeisle.com/contact/' ),
 					'is_button' => true,
@@ -126,7 +126,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'title' => esc_html__( 'Documentation','flymag' ),
 					'icon' => 'dashicons dashicons-book-alt',
 					/* translators: %s is theme name */
-					'text' => sprintf( esc_html__( 'Even if you are a long-time WordPress user, we still believe you should give our documentation a very quick Read.','flymag' ), 'FlyMag' ),
+					'text' => sprintf( esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use FlyMag.','flymag' ), 'FlyMag' ),
 					'button_label' => esc_html__( 'Documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
@@ -136,7 +136,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'title' => esc_html__( 'Changelog','flymag' ),
 					'icon' => 'dashicons dashicons-portfolio',
 					'text' => esc_html__( 'Want to get the gist on the latest theme changes? Just consult our changelog below to get a taste of the recent fixes and features implemented.','flymag' ),
-					'button_label' => esc_html__( 'See changelog','flymag' ),
+					'button_label' => esc_html__( 'Changelog','flymag' ),
 					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=changelog&show=yes' ) ),
 					'is_button' => false,
 					'is_new_tab' => false,
@@ -173,7 +173,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			'getting_started' => array(
 				'second' => array(
 					'title' => esc_html__( 'Documentation','flymag' ),
-					'text' => esc_html__( 'Even if you are a long-time WordPress user, we still believe you should give our documentation a very quick Read.','flymag' ),
+					'text' => esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use FlyMag.','flymag' ),
 					'button_label' => esc_html__( 'Documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
