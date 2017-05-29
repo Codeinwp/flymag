@@ -96,7 +96,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			/* translators: %s is theme name */
 			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), esc_html( 'FlyMag' ) ),
 			/* translators: %s is theme name */
-			'welcome_content'       => sprintf( __( '%1$s is now installed and ready to use! We want to make sure you have the best experience using %2$s and that is why we gathered here all the necessary information for you. We hope you will enjoy using %3$s, as much as we enjoy creating great products.','flymag' ), esc_html( 'FlyMag' ), esc_html( 'FlyMag' ), esc_html( 'FlyMag' ) ),
+			'welcome_content'       => esc_html__( 'Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.','flymag' ),
 			/**
 			 * Tabs array.
 			 *
@@ -105,7 +105,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			 */
 			'tabs'                    => array(
 				'getting_started'  => __( 'Getting Started', 'flymag' ),
-				'recommended_actions' => __( 'Recommended Actions', 'flymag' ),
+				'recommended_actions' => '',
 				'recommended_plugins' => __( 'Recommended Plugins','flymag' ),
 				'support'       => __( 'Support', 'flymag' ),
 				'changelog'        => __( 'Changelog', 'flymag' ),
@@ -126,8 +126,8 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 					'title' => esc_html__( 'Documentation','flymag' ),
 					'icon' => 'dashicons dashicons-book-alt',
 					/* translators: %s is theme name */
-					'text' => sprintf( esc_html__( 'This is the place to go to reference different aspects of the theme. Our online documentation is an incredible resource for learning the ins and outs of using %s.','flymag' ), 'FlyMag' ),
-					'button_label' => esc_html__( 'See our full documentation','flymag' ),
+					'text' => sprintf( esc_html__( 'Even if you are a long-time WordPress user, we still believe you should give our documentation a very quick Read.','flymag' ), 'FlyMag' ),
+					'button_label' => esc_html__( 'Documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
 					'is_new_tab' => true,
@@ -171,26 +171,17 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 			),
 			// Getting started tab
 			'getting_started' => array(
-				'first' => array(
-					'title' => esc_html__( 'Step 1 - Implement recommended actions','flymag' ),
-					'text' => esc_html__( 'We have compiled a list of steps for you, to take make sure the experience you will have using one of our products is very easy to follow.','flymag' ),
-					'button_label' => esc_html__( 'Check recommended actions','flymag' ),
-					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=recommended_actions' ) ),
-					'is_button' => false,
-					'recommended_actions' => true,
-					'is_new_tab' => false,
-				),
 				'second' => array(
-					'title' => esc_html__( 'Step 2 - Check our documentation','flymag' ),
+					'title' => esc_html__( 'Documentation','flymag' ),
 					'text' => esc_html__( 'Even if you are a long-time WordPress user, we still believe you should give our documentation a very quick Read.','flymag' ),
-					'button_label' => esc_html__( 'Full documentation','flymag' ),
+					'button_label' => esc_html__( 'Documentation','flymag' ),
 					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
 					'is_button' => false,
 					'recommended_actions' => false,
 					'is_new_tab' => true,
 				),
 				'third' => array(
-					'title' => esc_html__( 'Step 3 - Customize everything','flymag' ),
+					'title' => esc_html__( 'Go to Customizer','flymag' ),
 					'text' => esc_html__( 'Using the WordPress Customizer you can easily customize every aspect of the theme.','flymag' ),
 					'button_label' => esc_html__( 'Go to Customizer','flymag' ),
 					'button_link' => esc_url( admin_url( 'customize.php' ) ),
@@ -278,23 +269,7 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 				'install_label' => esc_html__( 'Install', 'flymag' ),
 				'activate_label' => esc_html__( 'Activate', 'flymag' ),
 				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
-				'content'            => array(
-					'pirate-forms' => array(
-						'title'       => __( 'Pirate Forms', 'flymag' ),
-						'description' => __( 'Makes your contact page more engaging by creating a good-looking contact form on your website. The interaction with your visitors was never easier.', 'flymag' ),
-						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
-						'check'       => defined( 'PIRATE_FORMS_VERSION' ),
-						'plugin_slug' => 'pirate-forms',
-						'id' => 'pirate-forms',
-					),
-					'buddypress' => array(
-						'title'       => __( 'BuddyPress', 'flymag' ),
-						'link_label'  => __( 'Install Pirate Forms', 'flymag' ),
-						'check'       => class_exists( 'BuddyPress' ),
-						'plugin_slug' => 'buddypress',
-						'id' => 'buddypress',
-					),
-				),
+				'content'            => array(),
 			),
 		);
 		TI_About_Page::init( $config );
