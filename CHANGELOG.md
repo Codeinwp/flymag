@@ -1,4 +1,10 @@
 
+### 2.0.0 - 29/05/2017
+**Changes:** 
+- Added About FlyMag page
+- Redid upsells
+- Make frontpage images clickable
+
 ### 1.10 - 03/06/2016
 **Changes:** 
 - Updated documentation link
