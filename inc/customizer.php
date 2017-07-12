@@ -143,7 +143,6 @@ function flymag_customize_register( $wp_customize ) {
 			'min'   => 50,
 			'max'   => 600,
 			'step'  => 5,
-			'style' => 'margin-bottom: 15px; padding: 15px;',
 		),
 	) );
 	// Logo style
@@ -178,7 +177,6 @@ function flymag_customize_register( $wp_customize ) {
 			'min'   => 0,
 			'max'   => 350,
 			'step'  => 5,
-			'style' => 'padding: 15px;',
 		),
 	) );
 

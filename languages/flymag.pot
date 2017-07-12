@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlyMag 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/flymag/issues\n"
-"POT-Creation-Date: 2017-05-22 15:19:55+00:00\n"
+"POT-Creation-Date: 2017-07-12 08:48:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -283,7 +283,7 @@ msgstr ""
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2717 functions.php:258 functions.php:278
+#: class-tgm-plugin-activation.php:2717
 msgid "Install"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: class-tgm-plugin-activation.php:2726 functions.php:259 functions.php:279
+#: class-tgm-plugin-activation.php:2726 functions.php:251 functions.php:271
 msgid "Activate"
 msgstr ""
 
@@ -462,32 +462,28 @@ msgstr ""
 msgid "Welcome to %s! - Version "
 msgstr ""
 
-#: functions.php:99
-#. translators: %s is theme name
+#. Description of the plugin/theme
 msgid ""
-"%1$s is now installed and ready to use! We want to make sure you have the "
-"best experience using %2$s and that is why we gathered here all the "
-"necessary information for you. We hope you will enjoy using %3$s, as much "
-"as we enjoy creating great products."
+"Flymag is a responsive magazine theme with a modern look. Flymag lets you "
+"use any of the 600+ Google Fonts, provides color options for a lot of the "
+"theme elements and also offers you some useful page templates. With Flymag "
+"you can easily build your front page magazine-layout using the built in "
+"widgets specifically designed for this task."
 msgstr ""
 
 #: functions.php:107
 msgid "Getting Started"
 msgstr ""
 
-#: functions.php:108
-msgid "Recommended Actions"
-msgstr ""
-
 #: functions.php:109
 msgid "Recommended Plugins"
 msgstr ""
 
-#: functions.php:110 functions.php:247
+#: functions.php:110 functions.php:239
 msgid "Support"
 msgstr ""
 
-#: functions.php:111 functions.php:136
+#: functions.php:111 functions.php:136 functions.php:139
 msgid "Changelog"
 msgstr ""
 
@@ -501,34 +497,27 @@ msgstr ""
 
 #: functions.php:119
 msgid ""
-"We offer excellent support through our advanced ticketing system. Make sure "
-"to register your purchase before contacting support!"
+"We want to make sure you have the best experience using FlyMag and that is "
+"why we gathered here all the necessary informations for you. We hope you "
+"will enjoy using FlyMag, as much as we enjoy creating great products.!"
 msgstr ""
 
-#: functions.php:126 inc/class/flymag-info.php:42
+#: functions.php:126 functions.php:130 functions.php:175 functions.php:178
+#: inc/class/flymag-info.php:42
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:129 functions.php:177
 #. translators: %s is theme name
 msgid ""
-"This is the place to go to reference different aspects of the theme. Our "
-"online documentation is an incredible resource for learning the ins and "
-"outs of using %s."
-msgstr ""
-
-#: functions.php:130
-msgid "See our full documentation"
+"Need more details? Please check our full documentation for detailed "
+"information on how to use %s."
 msgstr ""
 
 #: functions.php:138
 msgid ""
 "Want to get the gist on the latest theme changes? Just consult our "
 "changelog below to get a taste of the recent fixes and features implemented."
-msgstr ""
-
-#: functions.php:139
-msgid "See changelog"
 msgstr ""
 
 #: functions.php:145
@@ -569,170 +558,124 @@ msgid ""
 "looking landing page using a drag-and-drop content builder plugin."
 msgstr ""
 
-#: functions.php:175
-msgid "Step 1 - Implement recommended actions"
-msgstr ""
-
-#: functions.php:176
-msgid ""
-"We have compiled a list of steps for you, to take make sure the experience "
-"you will have using one of our products is very easy to follow."
-msgstr ""
-
-#: functions.php:177
-msgid "Check recommended actions"
-msgstr ""
-
-#: functions.php:184
-msgid "Step 2 - Check our documentation"
-msgstr ""
-
-#: functions.php:185
-msgid ""
-"Even if you are a long-time WordPress user, we still believe you should "
-"give our documentation a very quick Read."
+#: functions.php:185 functions.php:187
+msgid "Go to Customizer"
 msgstr ""
 
 #: functions.php:186
-msgid "Full documentation"
-msgstr ""
-
-#: functions.php:193
-msgid "Step 3 - Customize everything"
-msgstr ""
-
-#: functions.php:194
 msgid ""
 "Using the WordPress Customizer you can easily customize every aspect of the "
 "theme."
 msgstr ""
 
-#: functions.php:195
-msgid "Go to Customizer"
-msgstr ""
-
-#: functions.php:208
+#: functions.php:200
 #. translators: %s is theme name
 msgid "Get %s now!"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:203
 msgid "Mobile friendly"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:204
 msgid "Responsive layout. Works on every device."
 msgstr ""
 
-#: functions.php:217
+#: functions.php:209
 msgid "Unlimited color option"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:210
 msgid "You can change the colors of each section. You have unlimited options."
 msgstr ""
 
-#: functions.php:223
+#: functions.php:215
 msgid "Background image"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:216
 msgid "You can use any background image you want."
 msgstr ""
 
-#: functions.php:229
+#: functions.php:221
 msgid "Featured Area"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:222
 msgid "Have access to a new featured area."
 msgstr ""
 
-#: functions.php:235
+#: functions.php:227
 msgid "Footer credits"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:233
 msgid "Extra widgets areas"
 msgstr ""
 
-#: functions.php:242
+#: functions.php:234
 msgid "More widgets areas for your theme."
 msgstr ""
 
-#: functions.php:248
+#: functions.php:240
 msgid "You will benefit of our full support for any issues you have with the theme."
 msgstr ""
 
-#: functions.php:256
+#: functions.php:248
 msgid "Already activated"
 msgstr ""
 
-#: functions.php:257
+#: functions.php:249
 msgid "Version: "
 msgstr ""
 
-#: functions.php:260 functions.php:280
+#: functions.php:250 functions.php:270
+msgid "Install and Activate"
+msgstr ""
+
+#: functions.php:252 functions.php:272
 msgid "Deactivate"
 msgstr ""
 
-#: functions.php:283
-msgid "Pirate Forms"
-msgstr ""
-
-#: functions.php:284
-msgid ""
-"Makes your contact page more engaging by creating a good-looking contact "
-"form on your website. The interaction with your visitors was never easier."
-msgstr ""
-
-#: functions.php:285 functions.php:292
-msgid "Install Pirate Forms"
-msgstr ""
-
-#: functions.php:291
-msgid "BuddyPress"
-msgstr ""
-
-#: functions.php:311
+#: functions.php:287
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:320
+#: functions.php:296
 msgid "Home page"
 msgstr ""
 
-#: functions.php:322
+#: functions.php:298
 msgid "Widgets added here will be displayed on pages using the Front Page template"
 msgstr ""
 
-#: functions.php:329
+#: functions.php:305
 msgid "Home page top"
 msgstr ""
 
-#: functions.php:331
+#: functions.php:307
 msgid ""
 "Widgets added here will be displayed above the main content area and "
 "sidebar on pages using the Front Page template"
 msgstr ""
 
-#: functions.php:338
+#: functions.php:314
 msgid "Footer left"
 msgstr ""
 
-#: functions.php:346
+#: functions.php:322
 msgid "Footer center"
 msgstr ""
 
-#: functions.php:354
+#: functions.php:330
 msgid "Footer right"
 msgstr ""
 
-#: functions.php:500
+#: functions.php:476
 msgid "Create your menu here"
 msgstr ""
 
-#: functions.php:522
+#: functions.php:498
 #. translators: %s is category name
 msgid "See all posts in %s"
 msgstr ""
@@ -800,256 +743,256 @@ msgstr ""
 msgid "Max-width for the logo. Default 200px"
 msgstr ""
 
-#: inc/customizer.php:156
+#: inc/customizer.php:155
 msgid "Logo style"
 msgstr ""
 
-#: inc/customizer.php:157
+#: inc/customizer.php:156
 msgid "This option applies only if you are using a logo"
 msgstr ""
 
-#: inc/customizer.php:161 inc/customizer.php:1007
+#: inc/customizer.php:160 inc/customizer.php:1005
 msgid "Only logo"
 msgstr ""
 
-#: inc/customizer.php:162 inc/customizer.php:1008
+#: inc/customizer.php:161 inc/customizer.php:1006
 msgid "Logo plus site title&amp;description"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:174
 msgid "Padding"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:175
 msgid "Top&amp;bottom padding for the branding. Default: 150px"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:191
 msgid "View pro version"
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:192
 msgid ""
 "It adds extra widget areas, the ability to change footer credits and a "
 "featured area."
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer.php:198
 msgid "Latest news"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:210
 msgid "Check this box to display the latest news ribbon."
 msgstr ""
 
-#: inc/customizer.php:223
+#: inc/customizer.php:221
 msgid "Select which category to show in the slider"
 msgstr ""
 
-#: inc/customizer.php:234 inc/customizer.php:307
+#: inc/customizer.php:232 inc/customizer.php:305
 msgid "Enter the number of posts you want to show"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:240
 msgid "Carousel"
 msgstr ""
 
-#: inc/customizer.php:252
+#: inc/customizer.php:250
 msgid "Show carousel on front page?"
 msgstr ""
 
-#: inc/customizer.php:263
+#: inc/customizer.php:261
 msgid "Show carousel on blog index/archives/etc?"
 msgstr ""
 
-#: inc/customizer.php:274
+#: inc/customizer.php:272
 msgid "Show carousel on single posts and pages?"
 msgstr ""
 
-#: inc/customizer.php:285
+#: inc/customizer.php:283
 msgid "Select which category to show in the carousel"
 msgstr ""
 
-#: inc/customizer.php:296
+#: inc/customizer.php:294
 msgid "Enter the carousel speed in miliseconds [Default: 4000]"
 msgstr ""
 
-#: inc/customizer.php:315
+#: inc/customizer.php:313
 msgid "Blog options"
 msgstr ""
 
-#: inc/customizer.php:325
+#: inc/customizer.php:323
 msgid "Blog page"
 msgstr ""
 
-#: inc/customizer.php:337
+#: inc/customizer.php:335
 msgid "Blog layout"
 msgstr ""
 
-#: inc/customizer.php:341 inc/customizer.php:974
+#: inc/customizer.php:339 inc/customizer.php:972
 msgid "Classic"
 msgstr ""
 
-#: inc/customizer.php:342 inc/customizer.php:975
+#: inc/customizer.php:340 inc/customizer.php:973
 msgid "Full width (no sidebar)"
 msgstr ""
 
-#: inc/customizer.php:343 inc/customizer.php:976
+#: inc/customizer.php:341 inc/customizer.php:974
 msgid "Masonry (grid style)"
 msgstr ""
 
-#: inc/customizer.php:355
+#: inc/customizer.php:353
 msgid "Excerpt lenght"
 msgstr ""
 
-#: inc/customizer.php:356
+#: inc/customizer.php:354
 msgid "Choose your excerpt length. Default: 55 words"
 msgstr ""
 
-#: inc/customizer.php:371
+#: inc/customizer.php:369
 msgid "Hide post date on index?"
 msgstr ""
 
-#: inc/customizer.php:382
+#: inc/customizer.php:380
 msgid "Hide post categories on index?"
 msgstr ""
 
-#: inc/customizer.php:393
+#: inc/customizer.php:391
 msgid "Single posts"
 msgstr ""
 
-#: inc/customizer.php:405
+#: inc/customizer.php:403
 msgid "Hide post date &amp; author on single posts?"
 msgstr ""
 
-#: inc/customizer.php:416
+#: inc/customizer.php:414
 msgid "Hide post categories on single posts?"
 msgstr ""
 
-#: inc/customizer.php:427
+#: inc/customizer.php:425
 msgid "Hide post tags on single posts?"
 msgstr ""
 
-#: inc/customizer.php:437
+#: inc/customizer.php:435
 msgid "Full width single posts?"
 msgstr ""
 
-#: inc/customizer.php:444
+#: inc/customizer.php:442
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:446
+#: inc/customizer.php:444
 msgid ""
 "You can use any Google Fonts you want for the heading and/or body. See the "
 "fonts here: google.com/fonts. See the documentation if you need help with "
 "this: docs.themeisle.com/article/310-flymag-documentation"
 msgstr ""
 
-#: inc/customizer.php:455
+#: inc/customizer.php:453
 msgid "Body fonts"
 msgstr ""
 
-#: inc/customizer.php:466 inc/customizer.php:500
+#: inc/customizer.php:464 inc/customizer.php:498
 msgid "Font name/style/sets"
 msgstr ""
 
-#: inc/customizer.php:477 inc/customizer.php:511
+#: inc/customizer.php:475 inc/customizer.php:509
 msgid "Font family"
 msgstr ""
 
-#: inc/customizer.php:489
+#: inc/customizer.php:487
 msgid "Headings fonts"
 msgstr ""
 
-#: inc/customizer.php:523
+#: inc/customizer.php:521
 msgid "Font sizes"
 msgstr ""
 
-#: inc/customizer.php:538 inc/customizer.php:836
+#: inc/customizer.php:536 inc/customizer.php:834
 msgid "Site title"
 msgstr ""
 
-#: inc/customizer.php:556 inc/customizer.php:851
+#: inc/customizer.php:554 inc/customizer.php:849
 msgid "Site description"
 msgstr ""
 
-#: inc/customizer.php:574 inc/customizer.php:879
+#: inc/customizer.php:572 inc/customizer.php:877
 msgid "Menu items"
 msgstr ""
 
-#: inc/customizer.php:592
+#: inc/customizer.php:590
 msgid "H1 font size"
 msgstr ""
 
-#: inc/customizer.php:610
+#: inc/customizer.php:608
 msgid "H2 font size"
 msgstr ""
 
-#: inc/customizer.php:628
+#: inc/customizer.php:626
 msgid "H3 font size"
 msgstr ""
 
-#: inc/customizer.php:646
+#: inc/customizer.php:644
 msgid "H4 font size"
 msgstr ""
 
-#: inc/customizer.php:664
+#: inc/customizer.php:662
 msgid "H5 font size"
 msgstr ""
 
-#: inc/customizer.php:682
+#: inc/customizer.php:680
 msgid "H6 font size"
 msgstr ""
 
-#: inc/customizer.php:700
+#: inc/customizer.php:698
 msgid "Body font size"
 msgstr ""
 
-#: inc/customizer.php:722
+#: inc/customizer.php:720
 msgid "Color scheme"
 msgstr ""
 
-#: inc/customizer.php:734
+#: inc/customizer.php:732
 msgid "Color 1 (primary color)"
 msgstr ""
 
-#: inc/customizer.php:747
+#: inc/customizer.php:745
 msgid "Color 2"
 msgstr ""
 
-#: inc/customizer.php:760
+#: inc/customizer.php:758
 msgid "Color 3"
 msgstr ""
 
-#: inc/customizer.php:773
+#: inc/customizer.php:771
 msgid "Color 4"
 msgstr ""
 
-#: inc/customizer.php:786
+#: inc/customizer.php:784
 msgid "Color 5"
 msgstr ""
 
-#: inc/customizer.php:807
+#: inc/customizer.php:805
 msgid "Latest news background"
 msgstr ""
 
-#: inc/customizer.php:821
+#: inc/customizer.php:819
 msgid "Header background"
 msgstr ""
 
-#: inc/customizer.php:865
+#: inc/customizer.php:863
 msgid "Menu background"
 msgstr ""
 
-#: inc/customizer.php:899
+#: inc/customizer.php:897
 msgid "Body text"
 msgstr ""
 
-#: inc/customizer.php:914
+#: inc/customizer.php:912
 msgid "Widgets color"
 msgstr ""
 
-#: inc/customizer.php:929
+#: inc/customizer.php:927
 msgid "Footer"
 msgstr ""
 
@@ -1133,6 +1076,10 @@ msgstr ""
 
 #: searchform.php:14
 msgid "Type and press enter"
+msgstr ""
+
+#: ti-about-page/class-ti-about-page.php:1041
+msgid "Activating"
 msgstr ""
 
 #: widgets/recent-comments.php:19
@@ -1260,15 +1207,6 @@ msgstr ""
 
 #. Theme URI of the plugin/theme
 msgid "http://themeisle.com/themes/flymag/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Flymag is a responsive magazine theme with a modern look. Flymag lets you "
-"use any of the 600+ Google Fonts, provides color options for a lot of the "
-"theme elements and also offers you some useful page templates. With Flymag "
-"you can easily build your front page magazine-layout using the built in "
-"widgets specifically designed for this task."
 msgstr ""
 
 #. Author of the plugin/theme
