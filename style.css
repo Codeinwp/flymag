@@ -67,7 +67,7 @@ table > tbody > tr > td,
 table > tfoot > tr > td {
 	border: 1px solid #ddd;
 }
-
+.bypostauthor {}
 
 /*--------------------------------------------------------------
 Forms
