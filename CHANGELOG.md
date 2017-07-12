@@ -1,4 +1,8 @@
 
+### 2.0.1 - 12/07/2017
+**Changes:** 
+- Fixed issues with type number options not visible in Mozilla
+
 ### 2.0.0 - 29/05/2017
 **Changes:** 
 - Added About FlyMag page
