@@ -199,25 +199,25 @@
 }
 
 .plugin_box .action_bar {
+	overflow: hidden;
 	position: absolute;
+	right: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;
-	font-size: 13px;
-	font-weight: 600;
+	max-width: 140px;
 	height: 18px;
 	margin: 0;
 	padding: 15px;
-	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
-	box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
-	overflow: hidden;
+	padding-right: 105px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.65);
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	font-size: 13px;
+	font-weight: 600;
+	text-align: left;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	background: #fff;
-	background: rgba(255, 255, 255, .65);
-	text-align: left;
-	padding-right: 105px;
-	max-width: 140px;
 }
 
 .plugin_box .action_bar.active {
