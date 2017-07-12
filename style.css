@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/flymag/
 Author: Themeisle
 Author URI: http://themeisle.com
 Description: Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.
-Version: 2.0.0
+Version: 2.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: flymag
@@ -67,7 +67,6 @@ table > tbody > tr > td,
 table > tfoot > tr > td {
 	border: 1px solid #ddd;
 }
-
 .bypostauthor {}
 
 /*--------------------------------------------------------------

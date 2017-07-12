@@ -16,7 +16,7 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-			 		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+						<?php dynamic_sidebar( 'sidebar-2' ); ?>
 				<?php endif; ?>	
 
 			</main><!-- #main -->

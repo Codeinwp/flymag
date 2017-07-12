@@ -15,7 +15,7 @@ class Flymag_Recent_D extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array(
-		        'classname' => 'recent_posts_d clearfix',
+				'classname' => 'recent_posts_d clearfix',
 			'description' => __( 'Recent posts widget Type D - only images (front page)', 'flymag' ),
 		);
 		parent::__construct( 'recent_posts_d', __( 'Flymag: Recent posts type D', 'flymag' ), $widget_ops );
@@ -98,7 +98,7 @@ class Flymag_Recent_D extends WP_Widget {
 
 					<div class="recent-post col-md-4 col-sm-6 col-xs-6">
 						<a href="<?php the_permalink(); ?>">
-						    <span class="thumb-overlay"></span>
+							<span class="thumb-overlay"></span>
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'carousel-thumb' ); ?>
 							<?php else : ?>
