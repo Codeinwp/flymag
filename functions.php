@@ -252,13 +252,10 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
 				'content'                   => array(
 					array(
+						'slug'        => 'themeisle-companion',
+					),
+					array(
 						'slug'        => 'pirate-forms',
-					),
-					array(
-						'link'        => 'http://themeisle.com/plugins/easy-content-types/',
-					),
-					array(
-						'slug'        => 'siteorigin-panels',
 					),
 					array(
 						'slug'        => 'intergeo-maps',
@@ -405,20 +402,11 @@ require_once get_template_directory() . '/class-tgm-plugin-activation.php';
 function flymag_register_required_plugins() {
 	$plugins = array(
 		array(
-			'name'     => 'WP Product Review',
-			'slug'     => 'wp-product-review',
+			'name'     => 'Orbit Fox',
+			'slug'     => 'themeisle-companion',
 			'required' => false,
 		),
-		array(
-			'name'     => 'Login customizer',
-			'slug'     => 'login-customizer',
-			'required' => false,
-		),
-		array(
-			'name'     => 'Intergeo Maps - Google Maps Plugin',
-			'slug'     => 'intergeo-maps',
-			'required' => false,
-		),
+
 		array(
 			'name'     => 'Pirate Forms',
 			'slug'     => 'pirate-forms',
