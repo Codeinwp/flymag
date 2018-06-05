@@ -12,6 +12,19 @@
         <exclude name="Squiz.Commenting.InlineComment.NotCapital" />
         <exclude name="WordPress.Files.FileName" />
         <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
+        <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" />
+        <exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd" />
+        <exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen" />
+        <exclude name="WordPress.Arrays.MultipleStatementAlignment" />
+        <exclude name="WordPress.Arrays.ArrayIndentation" />
+        <exclude name="Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma" />
+        <exclude name="WordPress.WhiteSpace" />
+        <exclude name="Squiz.PHP.CommentedOutCode.Found" />
+        <exclude name="Generic.Formatting.MultipleStatementAlignment" />
+        <exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
+        <exclude name="Squiz.PHP.EmbeddedPhp.SpacingAfterOpen" />
+        <exclude name="Squiz.Commenting.FileComment.Missing" />
+        <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing" />
     </rule>
     <rule ref="WordPress-Docs">
 
