@@ -1,4 +1,8 @@
 
+ ### v2.0.4 - 2018-06-05 
+ **Changes:** 
+ * Compatibility with Orbit Fox plugin
+ 
 ### 2.0.1 - 12/07/2017
 **Changes:** 
 - Fixed issues with type number options not visible in Mozilla
