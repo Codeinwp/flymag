@@ -33,10 +33,12 @@
 		<div class="entry-content">
 			<?php the_excerpt(); ?>
 			<?php
-				wp_link_pages( array(
+				wp_link_pages(
+					array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'flymag' ),
 					'after'  => '</div>',
-				) );
+					)
+				);
 			?>
 		</div><!-- .entry-content -->
 

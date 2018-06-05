@@ -65,11 +65,15 @@ class Flymag_Recent_Comments extends WP_Widget {
 			$number = 5;
 		}
 
-		$comments = get_comments( apply_filters( 'widget_comments_args', array(
-			'number'      => $number,
-			'status'      => 'approve',
-			'post_status' => 'publish',
-		) ) );
+		$comments = get_comments(
+			apply_filters(
+				'widget_comments_args', array(
+				 'number'      => $number,
+				 'status'      => 'approve',
+				 'post_status' => 'publish',
+				 )
+			)
+		);
 
 		if ( ! empty( $args['before_widget'] ) ) {
 			$output .= $args['before_widget'];

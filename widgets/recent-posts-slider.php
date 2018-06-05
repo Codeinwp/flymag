@@ -64,13 +64,17 @@ class Flymag_Recent_Slider extends WP_Widget {
 		$bg_color    = isset( $instance['bg_color'] ) ? esc_attr( $instance['bg_color'] ) : '';
 		$title_color = isset( $instance['title_color'] ) ? esc_attr( $instance['title_color'] ) : '';
 
-		$r = new WP_Query( apply_filters( 'widget_posts_args', array(
-			'no_found_rows'       => true,
-			'post_status'         => 'publish',
-			'ignore_sticky_posts' => true,
-			'category_name'       => $category,
-			'posts_per_page'      => $number,
-		) ) );
+		$r = new WP_Query(
+			apply_filters(
+				'widget_posts_args', array(
+				 'no_found_rows'       => true,
+				 'post_status'         => 'publish',
+				 'ignore_sticky_posts' => true,
+				 'category_name'       => $category,
+				 'posts_per_page'      => $number,
+				 )
+			)
+		);
 
 		if ( $r->have_posts() ) :
 

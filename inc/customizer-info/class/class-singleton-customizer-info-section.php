@@ -74,11 +74,15 @@ final class Customizer_Info_Singleton {
 		// Register custom section types.
 		$manager->register_section_type( 'Customizer_Info' );
 
-		$manager->add_section( new Customizer_Info( $manager, 'flymag_view_pro', array(
-			'section_title' => __( 'View PRO version', 'flymag' ),
-			'section_url' => 'https://themeisle.com/themes/flymag-pro/',
-			'section_text' => __( 'Get it', 'flymag' ),
-		) ) );
+		$manager->add_section(
+			new Customizer_Info(
+				$manager, 'flymag_view_pro', array(
+				 'section_title' => __( 'View PRO version', 'flymag' ),
+				 'section_url' => 'https://themeisle.com/themes/flymag-pro/',
+				 'section_text' => __( 'Get it', 'flymag' ),
+				 )
+			)
+		);
 
 	}
 

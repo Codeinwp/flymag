@@ -24,6 +24,8 @@
         <exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
         <exclude name="Squiz.PHP.EmbeddedPhp.SpacingAfterOpen" />
         <exclude name="Squiz.Commenting.FileComment.Missing" />
+        <exclude name="Squiz.PHP.EmbeddedPhp.SpacingBeforeClose" />
+        <exclude name="Squiz.PHP.EmbeddedPhp.Empty" />
         <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing" />
     </rule>
     <rule ref="WordPress-Docs">

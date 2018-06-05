@@ -332,10 +332,12 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
 				$title = $count > 0 ? $this->page_name . '<span class="badge-action-count">' . esc_html( $count ) . '</span>' : $this->page_name;
 
-				add_theme_page( $this->menu_name, $title, 'activate_plugins', $this->theme_slug . '-welcome', array(
+				add_theme_page(
+					$this->menu_name, $title, 'activate_plugins', $this->theme_slug . '-welcome', array(
 					$this,
 					'ti_about_page_render',
-				) );
+					)
+				);
 			}
 		}
 
@@ -449,7 +451,8 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
 
 			if ( false === ( $call_api = get_transient( 'ti_about_page_plugin_information_transient_' . $slug ) ) ) {
-				$call_api = plugins_api( 'plugin_information', array(
+				$call_api = plugins_api(
+					'plugin_information', array(
 					'slug'   => $slug,
 					'fields' => array(
 						'downloaded'        => false,
@@ -467,8 +470,9 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 						'requires'          => false,
 						'downloadlink'      => false,
 						'icons'             => true,
-					),
-				) );
+					 ),
+					)
+				);
 				set_transient( 'ti_about_page_plugin_information_transient_' . $slug, $call_api, 30 * MINUTE_IN_SECONDS );
 			}
 
@@ -549,22 +553,26 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					);
 					break;
 				case 'deactivate':
-					return add_query_arg( array(
+					return add_query_arg(
+						array(
 						'action'        => 'deactivate',
 						'plugin'        => rawurlencode( $slug . '/' . $plugin_root_file . '.php' ),
 						'plugin_status' => 'all',
 						'paged'         => '1',
 						'_wpnonce'      => wp_create_nonce( 'deactivate-plugin_' . $slug . '/' . $plugin_root_file . '.php' ),
-					), network_admin_url( 'plugins.php' ) );
+						), network_admin_url( 'plugins.php' )
+					);
 					break;
 				case 'activate':
-					return add_query_arg( array(
+					return add_query_arg(
+						array(
 						'action'        => 'activate',
 						'plugin'        => rawurlencode( $slug . '/' . $plugin_root_file . '.php' ),
 						'plugin_status' => 'all',
 						'paged'         => '1',
 						'_wpnonce'      => wp_create_nonce( 'activate-plugin_' . $slug . '/' . $plugin_root_file . '.php' ),
-					), network_admin_url( 'plugins.php' ) );
+						), network_admin_url( 'plugins.php' )
+					);
 					break;
 			}
 		}
@@ -1034,12 +1042,14 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 
 				$recommended_actions         = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
 				$required_actions = $this->get_required_actions();
-				wp_localize_script( 'ti-about-page-js', 'tiAboutPageObject', array(
+				wp_localize_script(
+					'ti-about-page-js', 'tiAboutPageObject', array(
 					'nr_actions_required'      => count( $required_actions ),
 					'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 					'template_directory'       => get_template_directory_uri(),
 					'activating_string'        => __( 'Activating', 'flymag' ),
-				) );
+					)
+				);
 
 			}
 
