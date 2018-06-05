@@ -60,16 +60,19 @@ class Flymag_Recent_B extends WP_Widget {
 		$bg_color   = isset( $instance['bg_color'] ) ? esc_attr( $instance['bg_color'] ) : '';
 		$text_color = isset( $instance['text_color'] ) ? esc_attr( $instance['text_color'] ) : '';
 
-		$left_query = new WP_Query( array(
+		$left_query = new WP_Query(
+			array(
 			'posts_per_page'      => 1,
 			'no_found_rows'       => true,
 			'post_status'         => 'publish',
 			'ignore_sticky_posts' => true,
 			'category_name'       => $category,
 
-		) );
+			)
+		);
 
-		$right_query = new WP_Query( array(
+		$right_query = new WP_Query(
+			array(
 			'offset'              => 1,
 			'posts_per_page'      => 5,
 			'no_found_rows'       => true,
@@ -77,7 +80,8 @@ class Flymag_Recent_B extends WP_Widget {
 			'ignore_sticky_posts' => true,
 			'category_name'       => $category,
 
-		) );
+			)
+		);
 
 		if ( $left_query->have_posts() ) :
 

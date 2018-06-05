@@ -60,14 +60,18 @@ class Flymag_Recent_A extends WP_Widget {
 		$bg_color   = isset( $instance['bg_color'] ) ? esc_attr( $instance['bg_color'] ) : '';
 		$text_color = isset( $instance['text_color'] ) ? esc_attr( $instance['text_color'] ) : '';
 
-		$r = new WP_Query( apply_filters( 'widget_posts_args', array(
-			'posts_per_page'      => 5,
-			'no_found_rows'       => true,
-			'post_status'         => 'publish',
-			'ignore_sticky_posts' => true,
-			'category_name'       => $category,
+		$r = new WP_Query(
+			apply_filters(
+				'widget_posts_args', array(
+				 'posts_per_page'      => 5,
+				 'no_found_rows'       => true,
+				 'post_status'         => 'publish',
+				 'ignore_sticky_posts' => true,
+				 'category_name'       => $category,
 
-		) ) );
+				 )
+			)
+		);
 
 		if ( $r->have_posts() ) :
 

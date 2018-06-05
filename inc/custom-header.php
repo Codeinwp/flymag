@@ -22,16 +22,20 @@
  * @uses flymag_admin_header_image()
  */
 function flymag_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'flymag_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1366,
-		'height'                 => 768,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'flymag_header_style',
-		'admin-head-callback'    => 'flymag_admin_header_style',
-		'admin-preview-callback' => 'flymag_admin_header_image',
-	) ) );
+	add_theme_support(
+		'custom-header', apply_filters(
+			'flymag_custom_header_args', array(
+			 'default-image'          => '',
+			 'default-text-color'     => '000000',
+			 'width'                  => 1366,
+			 'height'                 => 768,
+			 'flex-height'            => true,
+			 'wp-head-callback'       => 'flymag_header_style',
+			 'admin-head-callback'    => 'flymag_admin_header_style',
+			 'admin-preview-callback' => 'flymag_admin_header_image',
+			 )
+		)
+	);
 }
 
 add_action( 'after_setup_theme', 'flymag_custom_header_setup' );

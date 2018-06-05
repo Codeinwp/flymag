@@ -29,13 +29,15 @@
 			</div><!-- .site-info -->
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
 			<nav class="social-navigation col-md-6 col-sm-6 clearfix">
-				<?php wp_nav_menu( array(
+				<?php wp_nav_menu(
+					array(
 					'theme_location' => 'social',
 					'link_before' => '<span class="screen-reader-text">',
 					'link_after' => '</span>',
 					'menu_class' => 'menu clearfix',
 					'fallback_cb' => false,
-				) ); ?>
+					)
+				); ?>
 			</nav>
 			<?php endif; ?>
 		</div>

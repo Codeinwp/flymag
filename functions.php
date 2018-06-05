@@ -63,39 +63,49 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		add_image_size( 'entry-thumb', 820 );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
+		register_nav_menus(
+			array(
 			'primary' => __( 'Primary Menu', 'flymag' ),
 			'social'  => __( 'Social', 'flymag' ),
-		) );
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
+		add_theme_support(
+			'html5', array(
 			'search-form',
 			'comment-form',
 			'comment-list',
 			'gallery',
 			'caption',
-		) );
+			)
+		);
 
 		/*
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
-		add_theme_support( 'post-formats', array(
+		add_theme_support(
+			'post-formats', array(
 			'aside',
 			'image',
 			'video',
 			'quote',
 			'link',
-		) );
+			)
+		);
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'flymag_custom_background_args', array(
-			'default-color' => 'f5f5f5',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background', apply_filters(
+				'flymag_custom_background_args', array(
+				 'default-color' => 'f5f5f5',
+				 'default-image' => '',
+				 )
+			)
+		);
 
 		/**
 		 * About page class
@@ -297,7 +307,8 @@ add_action( 'after_setup_theme', 'flymag_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function flymag_widgets_init() {
-	register_sidebar( array(
+	register_sidebar(
+		array(
 		'name'          => __( 'Sidebar', 'flymag' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
@@ -305,8 +316,10 @@ function flymag_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title"><span>',
 		'after_title'   => '</span></h3>',
-	) );
-	register_sidebar( array(
+		)
+	);
+	register_sidebar(
+		array(
 		'name'          => __( 'Home page', 'flymag' ),
 		'id'            => 'sidebar-2',
 		'description'   => __( 'Widgets added here will be displayed on pages using the Front Page template', 'flymag' ),
@@ -314,8 +327,10 @@ function flymag_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title"><span>',
 		'after_title'   => '</span></h3>',
-	) );
-	register_sidebar( array(
+		)
+	);
+	register_sidebar(
+		array(
 		'name'          => __( 'Home page top', 'flymag' ),
 		'id'            => 'sidebar-3',
 		'description'   => __( 'Widgets added here will be displayed above the main content area and sidebar on pages using the Front Page template', 'flymag' ),
@@ -323,31 +338,38 @@ function flymag_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title"><span>',
 		'after_title'   => '</span></h3>',
-	) );
-	register_sidebar( array(
+		)
+	);
+	register_sidebar(
+		array(
 		'name'          => __( 'Footer left', 'flymag' ),
 		'id'            => 'sidebar-4',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
+		)
+	);
+	register_sidebar(
+		array(
 		'name'          => __( 'Footer center', 'flymag' ),
 		'id'            => 'sidebar-5',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
+		)
+	);
+	register_sidebar(
+		array(
 		'name'          => __( 'Footer right', 'flymag' ),
 		'id'            => 'sidebar-6',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
+		)
+	);
 	// Custom widgets
 	register_widget( 'Flymag_Recent_A' );
 	register_widget( 'Flymag_Recent_B' );

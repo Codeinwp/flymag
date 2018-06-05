@@ -63,14 +63,16 @@ class Flymag_Recent_D extends WP_Widget {
 		if ( ! $number ) {
 			$number = 6;
 		}
-		$r = new WP_Query( array(
+		$r = new WP_Query(
+			array(
 			'posts_per_page'      => $number,
 			'no_found_rows'       => true,
 			'post_status'         => 'publish',
 			'ignore_sticky_posts' => true,
 			'category_name'       => $category,
 
-		) );
+			)
+		);
 
 		if ( $r->have_posts() ) :
 
