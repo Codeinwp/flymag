@@ -16,6 +16,7 @@ function flymag_load_sdk( $products ) {
 
 	return $products;
 }
+
 /**
  * FlyMag functions and definitions
  *
@@ -65,8 +66,8 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-			'primary' => __( 'Primary Menu', 'flymag' ),
-			'social'  => __( 'Social', 'flymag' ),
+				'primary' => __( 'Primary Menu', 'flymag' ),
+				'social'  => __( 'Social', 'flymag' ),
 			)
 		);
 
@@ -75,12 +76,13 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support(
-			'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
 			)
 		);
 
@@ -89,21 +91,24 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
 		add_theme_support(
-			'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
+			'post-formats',
+			array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
 			)
 		);
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
-			'custom-background', apply_filters(
-				'flymag_custom_background_args', array(
-				 'default-color' => 'f5f5f5',
-				 'default-image' => '',
-				 )
+			'custom-background',
+			apply_filters(
+				'flymag_custom_background_args',
+				array(
+					'default-color' => 'f5f5f5',
+					'default-image' => '',
+				)
 			)
 		);
 
@@ -117,109 +122,109 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 		 */
 		$config = array(
 			// Menu name under Appearance.
-			'menu_name'               => __( 'About Flymag', 'flymag' ),
+			'menu_name'           => __( 'About Flymag', 'flymag' ),
 			// Page title.
-			'page_name'               => __( 'About Flymag', 'flymag' ),
+			'page_name'           => __( 'About Flymag', 'flymag' ),
 			/* translators: %s is theme name */
-			'welcome_title'         => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), esc_html( 'FlyMag' ) ),
+			'welcome_title'       => sprintf( __( 'Welcome to %s! - Version ', 'flymag' ), esc_html( 'FlyMag' ) ),
 			/* translators: %s is theme name */
-			'welcome_content'       => esc_html__( 'Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.','flymag' ),
+			'welcome_content'     => esc_html__( 'Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.', 'flymag' ),
 			/**
 			 * Tabs array.
 			 *
 			 * The key needs to be ONLY consisted from letters and underscores. If we want to define outside the class a function to render the tab,
 			 * the will be the name of the function which will be used to render the tab content.
 			 */
-			'tabs'                    => array(
-				'getting_started'  => __( 'Getting Started', 'flymag' ),
+			'tabs'                => array(
+				'getting_started'     => __( 'Getting Started', 'flymag' ),
 				'recommended_actions' => '',
-				'recommended_plugins' => __( 'Recommended Plugins','flymag' ),
-				'support'       => __( 'Support', 'flymag' ),
-				'changelog'        => __( 'Changelog', 'flymag' ),
-				'free_pro'         => __( 'Free VS PRO', 'flymag' ),
+				'recommended_plugins' => __( 'Recommended Plugins', 'flymag' ),
+				'support'             => __( 'Support', 'flymag' ),
+				'changelog'           => __( 'Changelog', 'flymag' ),
+				'free_pro'            => __( 'Free VS PRO', 'flymag' ),
 			),
 			// Support content tab.
-			'support_content'      => array(
-				'first' => array(
-					'title' => esc_html__( 'Contact Support','flymag' ),
-					'icon' => 'dashicons dashicons-sos',
-					'text' => esc_html__( 'We want to make sure you have the best experience using FlyMag and that is why we gathered here all the necessary informations for you. We hope you will enjoy using FlyMag, as much as we enjoy creating great products.!','flymag' ),
-					'button_label' => esc_html__( 'Contact Support','flymag' ),
-					'button_link' => esc_url( 'https://themeisle.com/contact/' ),
-					'is_button' => true,
-					'is_new_tab' => true,
+			'support_content'     => array(
+				'first'  => array(
+					'title'        => esc_html__( 'Contact Support', 'flymag' ),
+					'icon'         => 'dashicons dashicons-sos',
+					'text'         => esc_html__( 'We want to make sure you have the best experience using FlyMag and that is why we gathered here all the necessary informations for you. We hope you will enjoy using FlyMag, as much as we enjoy creating great products.!', 'flymag' ),
+					'button_label' => esc_html__( 'Contact Support', 'flymag' ),
+					'button_link'  => esc_url( 'https://themeisle.com/contact/' ),
+					'is_button'    => true,
+					'is_new_tab'   => true,
 				),
 				'second' => array(
-					'title' => esc_html__( 'Documentation','flymag' ),
-					'icon' => 'dashicons dashicons-book-alt',
+					'title'        => esc_html__( 'Documentation', 'flymag' ),
+					'icon'         => 'dashicons dashicons-book-alt',
 					/* translators: %s is theme name */
-					'text' => sprintf( esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use %s.','flymag' ), 'FlyMag' ),
-					'button_label' => esc_html__( 'Documentation','flymag' ),
-					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
-					'is_button' => false,
-					'is_new_tab' => true,
+					'text'         => sprintf( esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use %s.', 'flymag' ), 'FlyMag' ),
+					'button_label' => esc_html__( 'Documentation', 'flymag' ),
+					'button_link'  => 'http://docs.themeisle.com/article/310-flymag-documentation',
+					'is_button'    => false,
+					'is_new_tab'   => true,
 				),
-				'third' => array(
-					'title' => esc_html__( 'Changelog','flymag' ),
-					'icon' => 'dashicons dashicons-portfolio',
-					'text' => esc_html__( 'Want to get the gist on the latest theme changes? Just consult our changelog below to get a taste of the recent fixes and features implemented.','flymag' ),
-					'button_label' => esc_html__( 'Changelog','flymag' ),
-					'button_link' => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=changelog&show=yes' ) ),
-					'is_button' => false,
-					'is_new_tab' => false,
+				'third'  => array(
+					'title'        => esc_html__( 'Changelog', 'flymag' ),
+					'icon'         => 'dashicons dashicons-portfolio',
+					'text'         => esc_html__( 'Want to get the gist on the latest theme changes? Just consult our changelog below to get a taste of the recent fixes and features implemented.', 'flymag' ),
+					'button_label' => esc_html__( 'Changelog', 'flymag' ),
+					'button_link'  => esc_url( admin_url( 'themes.php?page=flymag-welcome&tab=changelog&show=yes' ) ),
+					'is_button'    => false,
+					'is_new_tab'   => false,
 				),
 				'fourth' => array(
-					'title' => esc_html__( 'Create a child theme','flymag' ),
-					'icon' => 'dashicons dashicons-admin-customizer',
-					'text' => esc_html__( "If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below.",'flymag' ),
-					'button_label' => esc_html__( 'View how to do this','flymag' ),
-					'button_link' => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme',
-					'is_button' => false,
-					'is_new_tab' => true,
+					'title'        => esc_html__( 'Create a child theme', 'flymag' ),
+					'icon'         => 'dashicons dashicons-admin-customizer',
+					'text'         => esc_html__( "If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below.", 'flymag' ),
+					'button_label' => esc_html__( 'View how to do this', 'flymag' ),
+					'button_link'  => 'http://docs.themeisle.com/article/14-how-to-create-a-child-theme',
+					'is_button'    => false,
+					'is_new_tab'   => true,
 				),
-				'fifth' => array(
-					'title' => esc_html__( 'Speed up your site','flymag' ),
-					'icon' => 'dashicons dashicons-controls-skipforward',
-					'text' => esc_html__( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.','flymag' ),
-					'button_label' => esc_html__( 'View how to do this','flymag' ),
-					'button_link' => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site',
-					'is_button' => false,
-					'is_new_tab' => true,
+				'fifth'  => array(
+					'title'        => esc_html__( 'Speed up your site', 'flymag' ),
+					'icon'         => 'dashicons dashicons-controls-skipforward',
+					'text'         => esc_html__( 'If you find yourself in the situation where everything on your site is running very slow, you might consider having a look at the below documentation where you will find the most common issues causing this and possible solutions for each of the issues.', 'flymag' ),
+					'button_label' => esc_html__( 'View how to do this', 'flymag' ),
+					'button_link'  => 'http://docs.themeisle.com/article/63-speed-up-your-wordpress-site',
+					'is_button'    => false,
+					'is_new_tab'   => true,
 				),
-				'sixth' => array(
-					'title' => esc_html__( 'Build a landing page with a drag-and-drop content builder','flymag' ),
-					'icon' => 'dashicons dashicons-images-alt2',
-					'text' => esc_html__( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.','flymag' ),
-					'button_label' => esc_html__( 'View how to do this','flymag' ),
-					'button_link' => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
-					'is_button' => false,
-					'is_new_tab' => true,
+				'sixth'  => array(
+					'title'        => esc_html__( 'Build a landing page with a drag-and-drop content builder', 'flymag' ),
+					'icon'         => 'dashicons dashicons-images-alt2',
+					'text'         => esc_html__( 'In the below documentation you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin.', 'flymag' ),
+					'button_label' => esc_html__( 'View how to do this', 'flymag' ),
+					'button_link'  => 'http://docs.themeisle.com/article/219-how-to-build-a-landing-page-with-a-drag-and-drop-content-builder',
+					'is_button'    => false,
+					'is_new_tab'   => true,
 				),
 			),
 			// Getting started tab
-			'getting_started' => array(
+			'getting_started'     => array(
 				'second' => array(
-					'title' => esc_html__( 'Documentation','flymag' ),
+					'title'               => esc_html__( 'Documentation', 'flymag' ),
 					/* translators: %s is theme name */
-					'text' => sprintf( esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use %s.','flymag' ), 'FlyMag' ),
-					'button_label' => esc_html__( 'Documentation','flymag' ),
-					'button_link' => 'http://docs.themeisle.com/article/310-flymag-documentation',
-					'is_button' => false,
+					'text'                => sprintf( esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use %s.', 'flymag' ), 'FlyMag' ),
+					'button_label'        => esc_html__( 'Documentation', 'flymag' ),
+					'button_link'         => 'http://docs.themeisle.com/article/310-flymag-documentation',
+					'is_button'           => false,
 					'recommended_actions' => false,
-					'is_new_tab' => true,
+					'is_new_tab'          => true,
 				),
-				'third' => array(
-					'title' => esc_html__( 'Go to Customizer','flymag' ),
-					'text' => esc_html__( 'Using the WordPress Customizer you can easily customize every aspect of the theme.','flymag' ),
-					'button_label' => esc_html__( 'Go to Customizer','flymag' ),
-					'button_link' => esc_url( admin_url( 'customize.php' ) ),
-					'is_button' => true,
+				'third'  => array(
+					'title'               => esc_html__( 'Go to Customizer', 'flymag' ),
+					'text'                => esc_html__( 'Using the WordPress Customizer you can easily customize every aspect of the theme.', 'flymag' ),
+					'button_label'        => esc_html__( 'Go to Customizer', 'flymag' ),
+					'button_link'         => esc_url( admin_url( 'customize.php' ) ),
+					'is_button'           => true,
 					'recommended_actions' => false,
-					'is_new_tab' => true,
+					'is_new_tab'          => true,
 				),
 			),
 			// Free vs pro array.
-			'free_pro'                => array(
+			'free_pro'            => array(
 				'free_theme_name'     => 'FlyMag',
 				'pro_theme_name'      => 'FlyMag PRO',
 				'pro_theme_link'      => 'https://themeisle.com/themes/flymag-pro/',
@@ -271,30 +276,30 @@ if ( ! function_exists( 'flymag_setup' ) ) :
 				),
 			),
 			// Plugins array.
-			'recommended_plugins'        => array(
+			'recommended_plugins' => array(
 				'already_activated_message' => esc_html__( 'Already activated', 'flymag' ),
-				'version_label' => esc_html__( 'Version: ', 'flymag' ),
-				'install_label' => esc_html__( 'Install and Activate', 'flymag' ),
-				'activate_label' => esc_html__( 'Activate', 'flymag' ),
-				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
+				'version_label'             => esc_html__( 'Version: ', 'flymag' ),
+				'install_label'             => esc_html__( 'Install and Activate', 'flymag' ),
+				'activate_label'            => esc_html__( 'Activate', 'flymag' ),
+				'deactivate_label'          => esc_html__( 'Deactivate', 'flymag' ),
 				'content'                   => array(
 					array(
-						'slug'        => 'themeisle-companion',
+						'slug' => 'themeisle-companion',
 					),
 					array(
-						'slug'        => 'pirate-forms',
+						'slug' => 'pirate-forms',
 					),
 					array(
-						'slug'        => 'intergeo-maps',
+						'slug' => 'intergeo-maps',
 					),
 				),
 			),
 			// Required actions array.
-			'recommended_actions'        => array(
-				'install_label' => esc_html__( 'Install and Activate', 'flymag' ),
-				'activate_label' => esc_html__( 'Activate', 'flymag' ),
+			'recommended_actions' => array(
+				'install_label'    => esc_html__( 'Install and Activate', 'flymag' ),
+				'activate_label'   => esc_html__( 'Activate', 'flymag' ),
 				'deactivate_label' => esc_html__( 'Deactivate', 'flymag' ),
-				'content'            => array(),
+				'content'          => array(),
 			),
 		);
 		TI_About_Page::init( $config );
@@ -309,65 +314,65 @@ add_action( 'after_setup_theme', 'flymag_setup' );
 function flymag_widgets_init() {
 	register_sidebar(
 		array(
-		'name'          => __( 'Sidebar', 'flymag' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title"><span>',
-		'after_title'   => '</span></h3>',
+			'name'          => __( 'Sidebar', 'flymag' ),
+			'id'            => 'sidebar-1',
+			'description'   => '',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 	register_sidebar(
 		array(
-		'name'          => __( 'Home page', 'flymag' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Widgets added here will be displayed on pages using the Front Page template', 'flymag' ),
-		'before_widget' => '<aside id="%1$s" class="widget wow fadeIn %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title"><span>',
-		'after_title'   => '</span></h3>',
+			'name'          => __( 'Home page', 'flymag' ),
+			'id'            => 'sidebar-2',
+			'description'   => __( 'Widgets added here will be displayed on pages using the Front Page template', 'flymag' ),
+			'before_widget' => '<aside id="%1$s" class="widget wow fadeIn %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 	register_sidebar(
 		array(
-		'name'          => __( 'Home page top', 'flymag' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Widgets added here will be displayed above the main content area and sidebar on pages using the Front Page template', 'flymag' ),
-		'before_widget' => '<aside id="%1$s" class="widget wow fadeIn %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title"><span>',
-		'after_title'   => '</span></h3>',
+			'name'          => __( 'Home page top', 'flymag' ),
+			'id'            => 'sidebar-3',
+			'description'   => __( 'Widgets added here will be displayed above the main content area and sidebar on pages using the Front Page template', 'flymag' ),
+			'before_widget' => '<aside id="%1$s" class="widget wow fadeIn %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
 		)
 	);
 	register_sidebar(
 		array(
-		'name'          => __( 'Footer left', 'flymag' ),
-		'id'            => 'sidebar-4',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+			'name'          => __( 'Footer left', 'flymag' ),
+			'id'            => 'sidebar-4',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
 		array(
-		'name'          => __( 'Footer center', 'flymag' ),
-		'id'            => 'sidebar-5',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+			'name'          => __( 'Footer center', 'flymag' ),
+			'id'            => 'sidebar-5',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
 		array(
-		'name'          => __( 'Footer right', 'flymag' ),
-		'id'            => 'sidebar-6',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+			'name'          => __( 'Footer right', 'flymag' ),
+			'id'            => 'sidebar-6',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	// Custom widgets
@@ -546,15 +551,15 @@ function flymag_neve_notice() {
 	}
 	$dismiss_button =
 		sprintf(
-			/* translators: Install Neve link */
+		/* translators: Install Neve link */
 			'<a href="%s" class="notice-dismiss" style="text-decoration:none;"></a>',
 			'?flymag_nag_ignore_neve=0'
 		);
-	$message = sprintf(
-		/* translators: Install Neve link */
+	$message        = sprintf(
+	/* translators: Install Neve link */
 		esc_html__( 'Check out %1$s. Fully AMP optimized and responsive, Neve will load in mere seconds and adapt perfectly on any viewing device. Neve works perfectly with Gutenberg and the most popular page builders. You will love it!', 'flymag' ),
 		sprintf(
-			/* translators: Install Neve link */
+		/* translators: Install Neve link */
 			'<a target="_blank" href="%1$s"><strong>%2$s</strong></a>',
 			esc_url( admin_url( 'theme-install.php?theme=neve' ) ),
 			esc_html__( 'our newest theme', 'flymag' )
@@ -562,6 +567,7 @@ function flymag_neve_notice() {
 	);
 	printf( '<div class="notice updated" style="position:relative; padding-right: 35px;">%1$s<p>%2$s</p></div>', $dismiss_button, $message );
 }
+
 add_action( 'admin_notices', 'flymag_neve_notice' );
 /**
  * Update the flymag_ignore_neve_notice option to true, to dismiss the notice from the dashboard
@@ -574,6 +580,7 @@ function flymag_nag_ignore_neve() {
 		add_user_meta( $user_id, 'flymag_ignore_neve_notice', 'true', true );
 	}
 }
+
 add_action( 'admin_init', 'flymag_nag_ignore_neve' );
 
 add_action( 'wp_head', 'flymag_html5shiv' );
