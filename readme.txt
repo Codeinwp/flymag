@@ -12,6 +12,11 @@ Flymag is a responsive magazine theme with a modern look.
 == Description ==
 Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.
 
+== Copyright ==
+
+Flymag WordPress Theme, Copyright 2015 Themeisle
+Flymag is distributed under the terms of the GNU GPL
+
 == Documentation ==
 * https://docs.themeisle.com/article/310-flymag-documentation
 
