@@ -1,94 +1,68 @@
-I.Theme
-
-Flymag, Copyright 2015 
-Flymag is licensed under GNU General Public License V2 or later. You can find a copy of it in the license.txt file.
-
-II. Resources
-
-a) Framework
-a1) Underscores
-Resource URI: http://underscores.me/
-Copyright: Automattic, automattic.com
-License: GPLv2
+== Flymag ==
+Contributors: themeisle
+Tags: two-columns, right-sidebar, custom-colors, custom-background, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Requires at least: 4.0
+Tested up to: 4.9.8
+Stable tag: 2.0.4
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-a2) Bootstrap
-Resource URI: http://getbootstrap.com/
-Copyright: 2011-2014 Twitter, Inc
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+Flymag is a responsive magazine theme with a modern look.
 
-b) FontAwesome
-Copyright: Dave Gandy
-Resource URI: http://fontawesome.io
-License: SIL Open Font License, Version 1.1
-License URI: https://scripts.sil.org/OFL?
+== Description ==
+Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.
 
-c) FitVids
-Copyright: Chris Coyier, Paravel
-Resource URI: http://fitvidsjs.com/
-License: WTFPL
-License URI: http://www.wtfpl.net/txt/copying/
+== Copyright ==
 
-d) html5shiv
-Copyright: Alexander Farkas, Jonathan Neal, Paul Irish
-Resource URI: https://code.google.com/p/html5shiv/
-License: MIT/GPLv2
-License URI: http://opensource.org/licenses/MIT
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Flymag WordPress Theme, Copyright 2015 Themeisle
+Flymag is distributed under the terms of the GNU GPL
 
-e) imagesLoaded
-Copyright: 2014 David DeSandro
-Resource URI: http://imagesloaded.desandro.com/
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+== Documentation ==
+* https://docs.themeisle.com/article/310-flymag-documentation
 
-f) Slicknav
-Copyright: Josh Cope
-Resource URI: https://github.com/ComputerWolf/SlickNav
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+== Changelog ==
 
-g) OwlCarousel
-Copyright: 2013 Bartosz Wojciechowski
-Resource URI: http://www.owlgraphic.com/owlcarousel/
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+= 2.0.4 =
+* Compatibility with Orbit Fox plugin
 
-h) WOW.js
-Copyright: Matthieu Aussaguel
-Resource URI: http://mynameismatthieu.com/WOW/
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+= 2.0.1 =
+* Fixed issues with type number options not visible in Mozilla
 
-i) Easy Ticker
-Copyright: 2014, Aakash Chakravarthy
-Resource URI: http://www.aakashweb.com/
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+= 2.0.0 =
+* Added About FlyMag page
+* Redid upsells
+* Make frontpage images clickable
 
-h) Screenshot
+= 1.10 =
+* Updated documentation link
+* Fixed issue with recommended plugin WPPR
 
-Copyright: YS-Park
-Resource URI: http://pixabay.com/en/camera-sony-mirrorless-annex-5t-616396/
-License: CC0 1.0
-License URI: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+== Resources ==
 
-Copyright: jill111
-Resource URI: http://pixabay.com/en/woman-pretty-beautiful-happy-593141/
-License: CC0 1.0
-License URI: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+* http://underscores.me/, Automattic, GPLv2
 
-Copyright: FirmBee
-Resource URI: http://pixabay.com/en/office-freelancer-computer-business-583839/
-License: CC0 1.0
-License URI: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+* http://getbootstrap.com/, Copyright: 2011-2014 Twitter Inc, MIT
 
-Copyright: FirmBee
-Resource URI: http://pixabay.com/en/mobile-phone-samsung-music-605422/
-License: CC0 1.0
-License URI: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+* http://fontawesome.io, Dave Gandy, SIL Open Font License Version 1.1
 
-III. Documentation 
+* http://fitvidsjs.com/, Chris Coyier, Paravel, WTFPL
 
-Theme documentation is available on http://docs.themeisle.com/article/310-flymag-documentation
+* https://code.google.com/p/html5shiv/, Alexander Farkas, Jonathan Neal, Paul Irish, MIT/GPLv2
+
+* http://imagesloaded.desandro.com/, 2014 David DeSandro, MIT
+
+* https://github.com/ComputerWolf/SlickNav, Josh Cope, MIT
+
+* http://www.owlgraphic.com/owlcarousel/, 2013 Bartosz Wojciechowski, MIT
+
+* http://mynameismatthieu.com/WOW/, Matthieu Aussaguel, MIT
+
+* http://www.aakashweb.com/, 2014, Aakash Chakravarthy, MIT
+
+* http://pixabay.com/en/camera-sony-mirrorless-annex-5t-616396/, YS-Park, CC0 1.0
+
+* http://pixabay.com/en/woman-pretty-beautiful-happy-593141/, jill111, CC0 1.0
+
+* http://pixabay.com/en/office-freelancer-computer-business-583839/, FirmBee, CC0 1.0
+
+* http://pixabay.com/en/mobile-phone-samsung-music-605422/, FirmBee, CC0 1.0

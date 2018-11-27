@@ -15,7 +15,7 @@ class Flymag_Recent_A extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array(
-			'classname' => 'recent_posts_a clearfix',
+			'classname'   => 'recent_posts_a clearfix',
 			'description' => __( 'Recent posts widget Type A (front page)', 'flymag' ),
 		);
 		parent::__construct( 'recent_posts_a', __( 'Flymag: Recent posts type A', 'flymag' ), $widget_ops );
@@ -62,14 +62,15 @@ class Flymag_Recent_A extends WP_Widget {
 
 		$r = new WP_Query(
 			apply_filters(
-				'widget_posts_args', array(
-				 'posts_per_page'      => 5,
-				 'no_found_rows'       => true,
-				 'post_status'         => 'publish',
-				 'ignore_sticky_posts' => true,
-				 'category_name'       => $category,
+				'widget_posts_args',
+				array(
+					'posts_per_page'      => 5,
+					'no_found_rows'       => true,
+					'post_status'         => 'publish',
+					'ignore_sticky_posts' => true,
+					'category_name'       => $category,
 
-				 )
+				)
 			)
 		);
 
@@ -81,7 +82,8 @@ class Flymag_Recent_A extends WP_Widget {
 
 			?>
 
-			<div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>; color: <?php echo $text_color; ?>">
+			<div class="widget-inner clearfix"
+				 style="background-color: <?php echo $bg_color; ?>; color: <?php echo $text_color; ?>">
 				<?php
 
 				if ( ! empty( $title ) ) {
@@ -203,16 +205,25 @@ class Flymag_Recent_A extends WP_Widget {
 		?>
 
 		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'flymag' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/></p>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
+				   name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/>
+		</p>
 
-		<p><label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show posts from all categories.', 'flymag' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'category' ); ?>" type="text" value="<?php echo $category; ?>" size="3"/></p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show posts from all categories.', 'flymag' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>"
+				   name="<?php echo $this->get_field_name( 'category' ); ?>" type="text"
+				   value="<?php echo $category; ?>" size="3"/></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'bg_color' ); ?>" style="display:block;"><?php _e( 'Background color', 'flymag' ); ?></label>
-			<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>" name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>"/></p>
+		<p><label for="<?php echo $this->get_field_id( 'bg_color' ); ?>"
+				  style="display:block;"><?php _e( 'Background color', 'flymag' ); ?></label>
+			<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>"
+				   name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>"/></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'text_color' ); ?>" style="display:block;"><?php _e( 'Text color', 'flymag' ); ?></label>
-			<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'text_color' ); ?>" name="<?php echo $this->get_field_name( 'text_color' ); ?>" value="<?php echo $text_color; ?>"/></p>
+		<p><label for="<?php echo $this->get_field_id( 'text_color' ); ?>"
+				  style="display:block;"><?php _e( 'Text color', 'flymag' ); ?></label>
+			<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'text_color' ); ?>"
+				   name="<?php echo $this->get_field_name( 'text_color' ); ?>" value="<?php echo $text_color; ?>"/></p>
 
 
 		<?php
