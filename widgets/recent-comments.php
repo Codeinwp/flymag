@@ -15,7 +15,7 @@ class Flymag_Recent_Comments extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array(
-			'classname' => 'flymag_recent_comments',
+			'classname'   => 'flymag_recent_comments',
 			'description' => __( 'Display your site&#8217;s recent comments with avatars.', 'flymag' ),
 		);
 		parent::__construct( 'recent-comments', __( 'Flymag: Recent Comments', 'flymag' ), $widget_ops );
@@ -67,11 +67,12 @@ class Flymag_Recent_Comments extends WP_Widget {
 
 		$comments = get_comments(
 			apply_filters(
-				'widget_comments_args', array(
-				 'number'      => $number,
-				 'status'      => 'approve',
-				 'post_status' => 'publish',
-				 )
+				'widget_comments_args',
+				array(
+					'number'      => $number,
+					'status'      => 'approve',
+					'post_status' => 'publish',
+				)
 			)
 		);
 
@@ -96,7 +97,7 @@ class Flymag_Recent_Comments extends WP_Widget {
 
 			foreach ( (array) $comments as $comment ) {
 				$output .= '<li class="list-group-item"><div class="recent-comment clearfix">' . get_avatar( $comment, 60 ) . '<div class="recent-comment-meta"><span>' . /* translators: comments widget: 1: comment author, 2: post link */
-						   sprintf( __( '%1$s on %2$s', 'flymag' ), get_comment_author_link(), '</span><a class="post-title" href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></div>' ) . '</div></li>';
+				           sprintf( __( '%1$s on %2$s', 'flymag' ), get_comment_author_link(), '</span><a class="post-title" href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></div>' ) . '</div></li>';
 			}
 		}
 		$output .= '</ul>';
@@ -149,11 +150,16 @@ class Flymag_Recent_Comments extends WP_Widget {
 		$title  = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$number = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 		?>
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'flymag' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/></p>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'flymag' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
+                   name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/>
+        </p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of comments to show:', 'flymag' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3"/></p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of comments to show:', 'flymag' ); ?></label>
+            <input id="<?php echo $this->get_field_id( 'number' ); ?>"
+                   name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>"
+                   size="3"/></p>
 
 		<?php
 	}

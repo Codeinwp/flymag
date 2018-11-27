@@ -96,17 +96,17 @@ class Flymag_Recent_C extends WP_Widget {
 		$counter = 1;
 		while ( $left_query->have_posts() ) {
 
-		    $left_query->the_post();
+			$left_query->the_post();
 
-		    if ( $counter == 1 ) {
-			    echo '<div class="recent-post first-post clearfix">';
-		        	if ( has_post_thumbnail() ) { ?>
-                        <div class="recent-thumb">
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
-                                <?php the_post_thumbnail( 'carousel-thumb' ); ?>
-                            </a>
-                        </div>
-			        <?php } ?>
+			if ( $counter == 1 ) {
+				echo '<div class="recent-post first-post clearfix">';
+					if ( has_post_thumbnail() ) { ?>
+						<div class="recent-thumb">
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
+								<?php the_post_thumbnail( 'carousel-thumb' ); ?>
+							</a>
+						</div>
+					<?php } ?>
 				<div class="recent-content">					
 					<?php the_title( sprintf( '<h3 class="entry-title"><a style="color:' . $text_color . '" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 					<div class="entry-meta" style="color: <?php echo $text_color; ?>">

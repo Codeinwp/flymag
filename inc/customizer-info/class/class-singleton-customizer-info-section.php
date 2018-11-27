@@ -40,7 +40,8 @@ final class Customizer_Info_Singleton {
 	 * @access private
 	 * @return void
 	 */
-	private function __construct() {}
+	private function __construct() {
+	}
 
 	/**
 	 * Sets up initial actions.
@@ -63,7 +64,9 @@ final class Customizer_Info_Singleton {
 	 *
 	 * @since  1.0.0
 	 * @access public
+	 *
 	 * @param  object $manager WordPress customizer object.
+	 *
 	 * @return void
 	 */
 	public function sections( $manager ) {
@@ -76,11 +79,13 @@ final class Customizer_Info_Singleton {
 
 		$manager->add_section(
 			new Customizer_Info(
-				$manager, 'flymag_view_pro', array(
-				 'section_title' => __( 'View PRO version', 'flymag' ),
-				 'section_url' => 'https://themeisle.com/themes/flymag-pro/',
-				 'section_text' => __( 'Get it', 'flymag' ),
-				 )
+				$manager,
+				'flymag_view_pro',
+				array(
+					'section_title' => __( 'View PRO version', 'flymag' ),
+					'section_url'   => 'https://themeisle.com/themes/flymag-pro/',
+					'section_text'  => __( 'Get it', 'flymag' ),
+				)
 			)
 		);
 
