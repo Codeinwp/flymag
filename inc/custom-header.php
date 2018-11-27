@@ -52,13 +52,13 @@ if ( ! function_exists( 'flymag_header_style' ) ) :
 
 		if ( get_header_image() ) { ?>
 
-            <style type="text/css">
-                .site-branding {
-                    background: url(<?php echo get_header_image(); ?>) no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                }
-            </style>
+			<style type="text/css">
+				.site-branding {
+					background: url(<?php echo get_header_image(); ?>) no-repeat;
+					background-position: center;
+					background-size: cover;
+				}
+			</style>
 		<?php }
 	}
 endif; // flymag_header_style
@@ -71,27 +71,27 @@ if ( ! function_exists( 'flymag_admin_header_style' ) ) :
 	 */
 	function flymag_admin_header_style() {
 		?>
-        <style type="text/css">
-            .appearance_page_custom-header #headimg {
-                border: none;
-            }
+		<style type="text/css">
+			.appearance_page_custom-header #headimg {
+				border: none;
+			}
 
-            #headimg h1,
-            #desc {
-            }
+			#headimg h1,
+			#desc {
+			}
 
-            #headimg h1 {
-            }
+			#headimg h1 {
+			}
 
-            #headimg h1 a {
-            }
+			#headimg h1 a {
+			}
 
-            #desc {
-            }
+			#desc {
+			}
 
-            #headimg img {
-            }
-        </style>
+			#headimg img {
+			}
+		</style>
 		<?php
 	}
 endif; // flymag_admin_header_style
@@ -105,15 +105,15 @@ if ( ! function_exists( 'flymag_admin_header_image' ) ) :
 	function flymag_admin_header_image() {
 		$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 		?>
-        <div id="headimg">
-            <h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;"
-                                                  href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-            </h1>
-            <div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+		<div id="headimg">
+			<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;"
+												  href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+			</h1>
+			<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 			<?php if ( get_header_image() ) : ?>
-                <img src="<?php header_image(); ?>" alt="">
+				<img src="<?php header_image(); ?>" alt="">
 			<?php endif; ?>
-        </div>
+		</div>
 		<?php
 	}
 endif; // flymag_admin_header_image
