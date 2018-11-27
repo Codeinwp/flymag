@@ -84,7 +84,7 @@ class Flymag_Recent_Slider extends WP_Widget {
 			}
 			?>
 
-            <div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>">
+			<div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>">
 				<?php
 				if ( ! empty( $title ) ) {
 
@@ -97,24 +97,24 @@ class Flymag_Recent_Slider extends WP_Widget {
 					}
 				}
 				?>
-                <div class="posts-slider">
-                    <div class="posts-slider-inner clearfix">
+				<div class="posts-slider">
+					<div class="posts-slider-inner clearfix">
 						<?php while ( $r->have_posts() ) : $r->the_post(); ?>
 							<?php if ( has_post_thumbnail() ) : ?>
-                                <div class="recent-post">
-                                    <span class="carousel-overlay"></span>
-                                    <a href="<?php the_permalink(); ?>">
+								<div class="recent-post">
+									<span class="carousel-overlay"></span>
+									<a href="<?php the_permalink(); ?>">
 										<?php the_post_thumbnail(); ?>
-                                    </a>
+									</a>
 									<?php the_title( sprintf( '<h3 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-                                    <span class="slide-link"><a href="<?php echo esc_url( get_permalink() ); ?>"><i
-                                                    class="fa fa-long-arrow-right"></i></a></span>
-                                </div>
+									<span class="slide-link"><a href="<?php echo esc_url( get_permalink() ); ?>"><i
+													class="fa fa-long-arrow-right"></i></a></span>
+								</div>
 							<?php endif; ?>
 						<?php endwhile; ?>
-                    </div>
-                </div>
-            </div><!-- .widget-inner -->
+					</div>
+				</div>
+			</div><!-- .widget-inner -->
 			<?php
 
 			if ( ! empty( $args['after_widget'] ) ) {
@@ -177,33 +177,33 @@ class Flymag_Recent_Slider extends WP_Widget {
 		$title_color = isset( $instance['title_color'] ) ? esc_attr( $instance['title_color'] ) : '';
 		?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'flymag' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
-                   name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/>
-        </p>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'flymag' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
+				   name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/>
+		</p>
 
-        <p>
-            <label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show posts from all categories.', 'flymag' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>"
-                   name="<?php echo $this->get_field_name( 'category' ); ?>" type="text"
-                   value="<?php echo $category; ?>" size="3"/></p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show posts from all categories.', 'flymag' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>"
+				   name="<?php echo $this->get_field_name( 'category' ); ?>" type="text"
+				   value="<?php echo $category; ?>" size="3"/></p>
 
-        <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'flymag' ); ?></label>
-            <input id="<?php echo $this->get_field_id( 'number' ); ?>"
-                   name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>"
-                   size="3"/></p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'flymag' ); ?></label>
+			<input id="<?php echo $this->get_field_id( 'number' ); ?>"
+				   name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>"
+				   size="3"/></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'bg_color' ); ?>"
-                  style="display:block;"><?php _e( 'Background color', 'flymag' ); ?></label>
-            <input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>"
-                   name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>"/></p>
+		<p><label for="<?php echo $this->get_field_id( 'bg_color' ); ?>"
+				  style="display:block;"><?php _e( 'Background color', 'flymag' ); ?></label>
+			<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'bg_color' ); ?>"
+				   name="<?php echo $this->get_field_name( 'bg_color' ); ?>" value="<?php echo $bg_color; ?>"/></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'title_color' ); ?>"
-                  style="display:block;"><?php _e( 'Title color', 'flymag' ); ?></label>
-            <input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'title_color' ); ?>"
-                   name="<?php echo $this->get_field_name( 'title_color' ); ?>" value="<?php echo $title_color; ?>"/>
-        </p>
+		<p><label for="<?php echo $this->get_field_id( 'title_color' ); ?>"
+				  style="display:block;"><?php _e( 'Title color', 'flymag' ); ?></label>
+			<input class="color-picker" type="text" id="<?php echo $this->get_field_id( 'title_color' ); ?>"
+				   name="<?php echo $this->get_field_name( 'title_color' ); ?>" value="<?php echo $title_color; ?>"/>
+		</p>
 
 
 		<?php

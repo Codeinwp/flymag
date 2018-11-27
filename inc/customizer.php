@@ -372,7 +372,8 @@ function flymag_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control(
 		new Flymag_Categories_Dropdown(
-			$wp_customize, 'carousel_cat',
+			$wp_customize,
+			'carousel_cat',
 			array(
 				'label'    => __( 'Select which category to show in the carousel', 'flymag' ),
 				'section'  => 'flymag_carousel',
@@ -549,14 +550,14 @@ function flymag_customize_register( $wp_customize ) {
 	// Hide date
 	$wp_customize->add_setting(
 		'flymag_single_date',
-        array(
+		array(
 			'sanitize_callback' => 'flymag_sanitize_checkbox',
 			'default'           => 0,
 		)
 	);
 	$wp_customize->add_control(
 		'flymag_single_date',
-        array(
+		array(
 			'type'     => 'checkbox',
 			'label'    => __( 'Hide post date &amp; author on single posts?', 'flymag' ),
 			'section'  => 'blog_options',
@@ -565,13 +566,15 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Hide categories
 	$wp_customize->add_setting(
-		'flymag_single_cats', array(
+		'flymag_single_cats',
+        array(
 			'sanitize_callback' => 'flymag_sanitize_checkbox',
 			'default'           => 0,
 		)
 	);
 	$wp_customize->add_control(
-		'flymag_single_cats', array(
+		'flymag_single_cats',
+        array(
 			'type'     => 'checkbox',
 			'label'    => __( 'Hide post categories on single posts?', 'flymag' ),
 			'section'  => 'blog_options',
@@ -580,13 +583,15 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Hide tags
 	$wp_customize->add_setting(
-		'flymag_single_tags', array(
+		'flymag_single_tags',
+        array(
 			'sanitize_callback' => 'flymag_sanitize_checkbox',
 			'default'           => 0,
 		)
 	);
 	$wp_customize->add_control(
-		'flymag_single_tags', array(
+		'flymag_single_tags',
+        array(
 			'type'     => 'checkbox',
 			'label'    => __( 'Hide post tags on single posts?', 'flymag' ),
 			'section'  => 'blog_options',
@@ -595,12 +600,14 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Full width
 	$wp_customize->add_setting(
-		'fullwidth_single', array(
+		'fullwidth_single',
+        array(
 			'sanitize_callback' => 'flymag_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'fullwidth_single', array(
+		'fullwidth_single',
+        array(
 			'type'     => 'checkbox',
 			'label'    => __( 'Full width single posts?', 'flymag' ),
 			'section'  => 'blog_options',
@@ -609,7 +616,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// ___Fonts___//
 	$wp_customize->add_section(
-		'flymag_fonts', array(
+		'flymag_fonts',
+        array(
 			'title'       => __( 'Fonts', 'flymag' ),
 			'priority'    => 15,
 			'description' => __( 'You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: docs.themeisle.com/article/310-flymag-documentation', 'flymag' ),
@@ -617,7 +625,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Body fonts title
 	$wp_customize->add_setting(
-		'flymag_options[titles]', array(
+		'flymag_options[titles]',
+        array(
 			'type'              => 'titles_control',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'esc_attr',
@@ -625,7 +634,9 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		new flymag_Titles(
-			$wp_customize, 'body_fonts', array(
+			$wp_customize,
+            'body_fonts',
+            array(
 				'label'    => __( 'Body fonts', 'flymag' ),
 				'section'  => 'flymag_fonts',
 				'settings' => 'flymag_options[titles]',
@@ -635,13 +646,15 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Body fonts
 	$wp_customize->add_setting(
-		'body_font_name', array(
+		'body_font_name',
+        array(
 			'default'           => 'Roboto:400,400italic,700,700italic',
 			'sanitize_callback' => 'flymag_sanitize_text',
 		)
 	);
 	$wp_customize->add_control(
-		'body_font_name', array(
+		'body_font_name',
+        array(
 			'label'    => __( 'Font name/style/sets', 'flymag' ),
 			'section'  => 'flymag_fonts',
 			'type'     => 'text',
@@ -650,13 +663,15 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Body fonts family
 	$wp_customize->add_setting(
-		'body_font_family', array(
+		'body_font_family',
+        array(
 			'default'           => '\'Roboto\', sans-serif',
 			'sanitize_callback' => 'flymag_sanitize_text',
 		)
 	);
 	$wp_customize->add_control(
-		'body_font_family', array(
+		'body_font_family',
+        array(
 			'label'    => __( 'Font family', 'flymag' ),
 			'section'  => 'flymag_fonts',
 			'type'     => 'text',
@@ -665,7 +680,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Headings fonts title
 	$wp_customize->add_setting(
-		'flymag_options[titles]', array(
+		'flymag_options[titles]',
+        array(
 			'type'              => 'titles_control',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'esc_attr',
@@ -673,7 +689,9 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		new flymag_Titles(
-			$wp_customize, 'headings_fonts', array(
+			$wp_customize,
+            'headings_fonts',
+            array(
 				'label'    => __( 'Headings fonts', 'flymag' ),
 				'section'  => 'flymag_fonts',
 				'settings' => 'flymag_options[titles]',
@@ -683,13 +701,15 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Headings fonts
 	$wp_customize->add_setting(
-		'headings_font_name', array(
+		'headings_font_name',
+        array(
 			'default'           => 'Oswald:400,700',
 			'sanitize_callback' => 'flymag_sanitize_text',
 		)
 	);
 	$wp_customize->add_control(
-		'headings_font_name', array(
+		'headings_font_name',
+        array(
 			'label'    => __( 'Font name/style/sets', 'flymag' ),
 			'section'  => 'flymag_fonts',
 			'type'     => 'text',
@@ -698,13 +718,15 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Headings fonts family
 	$wp_customize->add_setting(
-		'headings_font_family', array(
+		'headings_font_family',
+        array(
 			'default'           => '\'Oswald\', sans-serif',
 			'sanitize_callback' => 'flymag_sanitize_text',
 		)
 	);
 	$wp_customize->add_control(
-		'headings_font_family', array(
+		'headings_font_family',
+        array(
 			'label'    => __( 'Font family', 'flymag' ),
 			'section'  => 'flymag_fonts',
 			'type'     => 'text',
@@ -713,7 +735,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Font sizes title
 	$wp_customize->add_setting(
-		'flymag_options[titles]', array(
+		'flymag_options[titles]',
+        array(
 			'type'              => 'titles_control',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'esc_attr',
@@ -721,7 +744,9 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		new flymag_Titles(
-			$wp_customize, 'font_sizes_title', array(
+			$wp_customize,
+            'font_sizes_title',
+            array(
 				'label'    => __( 'Font sizes', 'flymag' ),
 				'section'  => 'flymag_fonts',
 				'settings' => 'flymag_options[titles]',
@@ -731,14 +756,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Site title
 	$wp_customize->add_setting(
-		'site_title_size', array(
+		'site_title_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '52',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'site_title_size', array(
+		'site_title_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 17,
 			'section'     => 'flymag_fonts',
@@ -753,14 +780,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Site description
 	$wp_customize->add_setting(
-		'site_desc_size', array(
+		'site_desc_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '20',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'site_desc_size', array(
+		'site_desc_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 17,
 			'section'     => 'flymag_fonts',
@@ -775,14 +804,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Nav menu
 	$wp_customize->add_setting(
-		'menu_size', array(
+		'menu_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '16',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'menu_size', array(
+		'menu_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 17,
 			'section'     => 'flymag_fonts',
@@ -797,14 +828,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// H1 size
 	$wp_customize->add_setting(
-		'h1_size', array(
+		'h1_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '36',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'h1_size', array(
+		'h1_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 17,
 			'section'     => 'flymag_fonts',
@@ -819,14 +852,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// H2 size
 	$wp_customize->add_setting(
-		'h2_size', array(
+		'h2_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '30',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'h2_size', array(
+		'h2_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 18,
 			'section'     => 'flymag_fonts',
@@ -841,14 +876,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// H3 size
 	$wp_customize->add_setting(
-		'h3_size', array(
+		'h3_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '24',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'h3_size', array(
+		'h3_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 19,
 			'section'     => 'flymag_fonts',
@@ -863,14 +900,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// H4 size
 	$wp_customize->add_setting(
-		'h4_size', array(
+		'h4_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '18',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'h4_size', array(
+		'h4_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 20,
 			'section'     => 'flymag_fonts',
@@ -885,14 +924,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// H5 size
 	$wp_customize->add_setting(
-		'h5_size', array(
+		'h5_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '14',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'h5_size', array(
+		'h5_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 21,
 			'section'     => 'flymag_fonts',
@@ -907,14 +948,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// H6 size
 	$wp_customize->add_setting(
-		'h6_size', array(
+		'h6_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '12',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'h6_size', array(
+		'h6_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 22,
 			'section'     => 'flymag_fonts',
@@ -929,14 +972,16 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Body
 	$wp_customize->add_setting(
-		'body_size', array(
+		'body_size',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '16',
 			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
-		'body_size', array(
+		'body_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 23,
 			'section'     => 'flymag_fonts',
@@ -954,7 +999,9 @@ function flymag_customize_register( $wp_customize ) {
 	// Color scheme
 	$wp_customize->add_control(
 		new Flymag_Divider(
-			$wp_customize, 'cs_divider', array(
+			$wp_customize,
+            'cs_divider',
+            array(
 				'section'  => 'colors',
 				'settings' => 'flymag_options[titles]',
 				'priority' => 11,
@@ -962,7 +1009,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'flymag_options[titles]', array(
+		'flymag_options[titles]',
+        array(
 			'type'              => 'titles_control',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'esc_attr',
@@ -970,7 +1018,9 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		new Flymag_Titles(
-			$wp_customize, 'color_scheme', array(
+			$wp_customize,
+            'color_scheme',
+            array(
 				'label'    => __( 'Color scheme', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'flymag_options[titles]',
@@ -979,7 +1029,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'color_scheme_1', array(
+		'color_scheme_1',
+        array(
 			'default'           => '#F0696A',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -987,7 +1038,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'color_scheme_1', array(
+			'color_scheme_1',
+            array(
 				'label'    => __( 'Color 1 (primary color)', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'color_scheme_1',
@@ -996,7 +1048,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'color_scheme_2', array(
+		'color_scheme_2',
+        array(
 			'default'           => '#5B8AC0',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1004,7 +1057,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'color_scheme_2', array(
+			'color_scheme_2',
+            array(
 				'label'    => __( 'Color 2', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'color_scheme_2',
@@ -1013,7 +1067,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'color_scheme_3', array(
+		'color_scheme_3',
+        array(
 			'default'           => '#ED945D',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1021,7 +1076,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'color_scheme_3', array(
+			'color_scheme_3',
+            array(
 				'label'    => __( 'Color 3', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'color_scheme_3',
@@ -1030,7 +1086,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'color_scheme_4', array(
+		'color_scheme_4',
+        array(
 			'default'           => '#9F76CA',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1038,7 +1095,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'color_scheme_4', array(
+			'color_scheme_4',
+            array(
 				'label'    => __( 'Color 4', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'color_scheme_4',
@@ -1047,7 +1105,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'color_scheme_5', array(
+		'color_scheme_5',
+        array(
 			'default'           => '#7FC09B',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -1055,7 +1114,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'color_scheme_5', array(
+			'color_scheme_5',
+            array(
 				'label'    => __( 'Color 5', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'color_scheme_5',
@@ -1066,7 +1126,9 @@ function flymag_customize_register( $wp_customize ) {
 	// Divider
 	$wp_customize->add_control(
 		new Flymag_Divider(
-			$wp_customize, 'color_scheme_divider', array(
+			$wp_customize,
+            'color_scheme_divider',
+            array(
 				'section'  => 'colors',
 				'settings' => 'color_scheme_5',
 				'priority' => 18,
@@ -1075,7 +1137,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Latest news bg
 	$wp_customize->add_setting(
-		'latest_news_color', array(
+		'latest_news_color',
+        array(
 			'default'           => '#333',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1084,7 +1147,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'latest_news_color', array(
+			'latest_news_color',
+            array(
 				'label'    => __( 'Latest news background', 'flymag' ),
 				'section'  => 'colors',
 				'priority' => 19,
@@ -1093,7 +1157,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Header
 	$wp_customize->add_setting(
-		'header_color', array(
+		'header_color',
+        array(
 			'default'           => '#ffffff',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1102,7 +1167,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'header_color', array(
+			'header_color',
+            array(
 				'label'    => __( 'Header background', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'header_color',
@@ -1112,7 +1178,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Site title
 	$wp_customize->add_setting(
-		'site_title_color', array(
+		'site_title_color',
+        array(
 			'default'           => '#1E262D',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1121,7 +1188,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'site_title_color', array(
+			'site_title_color',
+            array(
 				'label'    => __( 'Site title', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'site_title_color',
@@ -1131,7 +1199,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Site desc
 	$wp_customize->add_setting(
-		'site_desc_color', array(
+		'site_desc_color',
+        array(
 			'default'           => '#ABADB2',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1140,7 +1209,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'site_desc_color', array(
+			'site_desc_color',
+            array(
 				'label'    => __( 'Site description', 'flymag' ),
 				'section'  => 'colors',
 				'priority' => 23,
@@ -1149,7 +1219,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Menu bg
 	$wp_customize->add_setting(
-		'menu_bg_color', array(
+		'menu_bg_color',
+        array(
 			'default'           => '#ffffff',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1158,7 +1229,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'menu_bg_color', array(
+			'menu_bg_color',
+            array(
 				'label'    => __( 'Menu background', 'flymag' ),
 				'section'  => 'colors',
 				'priority' => 24,
@@ -1167,7 +1239,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Menu items
 	$wp_customize->add_setting(
-		'menu_items_color', array(
+		'menu_items_color',
+        array(
 			'default'           => '#505559',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1176,7 +1249,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'menu_items_color', array(
+			'menu_items_color',
+            array(
 				'label'    => __( 'Menu items', 'flymag' ),
 				'section'  => 'colors',
 				'priority' => 25,
@@ -1186,7 +1260,9 @@ function flymag_customize_register( $wp_customize ) {
 	// Divider
 	$wp_customize->add_control(
 		new Flymag_Divider(
-			$wp_customize, 'hc_divider', array(
+			$wp_customize,
+            'hc_divider',
+            array(
 				'section'  => 'colors',
 				'settings' => 'menu_items_color',
 				'priority' => 26,
@@ -1195,7 +1271,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Body
 	$wp_customize->add_setting(
-		'body_text_color', array(
+		'body_text_color',
+        array(
 			'default'           => '#989FA8',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1204,7 +1281,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'body_text_color', array(
+			'body_text_color',
+            array(
 				'label'    => __( 'Body text', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'body_text_color',
@@ -1214,7 +1292,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Widget color
 	$wp_customize->add_setting(
-		'widgets_color', array(
+		'widgets_color',
+        array(
 			'default'           => '#989FA8',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1223,7 +1302,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'widgets_color', array(
+			'widgets_color',
+            array(
 				'label'    => __( 'Widgets color', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'widgets_color',
@@ -1233,7 +1313,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Footer
 	$wp_customize->add_setting(
-		'footer_color', array(
+		'footer_color',
+        array(
 			'default'           => '#333',
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => 'postMessage',
@@ -1242,7 +1323,8 @@ function flymag_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'footer_color', array(
+			'footer_color',
+            array(
 				'label'    => __( 'Footer', 'flymag' ),
 				'section'  => 'colors',
 				'settings' => 'footer_color',
