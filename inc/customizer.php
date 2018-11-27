@@ -157,7 +157,8 @@ function flymag_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'logo_size', array(
+		'logo_size',
+        array(
 			'type'        => 'number',
 			'priority'    => 12,
 			'section'     => 'flymag_general',
@@ -194,7 +195,8 @@ function flymag_customize_register( $wp_customize ) {
 	);
 	// Padding
 	$wp_customize->add_setting(
-		'branding_padding', array(
+		'branding_padding',
+        array(
 			'sanitize_callback' => 'absint',
 			'default'           => '30',
 			'transport'         => 'postMessage',
