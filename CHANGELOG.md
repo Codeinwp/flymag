@@ -1,4 +1,9 @@
 
+ ### v2.0.5 - 2018-11-27 
+ **Changes:** 
+ * Update readme.txt file
+* Notice about Neve added in Dashboard
+ 
  ### v2.0.4 - 2018-06-05 
  **Changes:** 
  * Compatibility with Orbit Fox plugin

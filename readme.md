@@ -1,49 +1,49 @@
-== Flymag ==
-Contributors: themeisle
-Tags: two-columns, right-sidebar, custom-colors, custom-background, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
-Requires at least: 4.0
-Tested up to: 4.9.8
-Stable tag: 2.0.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+## Flymag ##
+**Contributors:** [themeisle](https://profiles.wordpress.org/themeisle)  
+**Tags:** two-columns, right-sidebar, custom-colors, custom-background, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready  
+**Requires at least:** 4.0  
+**Tested up to:** 4.9.8  
+**Stable tag:** 2.0.4  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
 Flymag is a responsive magazine theme with a modern look.
 
-== Description ==
+## Description ##
 Flymag is a responsive magazine theme with a modern look. Flymag lets you use any of the 600+ Google Fonts, provides color options for a lot of the theme elements and also offers you some useful page templates. With Flymag you can easily build your front page magazine-layout using the built in widgets specifically designed for this task.
 
-== Copyright ==
+## Copyright ##
 
 Flymag WordPress Theme, Copyright 2015 Themeisle
 Flymag is distributed under the terms of the GNU GPL
 
-== Documentation ==
+## Documentation ##
 * https://docs.themeisle.com/article/310-flymag-documentation
 
-== Changelog ==
-= 2.0.5 - 2018-11-27  = 
+## Changelog ##
+### 2.0.5 - 2018-11-27  ###
 
 * Update readme.txt file
 * Notice about Neve added in Dashboard
 
 
 
-= 2.0.4 =
+### 2.0.4 ###
 * Compatibility with Orbit Fox plugin
 
-= 2.0.1 =
+### 2.0.1 ###
 * Fixed issues with type number options not visible in Mozilla
 
-= 2.0.0 =
+### 2.0.0 ###
 * Added About FlyMag page
 * Redid upsells
 * Make frontpage images clickable
 
-= 1.10 =
+### 1.10 ###
 * Updated documentation link
 * Fixed issue with recommended plugin WPPR
 
-== Resources ==
+## Resources ##
 
 * http://underscores.me/, Automattic, GPLv2
 
