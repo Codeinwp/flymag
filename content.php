@@ -39,7 +39,7 @@
 					'after'  => '</div>',
 					)
 				);
-			?>
+				?>
 		</div><!-- .entry-content -->
 
 		<?php if ( get_theme_mod( 'flymag_cats' ) != 1 ) : ?>

@@ -83,29 +83,30 @@ class Flymag_Recent_C extends WP_Widget {
 		if ( ! empty( $args['before_widget'] ) ) {
 			echo $args['before_widget'];
 		}
-		?>
 
-		<div class="widget-inner clearfix" style="background-color: <?php echo $bg_color; ?>; color: <?php echo $text_color; ?>">
+		echo '<div class="widget-inner clearfix" style="background-color: ' . $bg_color . ';' . 'color: ' . $text_color . '">';
 
-		<div class="col-md-6 col-sm-6 col-xs-12">
+		echo '<div class="col-md-6 col-sm-6 col-xs-12">';
 
-		<?php $cat = get_term_by( 'slug', $cat_one, 'category' ) ?>
-		<?php if ( $cat ) {
+		$cat = get_term_by( 'slug', $cat_one, 'category' );
+		if ( $cat ) {
 			echo '<h3 class="cat-title"><a style="color:' . $text_color . '" href="' . esc_url( get_category_link( get_cat_ID( $cat -> name ) ) ) . '">' . $cat -> name . '</a></h3>';
-} ?>
+		}
 
-		<?php $counter = 1; ?>	
-		<?php while ( $left_query->have_posts() ) : $left_query->the_post(); ?>
+		$counter = 1;
+		while ( $left_query->have_posts() ) {
 
-		<?php if ( $counter == 1 ) : ?>
-			<div class="recent-post first-post clearfix">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="recent-thumb">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
-						<?php the_post_thumbnail( 'carousel-thumb' ); ?>
-					</a>							
-				</div>	
-			<?php endif; ?>
+		    $left_query->the_post();
+
+		    if ( $counter == 1 ) {
+			    echo '<div class="recent-post first-post clearfix">';
+		        	if ( has_post_thumbnail() ) { ?>
+                        <div class="recent-thumb">
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
+                                <?php the_post_thumbnail( 'carousel-thumb' ); ?>
+                            </a>
+                        </div>
+			        <?php } ?>
 				<div class="recent-content">					
 					<?php the_title( sprintf( '<h3 class="entry-title"><a style="color:' . $text_color . '" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 					<div class="entry-meta" style="color: <?php echo $text_color; ?>">
@@ -115,7 +116,7 @@ class Flymag_Recent_C extends WP_Widget {
 					<?php the_excerpt(); ?>
 				</div>
 			</div>
-		<?php else : ?>	
+		<?php } else { ?>
 			<div class="recent-post clearfix">
 				<div class="recent-thumb col-md-3 col-sm-3 col-xs-3">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
@@ -133,9 +134,9 @@ class Flymag_Recent_C extends WP_Widget {
 					</div>		
 				</div>			
 			</div>
-		<?php endif; ?>
+		<?php } ?>
 		<?php  $counter++; ?>
-		<?php endwhile; ?>
+		<?php } ?>
 		</div>
 
 		<div class="col-md-6 col-sm-6 col-xs-12">
