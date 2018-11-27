@@ -551,15 +551,15 @@ function flymag_neve_notice() {
 	}
 	$dismiss_button =
 		sprintf(
-		/* translators: Install Neve link */
+			/* translators: Install Neve link */
 			'<a href="%s" class="notice-dismiss" style="text-decoration:none;"></a>',
 			'?flymag_nag_ignore_neve=0'
 		);
 	$message        = sprintf(
-	/* translators: Install Neve link */
+		/* translators: Install Neve link */
 		esc_html__( 'Check out %1$s. Fully AMP optimized and responsive, Neve will load in mere seconds and adapt perfectly on any viewing device. Neve works perfectly with Gutenberg and the most popular page builders. You will love it!', 'flymag' ),
 		sprintf(
-		/* translators: Install Neve link */
+			/* translators: Install Neve link */
 			'<a target="_blank" href="%1$s"><strong>%2$s</strong></a>',
 			esc_url( admin_url( 'theme-install.php?theme=neve' ) ),
 			esc_html__( 'our newest theme', 'flymag' )
