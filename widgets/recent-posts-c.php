@@ -145,7 +145,7 @@ class Flymag_Recent_C extends WP_Widget {
 			<?php $cat = get_term_by( 'slug', $cat_two, 'category' ) ?>
 			<?php if ( $cat ) {
 				echo '<h3 class="cat-title"><a style="color:' . $text_color . '" href="' . esc_url( get_category_link( get_cat_ID( $cat->name ) ) ) . '">' . $cat->name . '</a></h3>';
-			} ?>
+} ?>
 
 			<?php $counter = 1; ?>
 			<?php while ( $right_query->have_posts() ) : $right_query->the_post(); ?>
