@@ -21,6 +21,11 @@ Flymag is distributed under the terms of the GNU GPL
 * https://docs.themeisle.com/article/310-flymag-documentation
 
 == Changelog ==
+= 2.0.6 - 2018-11-28  = 
+
+* version increased to sync with the theme version on wp.org
+
+
 = 2.0.5 - 2018-11-27  = 
 
 * Update readme.txt file

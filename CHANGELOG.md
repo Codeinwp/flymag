@@ -1,4 +1,8 @@
 
+ ### v2.0.6 - 2018-11-28 
+ **Changes:** 
+ * version increased to sync with the theme version on wp.org
+ 
  ### v2.0.5 - 2018-11-27 
  **Changes:** 
  * Update readme.txt file
